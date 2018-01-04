@@ -1,0 +1,174 @@
+object TimerConfigurePanel: TTimerConfigurePanel
+  Left = 0
+  Height = 26
+  Top = 0
+  Width = 477
+  AutoSize = True
+  ClientHeight = 26
+  ClientWidth = 477
+  TabOrder = 0
+  object Panel: TPanel
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 477
+    Align = alClient
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 26
+    ClientWidth = 477
+    TabOrder = 0
+    object MovesLabel: TLabel
+      Left = 446
+      Height = 26
+      Top = 0
+      Width = 28
+      Align = alClient
+      BorderSpacing.Right = 3
+      Caption = 'moves'
+      Font.Color = clBlue
+      Font.Style = [fsUnderline]
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+      OnClick = MovesLabelClick
+    end
+    object SecondsPanel: TPanel
+      Left = 0
+      Height = 26
+      Top = 0
+      Width = 332
+      Align = alLeft
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 26
+      ClientWidth = 332
+      TabOrder = 0
+      object TimeLabel: TLabel
+        Left = 94
+        Height = 26
+        Top = 0
+        Width = 49
+        Align = alClient
+        BorderSpacing.Left = 3
+        Caption = 'seconds'
+        Font.Color = clBlue
+        Font.Style = [fsUnderline]
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+        OnClick = TimeLabelClick
+      end
+      object RightSecondsPanel: TPanel
+        Left = 143
+        Height = 26
+        Top = 0
+        Width = 189
+        Align = alRight
+        AutoSize = True
+        BevelOuter = bvNone
+        ClientHeight = 26
+        ClientWidth = 189
+        TabOrder = 2
+        object LPlus: TLabel
+          Left = 0
+          Height = 26
+          Top = 0
+          Width = 10
+          Align = alLeft
+          Caption = ' +'
+          Layout = tlCenter
+          ParentColor = False
+        end
+        object LSecondsIncrement: TLabel
+          Left = 101
+          Height = 26
+          Top = 0
+          Width = 88
+          Align = alLeft
+          Caption = 'seconds/move'
+          Layout = tlCenter
+          ParentColor = False
+        end
+        object IncrementSpin: TSpinEdit
+          Left = 10
+          Height = 26
+          Top = 0
+          Width = 88
+          Align = alLeft
+          BorderSpacing.Right = 3
+          MaxValue = 999999
+          TabOrder = 0
+        end
+      end
+      object SecondsSpin: TSpinEdit
+        Left = 3
+        Height = 26
+        Top = 0
+        Width = 88
+        Align = alLeft
+        BorderSpacing.Left = 3
+        MaxValue = 999999
+        MinValue = 1
+        TabOrder = 0
+        Value = 300
+      end
+      object TimePanelBtn: TButton
+        Left = 0
+        Height = 25
+        Top = 0
+        Width = 1
+        Caption = 'TimePanelBtn'
+        OnClick = TimePanelBtnClick
+        OnEnter = TimePanelBtnEnter
+        OnExit = TimePanelBtnExit
+        TabOrder = 1
+      end
+    end
+    object MovesPanel: TPanel
+      Left = 332
+      Height = 26
+      Top = 0
+      Width = 114
+      Align = alLeft
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 26
+      ClientWidth = 114
+      TabOrder = 1
+      object MovesSpin: TSpinEdit
+        Left = 23
+        Height = 26
+        Top = 0
+        Width = 88
+        Align = alRight
+        BorderSpacing.Right = 3
+        MaxValue = 999999
+        MinValue = 1
+        TabOrder = 0
+        Value = 40
+      end
+      object LFor: TLabel
+        Left = 0
+        Height = 26
+        Top = 0
+        Width = 23
+        Align = alClient
+        Caption = ' for '
+        Layout = tlCenter
+        ParentColor = False
+      end
+    end
+  end
+  object MovesPanelBtn: TButton
+    Left = 0
+    Height = 25
+    Top = 0
+    Width = 1
+    Caption = 'MovesPanelBtn'
+    OnClick = MovesPanelBtnClick
+    OnEnter = MovesPanelBtnEnter
+    OnExit = MovesPanelBtnExit
+    TabOrder = 1
+  end
+end

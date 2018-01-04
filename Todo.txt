@@ -1,0 +1,26 @@
+!!! Add moving to variations & variation compression
+!!! Allowing multiple games (later)
+!!! Implement i18n
+!!! Don't allow multi-line hints (they aren't saved into PO correctly)
+!!! Add moves by (50, 100, 128, 256) moves as an option
+!!! Improve using lowercase & upcase in move (make the MoveParser much more flexible) ...
+!!! Make another policy for checking if the engine is responding. (?)
+!!! Process info string somehow (not in the analysis).
+!!! Use "debug" option.
+!!! Put DefaultCaption = True for every TButtonPanel (for i18n).
+!!! When starting & changing games, do not create and kill engines so much.
+!!! Improve the piece drawing (especially on Win32 widgetset).
+!!! Add the message if a chess engine was terminated (or crashed?)
+!!! Make unlimited waiting for engine configuration (with a dialog window).
+!!! Maybe try to overcome Initialize/Uninitialize.
+!!! Reduce notation updatings in the beginning.
+!!! Too many board refreshes in the beginning.
+!!! Optimize VisualChessNotation when undo/redo.
+!!! When the key is up, the actions still execute.
+!!! When just clicking onto the notation, the analysis restarts.
+!!! Remove the Debug Console
+!!! Add command-line support for engines.
+!!! Add Winboard/XBoard engines support
+!!! Fix a bug with underline (and not only) characters (diacritic symbols)
+!!! Rewrite character length counting
+!!! Maybe use 2 (or more?) chars to determine it

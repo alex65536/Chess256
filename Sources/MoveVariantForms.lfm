@@ -1,0 +1,27 @@
+object MoveVariantForm: TMoveVariantForm
+  Left = 546
+  Height = 644
+  Top = 37
+  Width = 231
+  Caption = 'Move variants'
+  ClientHeight = 644
+  ClientWidth = 231
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.8.0.6'
+  Visible = False
+  object ListBox: TListBox
+    Left = 0
+    Height = 644
+    Top = 0
+    Width = 231
+    Align = alClient
+    ItemHeight = 0
+    OnDblClick = ListBoxDblClick
+    OnKeyPress = ListBoxKeyPress
+    ScrollWidth = 229
+    Sorted = True
+    TabOrder = 0
+    TopIndex = -1
+  end
+end

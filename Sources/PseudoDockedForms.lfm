@@ -1,0 +1,52 @@
+object PseudoDockContainer: TPseudoDockContainer
+  Left = 284
+  Height = 200
+  Top = 84
+  Width = 218
+  ClientHeight = 200
+  ClientWidth = 218
+  LCLVersion = '1.8.0.6'
+  Visible = True
+  object CaptionPanel: TPanel
+    Left = 0
+    Height = 14
+    Top = 0
+    Width = 218
+    Align = alTop
+    AutoSize = True
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 14
+    ClientWidth = 218
+    Color = 16744576
+    Font.Color = clBlack
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object CaptionLabel: TLabel
+      Left = 5
+      Height = 4
+      Top = 5
+      Width = 201
+      Align = alClient
+      Alignment = taCenter
+      BorderSpacing.Around = 3
+      Color = 16744576
+      Layout = tlCenter
+      ParentColor = False
+      Transparent = False
+    end
+    object HideButton: TSpeedButton
+      Left = 209
+      Height = 4
+      Top = 5
+      Width = 4
+      Align = alRight
+      AutoSize = True
+      BorderSpacing.Around = 3
+      Color = clDefault
+      Flat = True
+      OnClick = HideButtonClick
+    end
+  end
+end

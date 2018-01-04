@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="10"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="Chess 256"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True/PM"/>
+        <TextName Value="Alex65536.Chess256.ChessApp"/>
+        <TextDesc Value="Chess 256 is a chess program for playing, editing and analysing chess games."/>
+      </XPManifest>
+      <Icon Value="0"/>
+      <Resources Count="5">
+        <Resource_0 FileName="../Images/Pieces/BoardPack128.png" Type="RCDATA" ResourceName="TEXTURES.BORDERS"/>
+        <Resource_1 FileName="../Images/Pieces/Eraser128.png" Type="RCDATA" ResourceName="TEXTURES.ERASER"/>
+        <Resource_2 FileName="../Images/Pieces/Pack128.png" Type="RCDATA" ResourceName="TEXTURES.PIECES"/>
+        <Resource_3 FileName="../Images/Pieces/Cursor128.png" Type="RCDATA" ResourceName="TEXTURES.CURSOR"/>
+        <Resource_4 FileName="../Images/Design/CloseBtn.png" Type="RCDATA" ResourceName="PSEUDODOCK.CLOSEBTN"/>
+      </Resources>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <MinorVersionNr Value="1"/>
+      <RevisionNr Value="3"/>
+      <Language Value="0809"/>
+      <StringTable Comments="Chess 256 is a chess program for playing, editing and analysing chess games." FileDescription="Chess 256" InternalName="Chess 256" LegalCopyright="© 2016, 2018 Kernozhitsky Alexander" OriginalFilename="Chess256.exe" ProductName="Chess 256" ProductVersion="0.13 alpha"/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+      <SharedMatrixOptions Count="1">
+        <Item1 ID="597209912387" Type="IDEMacro" MacroName="LCLWidgetType" Value="gtk2"/>
+      </SharedMatrixOptions>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="3">
+      <Item1>
+        <PackageName Value="cmdbox"/>
+        <MaxVersion Minor="4" Build="256" Valid="True"/>
+        <MinVersion Minor="4" Build="256" Valid="True"/>
+        <DefaultFilename Value="../Packages/CmdBox/package/cmdbox.lpk"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+    </RequiredPackages>
+    <Units Count="66">
+      <Unit0>
+        <Filename Value="Chess256.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="MainUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="ChessRules.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="ChessBoards.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="VisualChessBoard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="PromoteDialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PromoteDlg"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="MoveConverters.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="PositionEditors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PositionEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="About.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutBox"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="ApplicationForms.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="ChessTime.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="ChessClock.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="VisualChessClock"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="NotationUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="NotationTags.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="NotationLists.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="ChessUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="PGNParser.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="PGNUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="NotationForms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="NotationForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="VisualNotation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="VisualChessNotation"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="NotationMessaging.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="ChessNotation.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="TextViewImpl.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TextViewImplFrame"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="TextViewBase.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="NAGValues.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="NAGSelector.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="NAGSelect"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="NAGUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="CommentEditors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CommentEditor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="DebugConsole.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Console"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="BoardPainting.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="NotationNodeDrawer.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="BoardHashes.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="EngineProcesses.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="ChessEngines.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="UCICommands.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="MoveChains.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="EngineScores.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="UCIMsgProcessor.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="AnalysisForms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AnalysisForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="EngineAboutBox.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutEngine"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="ChessGUIUtils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="EngineConfigurers.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="UCIEngineConfigurer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="UCIConfigurerForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="TextureContainers.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="ChessGame.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="GameStartDialogs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="NewGameDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="TimerConfigurers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimerConfigure"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="TimerConfigurePanels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimerConfigurePanel"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="TimerConfigurePairs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimerConfigurePair"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="TimerConfigureForms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TimerConfigureForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="PlayerSelectors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PlayerSelector"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="ChessStrings.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="Utilities.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="NotationMsgReceiver.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="GlyphKeepers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="GlyphKeeper"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="CompilerDirectives.inc"/>
+        <IsPartOfProject Value="True"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="ClockForms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ClockForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="BoardForms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="BoardForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="MoveVariantForms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MoveVariantForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="EngineStrings.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="PseudoDockedForms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PseudoDockContainer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="ImbalanceFrame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Imbalance"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="ScaleDPI.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="PersistentNotation.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="../History.txt"/>
+        <IsPartOfProject Value="True"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="../Todo.txt"/>
+        <IsPartOfProject Value="True"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="LicenseInfo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LicenseInfoFrom"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit65>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="..\Binary\Chess256"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Checks>
+        <RangeChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
+      <Optimizations>
+        <OptimizationLevel Value="2"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <DebugInfoType Value="dsDwarf2"/>
+        <UseLineInfoUnit Value="False"/>
+        <UseHeaptrc Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="4">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EMoveParser"/>
+      </Item4>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

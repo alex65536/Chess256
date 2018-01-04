@@ -1,0 +1,70 @@
+object PromoteDlg: TPromoteDlg
+  Left = 305
+  Height = 99
+  Top = 144
+  Width = 300
+  AutoSize = True
+  BorderIcons = []
+  BorderStyle = bsDialog
+  Caption = 'Promote to...'
+  ClientHeight = 99
+  ClientWidth = 300
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '1.8.0.6'
+  Visible = False
+  object KnightPromote: TBitBtn
+    Left = 0
+    Height = 99
+    Hint = 'Promote to knight (N)'
+    Top = 0
+    Width = 52
+    Align = alLeft
+    AutoSize = True
+    Caption = 'Knight'
+    Layout = blGlyphTop
+    OnClick = KnightPromoteClick
+    TabOrder = 0
+  end
+  object QueenPromote: TBitBtn
+    Left = 148
+    Height = 99
+    Hint = 'Promote to queen (Q)'
+    Top = 0
+    Width = 152
+    Align = alClient
+    AutoSize = True
+    Caption = 'Queen'
+    Layout = blGlyphTop
+    OnClick = QueenPromoteClick
+    TabOrder = 3
+  end
+  object RookPromote: TBitBtn
+    Left = 105
+    Height = 99
+    Hint = 'Promote to rook (R)'
+    Top = 0
+    Width = 43
+    Align = alLeft
+    AutoSize = True
+    Caption = 'Rook'
+    Layout = blGlyphTop
+    OnClick = RookPromoteClick
+    TabOrder = 2
+  end
+  object BishopPromote: TBitBtn
+    Left = 52
+    Height = 99
+    Hint = 'Promote to bishop (B)'
+    Top = 0
+    Width = 53
+    Align = alLeft
+    AutoSize = True
+    Caption = 'Bishop'
+    Layout = blGlyphTop
+    OnClick = BishopPromoteClick
+    TabOrder = 1
+  end
+end

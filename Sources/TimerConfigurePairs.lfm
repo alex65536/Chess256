@@ -1,0 +1,77 @@
+object TimerConfigurePair: TTimerConfigurePair
+  Left = 0
+  Height = 235
+  Top = 0
+  Width = 327
+  AutoSize = True
+  ClientHeight = 235
+  ClientWidth = 327
+  TabOrder = 0
+  object SameTimeCheck: TCheckBox
+    Left = 0
+    Height = 19
+    Top = 0
+    Width = 327
+    Align = alTop
+    Caption = 'Same time for both players'
+    Checked = True
+    OnChange = SameTimeCheckChange
+    State = cbChecked
+    TabOrder = 0
+  end
+  object WhiteGroup: TGroupBox
+    Left = 0
+    Height = 216
+    Top = 19
+    Width = 162
+    Align = alLeft
+    AutoSize = True
+    Caption = 'White and Black'
+    ClientHeight = 197
+    ClientWidth = 160
+    TabOrder = 1
+    inline WhiteConfigurer: TTimerConfigure
+      Height = 196
+      Width = 158
+      Align = alClient
+      ClientHeight = 196
+      ClientWidth = 158
+      inherited Panel: TPanel
+        Width = 158
+        ClientWidth = 158
+      end
+      inherited ControlPanel: TPanel
+        Height = 167
+        Width = 158
+      end
+    end
+  end
+  object BlackGroup: TGroupBox
+    Left = 162
+    Height = 216
+    Top = 19
+    Width = 165
+    Align = alClient
+    AutoSize = True
+    Caption = 'Black'
+    ClientHeight = 197
+    ClientWidth = 163
+    TabOrder = 2
+    Visible = False
+    inline BlackConfigurer: TTimerConfigure
+      Height = 196
+      Width = 161
+      Align = alClient
+      ClientHeight = 196
+      ClientWidth = 161
+      inherited Panel: TPanel
+        Width = 161
+        ClientWidth = 161
+      end
+      inherited ControlPanel: TPanel
+        Height = 167
+        Width = 161
+      end
+    end
+  end
+end

@@ -1,0 +1,278 @@
+object AnalysisForm: TAnalysisForm
+  Left = 450
+  Height = 93
+  Top = 327
+  Width = 598
+  Caption = 'Analysis'
+  ClientHeight = 93
+  ClientWidth = 598
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnHide = FormHide
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.0.6'
+  Visible = False
+  object ListBox: TListBox
+    Left = 0
+    Height = 67
+    Top = 26
+    Width = 598
+    Align = alClient
+    Font.Height = -15
+    ItemHeight = 0
+    OnDblClick = ListBoxDblClick
+    ParentFont = False
+    ScrollWidth = 596
+    TabOrder = 1
+    TopIndex = -1
+  end
+  object IndicatorPanel: TPanel
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 598
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    ClientHeight = 24
+    ClientWidth = 596
+    Font.Height = -15
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+    object FlowPanel: TFlowPanel
+      Left = 0
+      Height = 24
+      Top = 0
+      Width = 596
+      Align = alClient
+      AutoSize = True
+      BevelOuter = bvNone
+      ControlList = <      
+        item
+          Control = ScorePanel
+          WrapAfter = waAuto
+          Index = 0
+        end      
+        item
+          Control = DepthPanel
+          WrapAfter = waAuto
+          Index = 1
+        end      
+        item
+          Control = TimePanel
+          WrapAfter = waAuto
+          Index = 2
+        end      
+        item
+          Control = NodesPanel
+          WrapAfter = waAuto
+          Index = 3
+        end      
+        item
+          Control = SpeedPanel
+          WrapAfter = waAuto
+          Index = 4
+        end      
+        item
+          Control = CurMovePanel
+          WrapAfter = waAuto
+          Index = 5
+        end>
+      FlowLayout = tlTop
+      FlowStyle = fsLeftRightTopBottom
+      TabOrder = 0
+      object DepthPanel: TPanel
+        Left = 54
+        Height = 24
+        Top = 0
+        Width = 41
+        Align = alLeft
+        AutoSize = True
+        ClientHeight = 24
+        ClientWidth = 41
+        TabOrder = 1
+        object DepthLabel: TLabel
+          Left = 7
+          Height = 22
+          Top = 1
+          Width = 27
+          Align = alLeft
+          BorderSpacing.Left = 6
+          BorderSpacing.Right = 6
+          Caption = 'd=4'
+          Layout = tlCenter
+          ParentColor = False
+        end
+      end
+      object TimePanel: TPanel
+        Left = 95
+        Height = 24
+        Top = 0
+        Width = 76
+        Align = alLeft
+        AutoSize = True
+        ClientHeight = 24
+        ClientWidth = 76
+        TabOrder = 2
+        object TimeLabel: TLabel
+          Left = 7
+          Height = 22
+          Top = 1
+          Width = 62
+          Align = alLeft
+          BorderSpacing.Left = 6
+          BorderSpacing.Right = 6
+          Caption = '00:00:01'
+          Layout = tlCenter
+          ParentColor = False
+        end
+      end
+      object NodesPanel: TPanel
+        Left = 171
+        Height = 24
+        Top = 0
+        Width = 64
+        Align = alLeft
+        AutoSize = True
+        ClientHeight = 24
+        ClientWidth = 64
+        TabOrder = 3
+        object NodesLabel: TLabel
+          Left = 7
+          Height = 22
+          Top = 1
+          Width = 50
+          Align = alLeft
+          BorderSpacing.Left = 6
+          BorderSpacing.Right = 6
+          Caption = '128 kN'
+          Layout = tlCenter
+          ParentColor = False
+        end
+      end
+      object SpeedPanel: TPanel
+        Left = 235
+        Height = 24
+        Top = 0
+        Width = 77
+        Align = alLeft
+        AutoSize = True
+        ClientHeight = 24
+        ClientWidth = 77
+        TabOrder = 4
+        object SpeedLabel: TLabel
+          Left = 7
+          Height = 22
+          Top = 1
+          Width = 63
+          Align = alLeft
+          BorderSpacing.Left = 6
+          BorderSpacing.Right = 6
+          Caption = '128 kN/s'
+          Layout = tlCenter
+          ParentColor = False
+        end
+      end
+      object CurMovePanel: TPanel
+        Left = 312
+        Height = 24
+        Top = 0
+        Width = 78
+        Align = alLeft
+        AutoSize = True
+        ClientHeight = 24
+        ClientWidth = 78
+        TabOrder = 5
+        object CurMoveLabel: TLabel
+          Left = 7
+          Height = 22
+          Top = 1
+          Width = 64
+          Align = alLeft
+          BorderSpacing.Left = 6
+          BorderSpacing.Right = 6
+          Caption = 'e4 (1/20)'
+          Layout = tlCenter
+          ParentColor = False
+        end
+      end
+      object ScorePanel: TPanel
+        Left = 0
+        Height = 24
+        Top = 0
+        Width = 54
+        Align = alLeft
+        AutoSize = True
+        ClientHeight = 24
+        ClientWidth = 54
+        TabOrder = 0
+        object ScoreLabel: TLabel
+          Left = 7
+          Height = 22
+          Top = 1
+          Width = 40
+          Align = alLeft
+          BorderSpacing.Left = 6
+          BorderSpacing.Right = 6
+          Caption = '+0.00'
+          Layout = tlCenter
+          ParentColor = False
+        end
+      end
+    end
+  end
+  object EngineHandle: TTimer
+    Interval = 200
+    OnTimer = EngineHandleTimer
+    left = 184
+    top = 40
+  end
+  object OpenDialog: TOpenDialog
+    Title = 'Select engine'
+    Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 240
+    top = 40
+  end
+  object ActionList: TActionList
+    Images = GlyphKeeper.ImageList
+    left = 112
+    top = 40
+    object AnalysisAction: TAction
+      Caption = 'Start analysis'
+      ImageIndex = 15
+      OnExecute = AnalysisActionExecute
+      OnUpdate = AnalysisActionUpdate
+      ShortCut = 113
+    end
+    object AnalysisStopAction: TAction
+      Caption = 'Stop analysis'
+      ImageIndex = 16
+      OnExecute = AnalysisStopActionExecute
+      OnUpdate = AnalysisStopActionUpdate
+      ShortCut = 16497
+    end
+    object EngineAboutAction: TAction
+      Caption = 'About engine...'
+      ImageIndex = 18
+      OnExecute = EngineAboutActionExecute
+      OnUpdate = EngineAboutActionUpdate
+      ShortCut = 24688
+    end
+    object EngineSettingsAction: TAction
+      Caption = 'Engine settings...'
+      ImageIndex = 17
+      OnExecute = EngineSettingsActionExecute
+      OnUpdate = EngineSettingsActionUpdate
+      ShortCut = 24689
+    end
+    object EngineSelectAction: TAction
+      Caption = 'Select engine...'
+      ImageIndex = 19
+      OnExecute = EngineSelectActionExecute
+      ShortCut = 24645
+    end
+  end
+end

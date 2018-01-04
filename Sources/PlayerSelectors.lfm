@@ -1,0 +1,150 @@
+object PlayerSelector: TPlayerSelector
+  Left = 0
+  Height = 166
+  Top = 0
+  Width = 319
+  AutoSize = True
+  ClientHeight = 166
+  ClientWidth = 319
+  TabOrder = 0
+  object PlayerSelect: TRadioGroup
+    Left = 0
+    Height = 78
+    Top = 0
+    Width = 319
+    Align = alClient
+    AutoFill = True
+    AutoSize = True
+    Caption = 'Player'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 59
+    ClientWidth = 317
+    ItemIndex = 0
+    Items.Strings = (
+      'Human'
+      'Computer'
+    )
+    OnClick = PlayerSelectClick
+    TabOrder = 0
+  end
+  object HumanGroup: TGroupBox
+    Left = 0
+    Height = 43
+    Top = 78
+    Width = 319
+    Align = alBottom
+    AutoSize = True
+    Caption = 'Human options'
+    ClientHeight = 24
+    ClientWidth = 317
+    TabOrder = 1
+    object HumanLabel: TLabel
+      Left = 0
+      Height = 23
+      Top = 0
+      Width = 35
+      Align = alLeft
+      BorderSpacing.Right = 3
+      Caption = 'Name:'
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object HumanName: TEdit
+      Left = 38
+      Height = 23
+      Top = 0
+      Width = 277
+      Align = alClient
+      TabOrder = 0
+      Text = 'Player'
+    end
+  end
+  object EngineGroup: TGroupBox
+    Left = 0
+    Height = 45
+    Top = 121
+    Width = 319
+    Align = alBottom
+    AutoSize = True
+    Caption = 'Engine options'
+    ClientHeight = 26
+    ClientWidth = 317
+    Enabled = False
+    TabOrder = 2
+    object EngineLabel: TLabel
+      Left = 0
+      Height = 25
+      Top = 0
+      Width = 27
+      Align = alLeft
+      BorderSpacing.Right = 3
+      Caption = 'Path:'
+      Enabled = False
+      Layout = tlCenter
+      ParentColor = False
+    end
+    object EngineOptions: TButton
+      Left = 238
+      Height = 25
+      Top = 0
+      Width = 77
+      Align = alRight
+      AutoSize = True
+      Caption = 'Options...'
+      Enabled = False
+      OnClick = EngineOptionsClick
+      TabOrder = 2
+    end
+    object EnginePath: TEdit
+      AnchorSideLeft.Control = EngineLabel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = EngineLabel
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = SelectBtn
+      Left = 30
+      Height = 23
+      Top = 1
+      Width = 182
+      Anchors = [akTop, akLeft, akRight]
+      Enabled = False
+      TabOrder = 0
+    end
+    object SelectBtn: TBitBtn
+      Left = 212
+      Height = 25
+      Top = 0
+      Width = 26
+      Align = alRight
+      Enabled = False
+      OnClick = SelectBtnClick
+      TabOrder = 1
+    end
+  end
+  object FileNameEdit: TFileNameEdit
+    Left = 0
+    Height = 23
+    Top = 0
+    Width = 2
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    ReadOnly = True
+    TabOrder = 3
+    TabStop = False
+    Visible = False
+  end
+  object OpenDialog: TOpenDialog
+    Title = 'Select engine...'
+    Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 144
+    top = 29
+  end
+end

@@ -1,0 +1,136 @@
+object TimerConfigureForm: TTimerConfigureForm
+  Left = 488
+  Height = 170
+  Top = 207
+  Width = 325
+  AutoSize = True
+  BorderStyle = bsDialog
+  Caption = 'Set time control...'
+  ClientHeight = 170
+  ClientWidth = 325
+  OnCreate = FormCreate
+  OnResize = FormResize
+  Position = poScreenCenter
+  Visible = False
+  object Panel: TPanel
+    Left = 0
+    Height = 129
+    Top = 0
+    Width = 252
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 129
+    ClientWidth = 252
+    TabOrder = 0
+    object ButtonPanel: TButtonPanel
+      Left = 6
+      Height = 42
+      Top = 81
+      Width = 240
+      OKButton.Name = 'OKButton'
+      OKButton.Caption = 'OK'
+      OKButton.DefaultCaption = False
+      HelpButton.Name = 'HelpButton'
+      HelpButton.DefaultCaption = True
+      CloseButton.Name = 'CloseButton'
+      CloseButton.DefaultCaption = True
+      CancelButton.Name = 'CancelButton'
+      CancelButton.Caption = 'Cancel'
+      CancelButton.DefaultCaption = False
+      TabOrder = 0
+      ShowButtons = [pbOK, pbCancel]
+    end
+    inline Configurer: TTimerConfigurePair
+      Height = 75
+      Width = 252
+      Align = alClient
+      ClientHeight = 75
+      ClientWidth = 252
+      OnResize = ConfigurerResize
+      TabOrder = 1
+      inherited SameTimeCheck: TCheckBox
+        Height = 21
+        Width = 252
+      end
+      inherited WhiteGroup: TGroupBox
+        Height = 54
+        Top = 21
+        Width = 126
+        ClientHeight = 35
+        ClientWidth = 124
+        inherited WhiteConfigurer: TTimerConfigure
+          Height = 35
+          Width = 124
+          Align = alClient
+          ClientHeight = 35
+          ClientWidth = 124
+          inherited Panel: TPanel
+            Height = 34
+            Width = 124
+            ClientHeight = 32
+            ClientWidth = 122
+            inherited ClearButton: TBitBtn
+              Left = 80
+              Height = 32
+              Width = 42
+            end
+            inherited EraseButton: TBitBtn
+              Left = 36
+              Height = 32
+              Width = 44
+            end
+            inherited AddButton: TBitBtn
+              Height = 32
+              Width = 36
+            end
+          end
+          inherited ControlPanel: TPanel
+            Height = 1
+            Top = 34
+            Width = 124
+          end
+        end
+      end
+      inherited BlackGroup: TGroupBox
+        Left = 126
+        Height = 54
+        Top = 21
+        Width = 126
+        ClientHeight = 35
+        ClientWidth = 124
+        inherited BlackConfigurer: TTimerConfigure
+          Height = 35
+          Width = 124
+          Align = alClient
+          ClientHeight = 35
+          ClientWidth = 124
+          inherited Panel: TPanel
+            Height = 34
+            Width = 124
+            ClientHeight = 32
+            ClientWidth = 122
+            inherited ClearButton: TBitBtn
+              Left = 80
+              Height = 32
+              Width = 42
+            end
+            inherited EraseButton: TBitBtn
+              Left = 36
+              Height = 32
+              Width = 44
+            end
+            inherited AddButton: TBitBtn
+              Height = 32
+              Width = 36
+            end
+          end
+          inherited ControlPanel: TPanel
+            Height = 1
+            Top = 34
+            Width = 124
+          end
+        end
+      end
+    end
+  end
+end

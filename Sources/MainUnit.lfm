@@ -1,0 +1,527 @@
+object MainForm: TMainForm
+  Left = 402
+  Height = 629
+  Top = 419
+  Width = 964
+  Caption = 'Chess 256'
+  ClientHeight = 629
+  ClientWidth = 964
+  KeyPreview = True
+  Menu = MainMenu
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.0.6'
+  Visible = False
+  object ToolBar: TToolBar
+    Left = 0
+    Height = 34
+    Top = 0
+    Width = 964
+    AutoSize = True
+    ButtonHeight = 32
+    ButtonWidth = 32
+    Caption = 'ToolBar'
+    Color = clWindow
+    Images = GlyphKeeper.ImageList
+    List = True
+    ParentColor = False
+    TabOrder = 0
+    object ToolButton25: TToolButton
+      Left = 713
+      Top = 2
+      Action = AboutAction
+    end
+    object ToolButton1: TToolButton
+      Left = 1
+      Top = 2
+      Action = NewGameAction
+    end
+    object ToolButton2: TToolButton
+      Left = 33
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton2'
+      Style = tbsSeparator
+    end
+    object ToolButton3: TToolButton
+      Left = 41
+      Top = 2
+      Action = ResignAction
+    end
+    object ToolButton4: TToolButton
+      Left = 73
+      Top = 2
+      Action = OfferDrawAction
+    end
+    object ToolButton5: TToolButton
+      Left = 105
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton5'
+      Style = tbsSeparator
+    end
+    object ToolButton6: TToolButton
+      Left = 185
+      Top = 2
+      Action = NotationForm.InsertCommentAction
+    end
+    object ToolButton7: TToolButton
+      Left = 217
+      Top = 2
+      Action = NotationForm.InsertNAGAction
+    end
+    object ToolButton8: TToolButton
+      Left = 249
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton8'
+      Style = tbsSeparator
+    end
+    object ToolButton9: TToolButton
+      Left = 257
+      Top = 2
+      Action = NotationForm.CopyFENAction
+    end
+    object ToolButton10: TToolButton
+      Left = 289
+      Top = 2
+      Action = NotationForm.CopyPGNAction
+    end
+    object ToolButton11: TToolButton
+      Left = 321
+      Top = 2
+      Action = NotationForm.PasteFENAction
+    end
+    object ToolButton12: TToolButton
+      Left = 353
+      Top = 2
+      Action = NotationForm.PastePGNAction
+    end
+    object ToolButton13: TToolButton
+      Left = 385
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton13'
+      Style = tbsSeparator
+    end
+    object ToolButton14: TToolButton
+      Left = 393
+      Top = 2
+      Action = NotationForm.EditNodeAction
+    end
+    object ToolButton15: TToolButton
+      Left = 425
+      Top = 2
+      Action = NotationForm.DelNodeAction
+    end
+    object ToolButton16: TToolButton
+      Left = 457
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton16'
+      Style = tbsSeparator
+    end
+    object ToolButton17: TToolButton
+      Left = 465
+      Top = 2
+      Action = NotationForm.TruncateNotationAction
+    end
+    object ToolButton18: TToolButton
+      Left = 497
+      Top = 2
+      Action = NotationForm.ClearNotationAction
+    end
+    object ToolButton19: TToolButton
+      Left = 529
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton19'
+      Style = tbsSeparator
+    end
+    object ToolButton20: TToolButton
+      Left = 577
+      Top = 2
+      Action = AnalysisForm.AnalysisAction
+    end
+    object ToolButton21: TToolButton
+      Left = 609
+      Top = 2
+      Action = AnalysisForm.AnalysisStopAction
+    end
+    object ToolButton22: TToolButton
+      Left = 641
+      Top = 2
+      Action = AnalysisForm.EngineSettingsAction
+    end
+    object ToolButton23: TToolButton
+      Left = 673
+      Top = 2
+      Action = AnalysisForm.EngineSelectAction
+    end
+    object ToolButton24: TToolButton
+      Left = 705
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton24'
+      Style = tbsSeparator
+    end
+    object ToolButton26: TToolButton
+      Left = 537
+      Top = 2
+      Action = BoardForm.InvertBoardAction
+    end
+    object ToolButton27: TToolButton
+      Left = 569
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton27'
+      Style = tbsSeparator
+    end
+    object ToolButton28: TToolButton
+      Left = 113
+      Top = 2
+      Action = NotationForm.UndoAction
+    end
+    object ToolButton29: TToolButton
+      Left = 145
+      Top = 2
+      Action = NotationForm.RedoAction
+    end
+    object ToolButton30: TToolButton
+      Left = 177
+      Height = 32
+      Top = 2
+      Caption = 'ToolButton30'
+      Style = tbsSeparator
+    end
+  end
+  object GlobalPanel: TPanel
+    Left = 0
+    Height = 567
+    Top = 34
+    Width = 964
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 567
+    ClientWidth = 964
+    Color = clWindow
+    ParentColor = False
+    TabOrder = 1
+    object Panel1: TPanel
+      Left = 565
+      Height = 567
+      Top = 0
+      Width = 399
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 567
+      ClientWidth = 399
+      Color = clRed
+      ParentColor = False
+      TabOrder = 0
+      object Panel5: TPanel
+        Left = 0
+        Height = 133
+        Top = 0
+        Width = 399
+        Align = alTop
+        BevelOuter = bvNone
+        Color = clFuchsia
+        ParentColor = False
+        TabOrder = 0
+      end
+      object Splitter4: TSplitter
+        Cursor = crVSplit
+        Left = 0
+        Height = 5
+        Top = 133
+        Width = 399
+        Align = alTop
+        MinSize = 1
+        ResizeAnchor = akTop
+        ResizeStyle = rsPattern
+      end
+    end
+    object Panel2: TPanel
+      Left = 0
+      Height = 567
+      Top = 0
+      Width = 152
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = clLime
+      ParentColor = False
+      TabOrder = 1
+    end
+    object Panel3: TPanel
+      Left = 157
+      Height = 567
+      Top = 0
+      Width = 403
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 567
+      ClientWidth = 403
+      Color = clBlue
+      ParentColor = False
+      TabOrder = 2
+      object Splitter3: TSplitter
+        Cursor = crVSplit
+        Left = 0
+        Height = 5
+        Top = 460
+        Width = 403
+        Align = alBottom
+        MinSize = 1
+        ResizeAnchor = akBottom
+        ResizeStyle = rsPattern
+      end
+      object Panel4: TPanel
+        Left = 0
+        Height = 102
+        Top = 465
+        Width = 403
+        Align = alBottom
+        BevelOuter = bvNone
+        Color = clYellow
+        ParentColor = False
+        TabOrder = 1
+      end
+    end
+    object Splitter2: TSplitter
+      Left = 152
+      Height = 567
+      Top = 0
+      Width = 5
+      MinSize = 1
+      ResizeStyle = rsPattern
+    end
+    object Splitter1: TSplitter
+      Left = 560
+      Height = 567
+      Top = 0
+      Width = 5
+      Align = alRight
+      Anchors = [akRight]
+      MinSize = 1
+      ResizeAnchor = akRight
+      ResizeStyle = rsPattern
+    end
+  end
+  object EngineHandleTimer: TTimer
+    Interval = 25
+    OnTimer = EngineHandleTimerTimer
+    left = 128
+    top = 64
+  end
+  object FontDialog: TFontDialog
+    Title = 'Select font...'
+    MinFontSize = 0
+    MaxFontSize = 0
+    PreviewText = '♙♘♗♖♕♔♟♞♝♜♛♚ABCDEFGH12345678'
+    left = 32
+    top = 64
+  end
+  object ActionList: TActionList
+    Images = GlyphKeeper.ImageList
+    left = 216
+    top = 64
+    object AboutAction: TAction
+      Caption = 'About'
+      ImageIndex = 20
+      OnExecute = AboutActionExecute
+      ShortCut = 8304
+    end
+    object ChangeLookAction: TAction
+      Caption = 'Change look'
+      ImageIndex = 10
+      OnExecute = ChangeLookActionExecute
+      ShortCut = 32834
+    end
+    object FontSelectAction: TAction
+      Caption = 'Font...'
+      ImageIndex = 11
+      OnExecute = FontSelectActionExecute
+      ShortCut = 32838
+    end
+    object NewGameAction: TAction
+      Caption = 'New game'
+      ImageIndex = 12
+      OnExecute = NewGameActionExecute
+      ShortCut = 16462
+    end
+    object ResignAction: TAction
+      Caption = 'Resign'
+      ImageIndex = 13
+      OnExecute = ResignActionExecute
+      OnUpdate = ResignActionUpdate
+      ShortCut = 16466
+    end
+    object OfferDrawAction: TAction
+      Caption = 'Offer a draw'
+      ImageIndex = 14
+      OnExecute = OfferDrawActionExecute
+      OnUpdate = OfferDrawActionUpdate
+      ShortCut = 16452
+    end
+    object ExitAction: TAction
+      Caption = 'Exit'
+      ImageIndex = 21
+      OnExecute = ExitActionExecute
+      ShortCut = 32883
+    end
+  end
+  object MainMenu: TMainMenu
+    left = 288
+    top = 64
+    object MenuItem1: TMenuItem
+      Caption = 'Game'
+      object MenuItem6: TMenuItem
+        Action = NewGameAction
+      end
+      object MenuItem7: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem8: TMenuItem
+        Action = ResignAction
+      end
+      object MenuItem9: TMenuItem
+        Action = OfferDrawAction
+      end
+      object MenuItem10: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem11: TMenuItem
+        Action = ExitAction
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Edit'
+      object MenuItem46: TMenuItem
+        Action = NotationForm.UndoAction
+      end
+      object MenuItem47: TMenuItem
+        Action = NotationForm.RedoAction
+      end
+      object MenuItem48: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem23: TMenuItem
+        Action = NotationForm.MakeMoveAction
+      end
+      object MenuItem24: TMenuItem
+        Action = NotationForm.InsertCommentAction
+      end
+      object MenuItem25: TMenuItem
+        Action = NotationForm.InsertNAGAction
+      end
+      object MenuItem26: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem27: TMenuItem
+        Action = NotationForm.CopyFENAction
+      end
+      object MenuItem28: TMenuItem
+        Action = NotationForm.CopyPGNAction
+      end
+      object MenuItem29: TMenuItem
+        Action = NotationForm.PasteFENAction
+      end
+      object MenuItem30: TMenuItem
+        Action = NotationForm.PastePGNAction
+      end
+      object MenuItem31: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem32: TMenuItem
+        Action = NotationForm.EditNodeAction
+      end
+      object MenuItem33: TMenuItem
+        Action = NotationForm.DelNodeAction
+      end
+      object MenuItem37: TMenuItem
+        Action = NotationForm.MoveLeftAction
+      end
+      object MenuItem38: TMenuItem
+        Action = NotationForm.MoveRightAction
+      end
+      object MenuItem39: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem34: TMenuItem
+        Action = NotationForm.TruncateNotationAction
+      end
+      object MenuItem35: TMenuItem
+        Action = NotationForm.ClearNotationAction
+      end
+      object MenuItem36: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem40: TMenuItem
+        Action = NotationForm.GoFirstAction
+      end
+      object MenuItem42: TMenuItem
+        Action = NotationForm.GoPrevAction
+      end
+      object MenuItem43: TMenuItem
+        Action = NotationForm.GoNextAction
+      end
+      object MenuItem41: TMenuItem
+        Action = NotationForm.GoLastAction
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'View'
+      object MenuItem12: TMenuItem
+        Action = ChangeLookAction
+      end
+      object MenuItem13: TMenuItem
+        Action = ClockForm.ClockOrientationAction
+      end
+      object MenuItem14: TMenuItem
+        Action = FontSelectAction
+      end
+      object MenuItem44: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem45: TMenuItem
+        Action = BoardForm.InvertBoardAction
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Analysis'
+      object MenuItem15: TMenuItem
+        Action = AnalysisForm.AnalysisAction
+      end
+      object MenuItem16: TMenuItem
+        Action = AnalysisForm.AnalysisStopAction
+      end
+      object MenuItem19: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem17: TMenuItem
+        Action = AnalysisForm.EngineAboutAction
+      end
+      object MenuItem18: TMenuItem
+        Action = AnalysisForm.EngineSettingsAction
+      end
+      object MenuItem20: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem21: TMenuItem
+        Action = AnalysisForm.EngineSelectAction
+      end
+    end
+    object WindowMenu: TMenuItem
+      Caption = 'Window'
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Help'
+      object MenuItem22: TMenuItem
+        Action = AboutAction
+      end
+    end
+  end
+end

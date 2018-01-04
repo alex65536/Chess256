@@ -1,0 +1,7 @@
+object VisualChessNotation: TVisualChessNotation
+  Left = 0
+  Height = 201
+  Top = 0
+  Width = 270
+  TabOrder = 0
+end

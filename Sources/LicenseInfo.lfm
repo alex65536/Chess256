@@ -1,0 +1,67 @@
+object LicenseInfoFrom: TLicenseInfoFrom
+  Left = 0
+  Height = 358
+  Top = 0
+  Width = 485
+  AutoSize = True
+  BorderStyle = bsDialog
+  Caption = 'License info'
+  ClientHeight = 358
+  ClientWidth = 485
+  Color = 16773360
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  Visible = False
+  object LicenseLabel: TLabel
+    Left = 3
+    Height = 252
+    Top = 44
+    Width = 415
+    Align = alClient
+    BorderSpacing.Around = 3
+    Caption = 'Copyright © 2016, 2018 Kernozhitsky Alexander <sh200105@mail.ru>'#10#10'This program is free software: you can redistribute it and/or modify'#10'it under the terms of the GNU General Public License as published by'#10'the Free Software Foundation, either version 3 of the License, or'#10'(at your option) any later version.'#10#10'This program is distributed in the hope that it will be useful,'#10'but WITHOUT ANY WARRANTY; without even the implied warranty of'#10'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the'#10'GNU General Public License for more details.'#10#10'You should have received a copy of the GNU General Public License'#10'along with this program.  If not, see <https://www.gnu.org/licenses/>.'
+    ParentColor = False
+  end
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 42
+    Top = 302
+    Width = 409
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.Caption = '&Close'
+    CloseButton.DefaultCaption = False
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 0
+    ShowButtons = [pbClose]
+  end
+  object HeaderLabel: TLabel
+    Tag = 18
+    Left = 0
+    Height = 33
+    Top = 0
+    Width = 421
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'License info'
+    Font.Color = clRed
+    Font.Height = -24
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Bevel: TBevel
+    Left = 0
+    Height = 5
+    Top = 36
+    Width = 421
+    Align = alTop
+    BorderSpacing.Top = 3
+    Shape = bsTopLine
+  end
+end

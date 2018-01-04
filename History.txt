@@ -1,0 +1,89 @@
+0.1.3.0 (0.13 alpha) (20.11.2016 20:27)
+[*] The size of the executable decreased a little.
+[*] All the images were redrawn.
+[*] Project icon changed a little.
+[*] Added Undo and Redo buttons.
+
+0.1.2.0 (0.12 alpha) (31.10.2016 20:11)
+[*] The project had a redesign.
+[*] Now, it is single-window.
+[*] Several bug fixes.
+[*] Now, you can show/hide some windows.
+[*] Added the imbalance frame.
+
+0.1.1.0 (0.11 alpha) (08.10.2016 18:55)
+[*] Small notation optimizations.
+[*] Many bugs fixed.
+[*] Many bugs added. :)
+[*] Added icons for buttons.
+[*] Added the main menu.
+[*] Added a better toolbar with buttons.
+[*] FEN parser became more strict.
+
+0.1.0.0 (0.10 alpha) (10.08.2016 13:05)
+[*] Added the new board look (based on chess characters in fonts).
+[*] Now you can switch the old look and the new look.
+[*] Games against another player or the computer are now allowed.
+[*] Minor clock fixes.
+[*] Now analysis options stop the analysis only when you press "OK".
+[*] Removed the testing console commands.
+
+0.0.0.9 (pre-alpha 9) (01.08.2016 12:00)
+[*] Tiny move variations improvement.
+[*] The move parser is made more flexible (now it can parse UCI move chains).
+[*] Improved the chess clock.
+[*] Improved the text viewing in the Notation.
+[*] Dialogs now use AutoSize (so they are viewing correctly).
+[*] Added the analysis using UCI chess engines.
+[*] Now, Linux version also exists.
+
+0.0.0.8 (pre-alpha 8) (04.07.2016 21:12)
+[*] Optimized the board redrawing.
+[*] Made better scolling.
+[*] Several bug fixes.
+[*] Now the notation contains chess pieces instead of English letters.
+[*] Optimized the notation (now all the notation operations are much faster).
+[*] Added the game results.
+[*] Improved the Position Editor.
+
+0.0.0.7 (pre-alpha 7) (23.06.2016 18:41)
+[*] Changed the icon.
+[*] Added the debug console.
+[*] Added the chess notation with adding moves, inserting, etc.
+
+0.0.0.6 (pre-alpha 6) (26.05.2016 22:37)
+[*] Added the chess notation.
+[*] Now new moves add to the notation.
+[*] You can make moves by right-clicking on the move variants.
+[*] Added the heap testing using the heaptrc unit.
+
+0.0.0.5 (pre-alpha 5) (06.05.2016 12:27)
+[*] Added the chess clock.
+[*] Added the chess clock testing form.
+
+0.0.0.4 (pre-alpha 4) (02.05.2016 16:35)
+[*] Now the default value in "Make move" is current move.
+[*] Tiny changes in "About box".
+[*] Added the board borders.
+[*] Minor changes and bug fixes.
+
+0.0.0.3 (pre-alpha 3) (10.04.2016 18:44)
+[*] Tiny graphics changes.
+[*] Added AboutBox.
+[*] Added High DPI support.
+[*] Added a move parser.
+[*] Added making a move by typing it.
+
+0.0.0.2 (pre-alpha 2) (06.04.2016 21:47)
+[*] Now you can make only correct moves.
+[*] Added a move list.
+[*] Optimized graphics.
+[*] Added a position editor.
+
+0.0.0.1 (pre-alpha 1) (31.03.2016 21:20)
+[*] Added a chessboard.
+[*] You can make moves.
+[*] Added PromoteDialog.
+
+0.0.0.0 (pre-alpha 0) (27.03.2016 20:00)
+[*] The development has started.

@@ -1,0 +1,88 @@
+object TimerConfigure: TTimerConfigure
+  Left = 0
+  Height = 264
+  Top = 0
+  Width = 324
+  AutoSize = True
+  ClientHeight = 264
+  ClientWidth = 324
+  TabOrder = 0
+  object Panel: TPanel
+    Left = 0
+    Height = 29
+    Top = 0
+    Width = 324
+    Align = alTop
+    AutoSize = True
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    ClientHeight = 29
+    ClientWidth = 324
+    TabOrder = 0
+    object ClearButton: TBitBtn
+      Left = 101
+      Height = 25
+      Top = 0
+      Width = 53
+      Action = ClearAction
+      Align = alLeft
+      AutoSize = True
+      TabOrder = 2
+    end
+    object EraseButton: TBitBtn
+      Left = 48
+      Height = 25
+      Top = 0
+      Width = 53
+      Action = EraseAction
+      Align = alLeft
+      AutoSize = True
+      TabOrder = 1
+    end
+    object AddButton: TBitBtn
+      Left = 0
+      Height = 25
+      Top = 0
+      Width = 48
+      Action = AddAction
+      Align = alLeft
+      AutoSize = True
+      TabOrder = 0
+    end
+  end
+  object ControlPanel: TPanel
+    Left = 0
+    Height = 235
+    Top = 29
+    Width = 324
+    Align = alClient
+    AutoSize = True
+    BevelOuter = bvNone
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 1
+  end
+  object ActionList: TActionList
+    Images = GlyphKeeper.ImageList
+    left = 67
+    top = 131
+    object AddAction: TAction
+      Caption = 'Add'
+      ImageIndex = 6
+      OnExecute = AddActionExecute
+      OnUpdate = AddActionUpdate
+    end
+    object EraseAction: TAction
+      Caption = 'Erase'
+      ImageIndex = 7
+      OnExecute = EraseActionExecute
+      OnUpdate = EraseActionUpdate
+    end
+    object ClearAction: TAction
+      Caption = 'Clear'
+      ImageIndex = 8
+      OnExecute = ClearActionExecute
+      OnUpdate = ClearActionUpdate
+    end
+  end
+end

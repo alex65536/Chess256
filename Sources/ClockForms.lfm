@@ -1,0 +1,63 @@
+object ClockForm: TClockForm
+  Left = 478
+  Height = 107
+  Top = 238
+  Width = 310
+  Caption = 'Clock'
+  ClientHeight = 107
+  ClientWidth = 310
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.6'
+  Visible = False
+  inline VisualClock: TVisualChessClock
+    Height = 107
+    Width = 310
+    Align = alClient
+    ClientHeight = 107
+    ClientWidth = 310
+    inherited WhitePanel: TPanel
+      Width = 310
+      ClientWidth = 310
+      inherited WhiteShape: TShape
+        Width = 310
+      end
+      inherited LWhite: TLabel
+        Width = 74
+        Font.Color = clBlack
+      end
+      inherited WhiteTime: TLabel
+        Left = 201
+        Width = 106
+      end
+    end
+    inherited BlackPanel: TPanel
+      Height = 57
+      Width = 310
+      ClientHeight = 57
+      ClientWidth = 310
+      inherited BlackShape: TShape
+        Height = 57
+        Width = 310
+      end
+      inherited LBlack: TLabel
+        Height = 51
+        Width = 67
+      end
+      inherited BlackTime: TLabel
+        Left = 203
+        Height = 51
+        Width = 104
+      end
+    end
+  end
+  object ActionList: TActionList
+    Images = GlyphKeeper.ImageList
+    left = 136
+    top = 40
+    object ClockOrientationAction: TAction
+      Caption = 'Change clock orientation'
+      OnExecute = ClockOrientationActionExecute
+      ShortCut = 32835
+    end
+  end
+end

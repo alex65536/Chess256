@@ -1,0 +1,7 @@
+**/backup/**
+**/lib/**
+*.lps
+*.log
+*.res
+.fuse*
+Binary/Chess256

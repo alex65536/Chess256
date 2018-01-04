@@ -1,0 +1,156 @@
+object NotationForm: TNotationForm
+  Left = 389
+  Height = 647
+  Top = 60
+  Width = 326
+  Align = alClient
+  Caption = 'Notation'
+  ClientHeight = 647
+  ClientWidth = 326
+  KeyPreview = True
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '1.8.0.6'
+  Visible = False
+  inline Notation: TVisualChessNotation
+    Height = 647
+    Width = 326
+    Align = alClient
+  end
+  object ActionList: TActionList
+    Images = GlyphKeeper.ImageList
+    left = 109
+    top = 89
+    object DelNodeAction: TAction
+      Caption = 'Delete current node'
+      ImageIndex = 22
+      OnExecute = DelNodeActionExecute
+      OnUpdate = DelNodeActionUpdate
+      ShortCut = 8
+    end
+    object MoveLeftAction: TAction
+      Caption = 'Move node left'
+      ImageIndex = 24
+      OnExecute = MoveLeftActionExecute
+      OnUpdate = MoveLeftActionUpdate
+      ShortCut = 16421
+    end
+    object MoveRightAction: TAction
+      Caption = 'Move node right'
+      ImageIndex = 23
+      OnExecute = MoveRightActionExecute
+      OnUpdate = MoveRightActionUpdate
+      ShortCut = 16423
+    end
+    object GoFirstAction: TAction
+      Caption = 'Go to the beginning'
+      ImageIndex = 25
+      OnExecute = GoFirstActionExecute
+      OnUpdate = GoFirstActionUpdate
+      ShortCut = 8229
+    end
+    object GoLastAction: TAction
+      Caption = 'Go to the ending'
+      ImageIndex = 26
+      OnExecute = GoLastActionExecute
+      OnUpdate = GoLastActionUpdate
+      ShortCut = 8231
+    end
+    object InsertCommentAction: TAction
+      Caption = 'Insert comment...'
+      ImageIndex = 28
+      OnExecute = InsertCommentActionExecute
+      OnUpdate = InsertCommentActionUpdate
+      ShortCut = 8259
+    end
+    object InsertNAGAction: TAction
+      Caption = 'Insert NAG...'
+      ImageIndex = 27
+      OnExecute = InsertNAGActionExecute
+      OnUpdate = InsertNAGActionUpdate
+      ShortCut = 8270
+    end
+    object EditNodeAction: TAction
+      Caption = 'Edit current node...'
+      ImageIndex = 29
+      OnExecute = EditNodeActionExecute
+      OnUpdate = EditNodeActionUpdate
+      ShortCut = 16453
+    end
+    object ClearNotationAction: TAction
+      Caption = 'Clear notation'
+      ImageIndex = 30
+      OnExecute = ClearNotationActionExecute
+      OnUpdate = ClearNotationActionUpdate
+      ShortCut = 16454
+    end
+    object TruncateNotationAction: TAction
+      Caption = 'Truncate notation'
+      ImageIndex = 31
+      OnExecute = TruncateNotationActionExecute
+      OnUpdate = TruncateNotationActionUpdate
+      ShortCut = 16468
+    end
+    object CopyPGNAction: TAction
+      Caption = 'Copy PGN'
+      ImageIndex = 33
+      OnExecute = CopyPGNActionExecute
+      ShortCut = 16451
+    end
+    object PastePGNAction: TAction
+      Caption = 'Paste PGN'
+      ImageIndex = 32
+      OnExecute = PastePGNActionExecute
+      OnUpdate = PastePGNActionUpdate
+      ShortCut = 16470
+    end
+    object CopyFENAction: TAction
+      Caption = 'Copy FEN'
+      ImageIndex = 1
+      OnExecute = CopyFENActionExecute
+      ShortCut = 24643
+    end
+    object PasteFENAction: TAction
+      Caption = 'Paste FEN'
+      ImageIndex = 5
+      OnExecute = PasteFENActionExecute
+      OnUpdate = PasteFENActionUpdate
+      ShortCut = 24662
+    end
+    object MakeMoveAction: TAction
+      Caption = 'Make a move'
+      ImageIndex = 9
+      OnExecute = MakeMoveActionExecute
+      OnUpdate = MakeMoveActionUpdate
+      ShortCut = 16461
+    end
+    object GoPrevAction: TAction
+      Caption = 'Go to previous node'
+      ImageIndex = 34
+      OnExecute = GoPrevActionExecute
+      OnUpdate = GoPrevActionUpdate
+      ShortCut = 37
+    end
+    object GoNextAction: TAction
+      Caption = 'Go to next node'
+      ImageIndex = 35
+      OnExecute = GoNextActionExecute
+      OnUpdate = GoNextActionUpdate
+      ShortCut = 39
+    end
+    object UndoAction: TAction
+      Caption = 'Undo'
+      ImageIndex = 37
+      OnExecute = UndoActionExecute
+      OnUpdate = UndoActionUpdate
+      ShortCut = 16474
+    end
+    object RedoAction: TAction
+      Caption = 'Redo'
+      ImageIndex = 38
+      OnExecute = RedoActionExecute
+      OnUpdate = RedoActionUpdate
+      ShortCut = 24666
+    end
+  end
+end
