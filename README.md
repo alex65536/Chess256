@@ -53,7 +53,7 @@ The project is in **ALPHA** state.
 
 * Customization, custom icon sets, board pieces, etc.
 
-Some missing things may also be found in Todo.txt.
+Some missing things may also be found in [Todo.txt](https://github.com/alex65536/Chess256/blob/master/Todo.txt).
 
 # History
 
@@ -81,32 +81,27 @@ Other widgetsets are not tested or unsupported:
 
 _Chess 256_ successfully builds on _Lazarus 1.8_ with _FPC 3.0.4_, but with some fixes it can be easily built in _Lazarus 1.6.x_ with _FPC 3.0.x_. Older versions of _FPC_ and _Lazarus_ were not tested. 
 
-[Stockfish](https://stockfishchess.org) is the official chess engine for _Chess 256_. You will need the _stockfish_ executables to run the program successfully. Now, the _stockfish_ binaries can be found in `Binary/` directory, but it's planned to remove the executable from the repo and to add _stockfish_ as a git subproject with building it from sources.
+[Stockfish](https://stockfishchess.org) is the default chess engine for _Chess 256_. You will need the _stockfish_ executables to run the program successfully. Now, the _stockfish_ binaries can be found in [`Binary/`](https://github.com/alex65536/Chess256/tree/master/Binary) directory, but it's planned to remove the executable from the repo and to add _stockfish_ as a git subproject with building it from sources.
 
 # Building _Chess 256_
 
 The building process should pass without any troubles. You can easily build the project from _Lazarus IDE_ or using command-line tools, such as `lazbuild`.
 
-But first, you may need to install the _CmdBox_ package into the IDE (located at `Packages/CmdBox`).
+But first, you may need to install the _CmdBox_ package into the IDE (located at [`Packages/CmdBox`](https://github.com/alex65536/Chess256/tree/master/Packages/CmdBox)).
 
 # Third-party software used by _Chess 256_
 
 * [Stockfish](https://stockfishchess.org) chess engine
 
-* CmdBox package which provides a command line component for the debug console. _**NOTE**_: _Chess 256_ uses the modified version of _CmdBox_, which adds some new methods to this component. The modified version can be found in this repo, `Packages/CmdBox` directory.
+* CmdBox package which provides a command line component for the debug console. _**NOTE**_: _Chess 256_ uses the modified version of _CmdBox_, which adds some new methods to this component. The modified version can be found in this repo, [`Packages/CmdBox`](https://github.com/alex65536/Chess256/tree/master/Packages/CmdBox) directory.
 
 # License info
 
 **License:** GPL 3+.
 
-_Chess 256_ is free software: you can redistribute it and/or modify
-it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/gpl.html) as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+_Chess 256_ is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/gpl.html) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-_Chess 256_ is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-[GNU General Public License](https://www.gnu.org/licenses/gpl.html) for more details.
+_Chess 256_ is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU General Public License](https://www.gnu.org/licenses/gpl.html) for more details.
 
 This repository also contains the _Stockfish_ chess engine binaries, which is also distributed under GNU GPL, version 3 or later. According to GPL, I must give a link where to obtain _Stockfish_ sources. [Here it is :)](https://github.com/official-stockfish/Stockfish)
