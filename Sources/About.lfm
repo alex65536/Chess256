@@ -1509,7 +1509,7 @@ object AboutBox: TAboutBox
       Height = 18
       Top = 76
       Width = 141
-      Caption = 'Kernozhitsky Alexander'
+      Caption = 'Alexander Kernozhitsky'
       ParentColor = False
     end
     object LDeveloperEMail: TLabel

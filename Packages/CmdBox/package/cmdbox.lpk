@@ -5,7 +5,7 @@
     <Name Value="cmdbox"/>
     <Type Value="RunAndDesignTime"/>
     <AddToProjectUsesSection Value="True"/>
-    <Author Value="Julian Schutsch (original developer), Kernozhisky Alexander (minor changes)"/>
+    <Author Value="Julian Schutsch (original developer), Alexander Kernozhitsky (minor changes)"/>
     <CompilerOptions>
       <Version Value="11"/>
       <PathDelim Value="\"/>

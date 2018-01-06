@@ -1,5 +1,5 @@
 { Copyright (C) 2007 Julian Schutsch
-  Copyright (C) 2016 Kernozhitsky Alexander
+  Copyright (C) 2016 Alexander Kernozhitsky
 
   This source is free software; you can redistribute it and/or modify it under
   the terms of the GNU Lesser General Public License as published by the Free
@@ -68,7 +68,7 @@
    Todo    : Input Masks
    Todo    : Docu
 
-   25.06.2016 : Modified by Kernozhitsky Alexander (alex256). Added a
+   25.06.2016 : Modified by Alexander Kernozhitsky (alex256). Added a
                 GetText method and Text property to get the text.
 }
 unit uCmdBox;
