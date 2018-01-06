@@ -117,5 +117,3 @@ _Chess 256_ is free software: you can redistribute it and/or modify it under the
 
 _Chess 256_ is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU General Public License](https://www.gnu.org/licenses/gpl.html) for more details.
-
-This repository also contains the _Stockfish_ chess engine binaries, which is also distributed under GNU GPL, version 3 or later. According to GPL, I must give a link where to obtain _Stockfish_ sources. [Here it is :)](https://github.com/official-stockfish/Stockfish)
