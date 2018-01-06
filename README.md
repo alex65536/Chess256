@@ -7,6 +7,7 @@ Welcome to the _Chess 256_ reposiory! :)
 # Contents
 
 * [About the program](#about-the-program)
+* [Screenshots](#screenshots)
 * [Features](#features)
 * [Missing things](#missing-things)
 * [History](#history)
@@ -20,6 +21,10 @@ Welcome to the _Chess 256_ reposiory! :)
 _Chess 256_ is a chess program for playing, editing and analysing chess games. This project was supposed to be a very powerful chess application, but many features are missing by now. Though, many basic things have been already implemented.
 
 The project is in **ALPHA** state.
+
+# Screenshots
+
+![Screenshot](https://raw.githubusercontent.com/alex65536/Chess256/master/Screenshot.png)
 
 # Features
 
