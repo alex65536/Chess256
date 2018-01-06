@@ -88,6 +88,8 @@ _Chess 256_ successfully builds on _Lazarus 1.8_ with _FPC 3.0.4_, but with some
 
 [Stockfish](https://stockfishchess.org) is the default chess engine for _Chess 256_. You will need the _stockfish_ executables to run the program successfully. Now, the _stockfish_ binaries can be found in [`Binary/`](https://github.com/alex65536/Chess256/tree/master/Binary) directory, but it's planned to remove the executable from the repo and to add _stockfish_ as a git subproject with building it from sources.
 
+**TODO** : Fix the last paragraph!!!!
+
 # Building _Chess 256_
 
 The building process should pass without any troubles. You can easily build the project from _Lazarus IDE_ or using command-line tools, such as `lazbuild`.
