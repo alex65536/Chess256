@@ -92,6 +92,8 @@ _Chess 256_ successfully builds on _Lazarus 1.8_ with _FPC 3.0.4_, but with some
 
 # Building _Chess 256_
 
+**TODO** : Describe build system better, with Makefiles usage!!!
+
 The building process should pass without any troubles. You can easily build the project from _Lazarus IDE_ or using command-line tools, such as `lazbuild`.
 
 But first, you may need to install the _CmdBox_ package into the IDE (located at [`Packages/CmdBox`](https://github.com/alex65536/Chess256/tree/master/Packages/CmdBox)).

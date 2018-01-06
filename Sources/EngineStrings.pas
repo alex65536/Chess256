@@ -36,9 +36,9 @@ resourcestring
 const
   {$IFDEF WINDOWS}
     {$IFDEF CPUI386}
-      EngineName = 'stockfish8.exe';
+      EngineName = 'stockfish-i386.exe';
     {$ELSE}
-      EngineName = 'stockfish8_x64.exe';
+      EngineName = 'stockfish8-x86_64.exe';
     {$ENDIF}
     EngineFilter = '*.exe';
     EngineDefExt = '.exe';
@@ -46,9 +46,9 @@ const
   {$ENDIF}
   {$IFDEF LINUX}
     {$IFDEF CPUI386}
-      EngineName = 'stockfish8';
+      EngineName = 'stockfish-i386';
     {$ELSE}
-      EngineName = 'stockfish8_x64';
+      EngineName = 'stockfish-x86_64';
     {$ENDIF}
      EngineFilter = '*';
      EngineDefExt = '';
