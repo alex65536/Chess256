@@ -5,3 +5,4 @@
 *.res
 .fuse*
 Binary/Chess256
+Binary/stockfish*
