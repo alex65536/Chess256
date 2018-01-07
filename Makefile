@@ -89,12 +89,15 @@ help: check
 build: check
 	cd Sources && lazbuild Chess256.lpi
 
-STOCKFISH_SRC_EXE = "stockfish"
-STOCKFISH_TARGET_EXE = "stockfish-$(DEFINED_CPU)"
+STOCKFISH_SRC_BASE_EXE = "stockfish"
+STOCKFISH_TARGET_BASE_EXE = "stockfish-$(DEFINED_CPU)"
 
 ifeq ($(BUILD_OS), Windows)
-	STOCKFISH_SRC_EXE = "$(STOCKFISH_SRC_EXE).exe"
-	STOCKFISH_TARGET_EXE = "$(STOCKFISH_TARGET_EXE).exe"
+	STOCKFISH_SRC_EXE = "$(STOCKFISH_SRC_BASE_EXE).exe"
+	STOCKFISH_TARGET_EXE = "$(STOCKFISH_TARGET_BASE_EXE).exe"
+else
+	STOCKFISH_SRC_EXE = "$(STOCKFISH_SRC_BASE_EXE)"
+	STOCKFISH_TARGET_EXE = "$(STOCKFISH_TARGET_BASE_EXE)"
 endif
 
 build-sf32: DEFINED_CPU := i386
@@ -103,7 +106,7 @@ build-sf64: DEFINED_CPU := x86_64
 build-sf64: DEFINED_SF_CPU := x86-64-modern
 
 build-sf32 build-sf64: check
-	@# It seems that, without make clean, Stockfish building fails when invoked twice in a row.
+#	It seems that, without make clean, Stockfish building fails when invoked twice in a row.
 	+cd Stockfish/src && make clean
 	+cd Stockfish/src && make build ARCH=$(DEFINED_SF_CPU)
 	cp Stockfish/src/$(STOCKFISH_SRC_EXE) Binary/$(STOCKFISH_TARGET_EXE)

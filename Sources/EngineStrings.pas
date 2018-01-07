@@ -39,8 +39,8 @@ const
       EngineName1 = 'stockfish-i386.exe';
       EngineName2 = 'stockfish-i386.exe';
     {$ELSE}
-      EngineName1 = 'stockfish8-x86_64.exe';
-      EngineName2 = 'stockfish8-x86_64.exe';
+      EngineName1 = 'stockfish-x86_64.exe';
+      EngineName2 = 'stockfish-x86_64.exe';
     {$ENDIF}
     EngineFilter = '*.exe';
     EngineDefExt = '.exe';
