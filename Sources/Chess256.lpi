@@ -29,8 +29,9 @@
       <UseVersionInfo Value="True"/>
       <MinorVersionNr Value="1"/>
       <RevisionNr Value="3"/>
+      <BuildNr Value="1"/>
       <Language Value="0809"/>
-      <StringTable Comments="Chess 256 is a chess program for playing, editing and analysing chess games." FileDescription="Chess 256" InternalName="Chess 256" LegalCopyright="© 2016, 2018 Alexander Kernozhitsky" OriginalFilename="Chess256.exe" ProductName="Chess 256" ProductVersion="0.13 alpha"/>
+      <StringTable Comments="Chess 256 is a chess program for playing, editing and analysing chess games." FileDescription="Chess 256" InternalName="Chess 256" LegalCopyright="© 2016, 2018 Alexander Kernozhitsky" OriginalFilename="Chess256.exe" ProductName="Chess 256" ProductVersion="0.13.1 alpha"/>
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>

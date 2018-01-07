@@ -4,7 +4,7 @@
 *.log
 *.res
 .fuse*
-Binary/Chess256
+Binary/Chess256*
 Binary/stockfish*
 debian/chess256.substvars
 debian/chess256
