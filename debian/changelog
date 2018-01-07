@@ -1,0 +1,5 @@
+chess256 (0.13.1~alpha-1) unstable; urgency=medium
+
+  * Initial release as a Debian package
+
+ -- Alexander Kernozhitsky <sh200105@mail.ru>  Sat, 06 Jan 2018 21:29:53 +0300
