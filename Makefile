@@ -17,9 +17,12 @@
 
 .PHONY: build build-sf32 build-sf64 build-sf build-img build-all
 .PHONY: clean clean-sf clean-img clean-all
-.PHONY: help defualt
+.PHONY: help default install deb
 
 default: help
+
+PREFIX = /usr/local
+INSTALL_PREFIX = $(DESTDIR)$(PREFIX)
 
 # Determine OS
 ifeq ($(OS), Windows_NT)
@@ -80,6 +83,8 @@ help: check
 	@echo "    clean-img  Cleans built images."
 	@echo "    clean-all  Cleans everything."
 	@echo "    help       Shows this help."
+	@echo "    install    Installs Chess 256 to the system."
+	@echo "    deb        Builds Debian package (for Debian-based systems only!)"
 
 build: check
 	cd Sources && lazbuild Chess256.lpi
@@ -127,3 +132,11 @@ clean-img: check
 	+cd Images && make clean
 
 clean-all: check clean clean-sf clean-img
+
+install:
+	install -D -T Binary/Chess256 $(INSTALL_PREFIX)/games/chess256
+	+cd Images && make install PREFIX=$(INSTALL_PREFIX)
+	install -D -T Other/Chess256.desktop $(INSTALL_PREFIX)/share/applications/chess256.desktop
+
+deb:
+	debuild -us -uc

@@ -1,0 +1,37 @@
+Source: chess256
+Section: games
+Priority: optional
+Maintainer: Alexander Kernozhitsky <sh200105@mail.ru>
+Build-Depends: debhelper (>= 9), lazarus-ide (>= 1.8) | lazarus-ide-1.8 | lazarus-project (>= 1.8), imagemagick, inkscape
+Standards-Version: 3.9.8
+Homepage: https://alex65536.github.io/Chess256
+Vcs-Git: https://github.com/alex65536/Chess256
+Vcs-Browser: https://github.com/alex65536/Chess256
+
+Package: chess256
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, stockfish
+Description: Chess program for playing, editing and analysing chess games
+ Chess 256 is a chess program for playing, editing and analysing chess games.
+ This project was supposed to be a very powerful chess application, but many
+ features are missing by now. Though, many basic things have been already
+ implemented.
+ .
+ The project is in ALPHA state.
+ .
+ Features:
+ .
+  * Support for standard chess formats (PGN for chess notation, FEN for
+ positions and UCI chess protocol).
+ .
+  * Powerful PGN editor (support for comments, NAGs, variations...).
+ .
+  * Playing games between players, between engines and player vs engine.
+ .
+  * Also there is analysis mode, where you can add variations, comments, etc.
+ .
+  * Advanced time control options (you can define options like this: 2 hours
+ per 40 moves, then 1 hour per following 20 moves and then 1 hour for the rest
+ of the game.
+ .
+  * Written on Free Pascal using Lazarus IDE.

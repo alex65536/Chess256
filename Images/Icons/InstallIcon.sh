@@ -16,16 +16,20 @@
 # You should have received a copy of the GNU General Public License
 # along with Chess 256.  If not, see <http://www.gnu.org/licenses/>.
 
+# Usage: InstallIcon.sh <dest dir>
+#
+# To install the icons into the system, <dest dir> must be like this:
+# /usr/share
+
 set -e
 
 . IconSizes.sh
 
-ICON_FILES=()
+DEST_DIR="$1/icons/hicolor"
 
 for SIZE in "${SIZES[@]}"; do
 	CUR_ICON="Icon${SIZE}.png"
-	ICON_FILES+=("${CUR_ICON}")
-	inkscape Icon.svg -e "${CUR_ICON}" -w "${SIZE}" -h "${SIZE}"
+	CUR_DIR="${DEST_DIR}/${SIZE}x${SIZE}/apps"
+	mkdir -p "${CUR_DIR}"
+	install -T "${CUR_ICON}" "${CUR_DIR}/chess256.png"
 done
-
-convert "${ICON_FILES[@]}" Icon.ico

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Chess 256
+Comment=Chess program for playing, editing and analysing games
+Exec=chess256
+Terminal=false
+Type=Application
+Icon=chess256
+Categories=GTK;Game;BoardGame;
+Keywords=chess;editor;PGN;FEN;UCI;Game;games;

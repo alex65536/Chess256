@@ -103,6 +103,8 @@ For building _Chess 256_, you may use _GNU Make_. `Makefile` of the project has 
 
 Also, the project can be built from the Lazarus IDE.
 
+On Debian-based systems you can also build a `.deb` package for _Chess 256_. Use `make deb` or `debuild -us -uc`.
+
 # Third-party software used by _Chess 256_
 
 * [Stockfish](https://stockfishchess.org) chess engine
