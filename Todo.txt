@@ -24,3 +24,4 @@
 !!! Fix a bug with underline (and not only) characters (diacritic symbols)
 !!! Rewrite character length counting
 !!! Maybe use 2 (or more?) chars to determine it
+!!! Keep engine options when re-creating a game!!!
