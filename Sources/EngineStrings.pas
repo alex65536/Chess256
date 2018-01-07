@@ -36,9 +36,11 @@ resourcestring
 const
   {$IFDEF WINDOWS}
     {$IFDEF CPUI386}
-      EngineName = 'stockfish-i386.exe';
+      EngineName1 = 'stockfish-i386.exe';
+      EngineName2 = 'stockfish-i386.exe';
     {$ELSE}
-      EngineName = 'stockfish8-x86_64.exe';
+      EngineName1 = 'stockfish8-x86_64.exe';
+      EngineName2 = 'stockfish8-x86_64.exe';
     {$ENDIF}
     EngineFilter = '*.exe';
     EngineDefExt = '.exe';
@@ -46,19 +48,30 @@ const
   {$ENDIF}
   {$IFDEF LINUX}
     {$IFDEF CPUI386}
-      EngineName = 'stockfish-i386';
+      EngineName1 = 'stockfish-i386';
     {$ELSE}
-      EngineName = 'stockfish-x86_64';
+      EngineName1 = 'stockfish-x86_64';
     {$ENDIF}
-     EngineFilter = '*';
-     EngineDefExt = '';
-     {$DEFINE HAS_ENGINE_NAME}
+    EngineName2 = '/usr/games/stockfish';
+    EngineFilter = '*';
+    EngineDefExt = '';
+    {$DEFINE HAS_ENGINE_NAME}
   {$ENDIF}
   {$IFNDEF HAS_ENGINE_NAME}
     {$ERROR Please add nessesary constants for this platform.}
   {$ENDIF}
 
+function EngineName: string;
+
 implementation
+
+function EngineName: string;
+begin
+  if FileExists(EngineName1) then
+    Result := EngineName1
+  else
+    Result := EngineName2;
+end;
 
 end.
 
