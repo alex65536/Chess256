@@ -133,6 +133,6 @@ clean-img: check
 clean-all: check clean clean-sf clean-img
 
 install:
-	install -D -T Binary/Chess256 $(INSTALL_PREFIX)/bin/chess256
+	install -D -T Binary/Chess256 $(INSTALL_PREFIX)/games/chess256
 	+cd Images && make install PREFIX=$(INSTALL_PREFIX)
 	install -D -T Other/Chess256.desktop $(INSTALL_PREFIX)/share/applications/chess256.desktop

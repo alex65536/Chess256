@@ -5,5 +5,5 @@ Exec=chess256
 Terminal=false
 Type=Application
 Icon=chess256
-Categories=Applications;GTK;Game;BoardGame;
+Categories=GTK;Game;BoardGame;
 Keywords=chess;editor;PGN;FEN;UCI;Game;games;
