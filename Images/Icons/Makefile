@@ -15,8 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with Chess 256.  If not, see <http://www.gnu.org/licenses/>.
 
-.PHONY: build clean
+.PHONY: build clean install
 .PRECIOUS: Icon.ico
+
+PREFIX = $(DESTDIR)/usr/local
 
 Icon.ico: Icon.svg
 	./BuildIcon.sh
@@ -25,3 +27,6 @@ build: Icon.ico
 
 clean:
 	$(RM) *.png *.ico
+
+install:
+	./InstallIcon.sh $(PREFIX)/share

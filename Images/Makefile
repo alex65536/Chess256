@@ -15,7 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with Chess 256.  If not, see <http://www.gnu.org/licenses/>.
 
-.PHONY: build clean
+.PHONY: build clean install
+
+PREFIX = $(DESTDIR)/usr/local
 
 DIRS := Design Glyphs Icons
 DIRS_BUILD := $(DIRS:%=%-build)
@@ -23,6 +25,9 @@ DIRS_CLEAN := $(DIRS:%=%-clean)
 
 build: $(DIRS_BUILD)
 clean: $(DIRS_CLEAN)
+
+install:
+	+cd Icons && make install PREFIX=$(PREFIX)
 
 .PHONY: $(DIRS_BUILD) $(DIRS_CLEAN)
 
