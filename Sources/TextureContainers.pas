@@ -408,7 +408,7 @@ constructor TResourceTextureContainer.Create;
         ImageList.Height := PNG.Height;
         ImageList.Width := PNG.Height;
       end;
-      ImageList.Add(PNG, nil);
+      ImageList.AddSliced(PNG, PNG.Width div ImageList.Width, PNG.Height div ImageList.Height);
     finally
       FreeAndNil(PNG);
     end;
