@@ -256,7 +256,8 @@ end;
 constructor TPlayerSelector.Create(TheOwner: TComponent);
 begin
   inherited Create(TheOwner);
-  SelectBtn.Glyph.Assign(FileNameEdit.Button.Glyph);
+  SelectBtn.Caption := '...';
+  //SelectBtn.Glyph.Assign(FileNameEdit.Button.Glyph);
   OpenDialog.Filter := Format(SEngineFilter, [EngineFilter]);
   OpenDialog.DefaultExt := EngineDefExt;
   FEngine := nil;
