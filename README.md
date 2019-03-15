@@ -84,7 +84,7 @@ Other widgetsets are not tested or unsupported:
 
 * _carbon_ and _cocoa_ are not tested.
 
-_Chess 256_ successfully builds on _Lazarus 1.8_ with _FPC 3.0.4_, but with some fixes it can be easily built in _Lazarus 1.6.x_ with _FPC 3.0.x_. Older versions of _FPC_ and _Lazarus_ were not tested. 
+_Chess 256_ successfully builds on _Lazarus 2.0_ with _FPC 3.0.4_, but with some fixes it can be easily built in _Lazarus 1.8.x_ and _Lazarus 1.6.x_ with _FPC 3.0.x_. Older versions of _FPC_ and _Lazarus_ were not tested. 
 
 [Stockfish](https://stockfishchess.org) is the default chess engine for _Chess 256_. You will need the _stockfish_ executables to run the program successfully.
 
