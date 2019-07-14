@@ -113,6 +113,8 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormHide(Sender: TObject);
     procedure itemCopyToClipboardClick(Sender: TObject);
+  protected
+    procedure DoShow; override;
   private
     FRead: boolean;
     FReadStr: string;
@@ -388,12 +390,20 @@ end;
 
 procedure TConsole.FormHide(Sender: TObject);
 begin
-  Application.Terminate;
+  //Application.Terminate;
 end;
 
 procedure TConsole.itemCopyToClipboardClick(Sender: TObject);
 begin
   Clipboard.AsText := CmdBox.Text; // to make it work, I modified TCmdBox a little ...
+end;
+
+procedure TConsole.DoShow;
+begin
+  // effectively disable the console, still allowing to write into it
+  // TODO : re-enable the console with the ability to turn it off
+  inherited DoShow;
+  Hide;
 end;
 
 {$HINTS OFF}
