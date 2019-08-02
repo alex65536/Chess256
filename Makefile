@@ -35,10 +35,12 @@ endif
 ifeq ($(BUILD_OS), Windows)
 	ifeq ($(PROCESSOR_ARCHITECTURE), x86)
 		BUILD_CPU := i386
-	else ifeq ($(PROCESSOR_ARCHITECTURE), AMD64)
-		BUILD_CPU := x86_64
 	else
-		BUILD_CPU := unknown
+		ifeq ($(PROCESSOR_ARCHITECTURE), AMD64)
+			BUILD_CPU := x86_64
+		else
+			BUILD_CPU := unknown
+		endif
 	endif
 else
 	BUILD_CPU := $(shell uname -m)
