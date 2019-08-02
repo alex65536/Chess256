@@ -36,6 +36,7 @@ uses
 resourcestring
   SEngineNotResponding = 'Engine "%s" that plays for %s is not responding.';
   SEngineWrongMove = 'Engine "%s" that plays for %s returned an incorrect move.';
+  SEngineDead = 'Engine "%s" suddenly died.';
   SStartGameRequirements =
     'To start a game, you must set ChessNotation and ChessTimer props.';
   SCannotChange = 'Cannot change %s while the game is active.';
@@ -279,6 +280,8 @@ begin
   if not FActive then
     Exit;
   try
+    if TAbstractChessEngine(Sender).Terminated then
+      RaiseEngineException(CurSide, SEngineDead);
     FEngineMoving := True;
     try
       CommonMakeMove(AResult.BestMove);

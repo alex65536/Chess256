@@ -50,6 +50,7 @@ type
     FProcess: TAsyncProcess;
     FRemainder: string;
     FTerminateOnDestroy: boolean;
+    FTerminated: boolean;
     // Event handlers
     procedure ProcessReadData(Sender: TObject);
     procedure ProcessTerminate(Sender: TObject);
@@ -206,6 +207,9 @@ end;
 procedure TConsoleProcess.DoTerminate;
 // Called when process was terminated.
 begin
+  if FTerminated then
+    Exit;
+  FTerminated := True;
   if Assigned(FOnTerminate) then
     FOnTerminate(Self);
 end;
@@ -232,11 +236,14 @@ procedure TConsoleProcess.TryRead;
 // Tries to read lines from the console.
 // Can be used if TAsyncProcess.OnReadData event is not working.
 begin
+  if not FProcess.Active then
+    DoTerminate;
   ProcessReadData(Self);
 end;
 
 constructor TConsoleProcess.Create(const ExeName: string);
 begin
+  FTerminated := False;
   FProcess := TAsyncProcess.Create(nil);
   FProcess.Executable := ExeName;
   FProcess.Options := [poUsePipes, poNoConsole];

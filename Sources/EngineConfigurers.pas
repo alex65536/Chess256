@@ -65,7 +65,7 @@ var
   ConfClass: TEngineConfigurerClass;
 begin
   Result := False;
-  if AEngine = nil then
+  if (AEngine = nil) or AEngine.Terminated then
     Exit;
   ConfClass := GetConfigurer(TChessEngineClass(AEngine.ClassType));
   if ConfClass = nil then

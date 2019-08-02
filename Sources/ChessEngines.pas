@@ -133,6 +133,7 @@ type
     FOnStart: TNotifyEvent;
     FOnStop: TAnalysisStopEvent;
     FOnTerminate: TNotifyEvent;
+    FTerminated: boolean;
   protected
     // Analysis events
     procedure DoStart;
@@ -150,6 +151,7 @@ type
     property FileName: string read GetFileName;
     property State: TAnalysisState read FState;
     property MoveChain: TMoveChain read FMoveChain;
+    property Terminated: boolean read FTerminated;
     // Events
     property OnStart: TNotifyEvent read FOnStart write FOnStart;
     property OnStop: TAnalysisStopEvent read FOnStop write FOnStop;
@@ -380,6 +382,7 @@ end;
 procedure TAbstractChessEngine.DoTerminate;
 // Signals that the analysis has terminated.
 begin
+  FTerminated := True;
   DoStop(AnalysisFailure);
   if Assigned(FOnTerminate) then
     FOnTerminate(Self);
@@ -448,6 +451,7 @@ begin
   FMoveChain := TMoveChain.Create;
   FState := TAnalysisState.Create;
   FStopping := False;
+  FTerminated := False;
 end;
 
 procedure TAbstractChessEngine.Initialize;

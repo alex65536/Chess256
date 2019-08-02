@@ -43,6 +43,8 @@ uses
 resourcestring
   SAnalysisCaptionEmpty = 'Analysis';
   SAnalysisCaption = 'Analysis [%s]';
+  SAnalysisWindowName = 'Analysis';
+  SEnglineTerminated = 'Engine "%s" suddenly died.';
 
 const
   MaxItemCount = 128;
@@ -99,6 +101,7 @@ type
     procedure AnalysisEngineHandler(Sender: TObject; AMessage: TAnalysisMessage);
     procedure AnalysisStart(Sender: TObject);
     procedure AnalysisStop(Sender: TObject; const AResult: RAnalysisResult);
+    procedure AnalysisTerminate(Sender: TObject);
     procedure ConfigurerUpdateOptions(Sender: TObject; var ApplyOptions: boolean);
     procedure NotatBoardUpdate(Sender: TObject);
     // Other methods
@@ -136,7 +139,7 @@ procedure TAnalysisForm.AnalysisActionUpdate(Sender: TObject);
 begin
   (Sender as TAction).Enabled :=
     (FEngine <> nil) and (not FEngine.State.Active) and
-    (NotationForm.ChessNotation.CanAddMove);
+    (not FEngine.Terminated) and (NotationForm.ChessNotation.CanAddMove);
 end;
 
 procedure TAnalysisForm.AnalysisStopActionExecute(Sender: TObject);
@@ -342,6 +345,12 @@ end;
 
 {$HINTS ON}
 
+procedure TAnalysisForm.AnalysisTerminate(Sender: TObject);
+begin
+  MessageDlg(SAnalysisWindowName, Format(SEnglineTerminated, [FEngine.Name]),
+    mtError, [mbOK], 0);
+end;
+
 procedure TAnalysisForm.ConfigurerUpdateOptions(Sender: TObject;
   var ApplyOptions: boolean);
 begin
@@ -511,6 +520,7 @@ begin
     FEngine.State.OnChange := @StateChange;
     FEngine.OnStart := @AnalysisStart;
     FEngine.OnStop := @AnalysisStop;
+    FEngine.OnTerminate := @AnalysisTerminate;
     FEngine.Initialize;
   except
     on E: Exception do
@@ -533,6 +543,8 @@ begin
   if FEngine.State.Active then
     Exit;
   if not NotationForm.ChessNotation.CanAddMove then
+    Exit;
+  if FEngine.Terminated then
     Exit;
   // clear list
   ClearList;
