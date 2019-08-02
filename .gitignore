@@ -10,3 +10,4 @@ debian/chess256.substvars
 debian/chess256
 debian/debhelper-build-stamp
 debian/files
+debian/.debhelper
