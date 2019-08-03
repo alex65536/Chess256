@@ -26,7 +26,7 @@ unit EngineProcesses;
 
 interface
 
-//{$DEFINE USELOG}
+{$DEFINE USELOG}
 // Uncomment if you want to write to log the communication process between the
 // application and the engine processes.
 
