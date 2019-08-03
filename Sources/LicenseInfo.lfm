@@ -1,32 +1,34 @@
 object LicenseInfoFrom: TLicenseInfoFrom
   Left = 0
-  Height = 358
+  Height = 382
   Top = 0
-  Width = 485
+  Width = 579
   AutoSize = True
   BorderStyle = bsDialog
   Caption = 'License info'
-  ClientHeight = 358
-  ClientWidth = 485
+  ClientHeight = 382
+  ClientWidth = 579
   Color = 16773360
+  DesignTimePPI = 120
   OnCreate = FormCreate
   Position = poScreenCenter
-  Visible = False
   object LicenseLabel: TLabel
-    Left = 3
-    Height = 252
-    Top = 44
-    Width = 415
+    Left = 4
+    Height = 280
+    Top = 49
+    Width = 571
     Align = alClient
-    BorderSpacing.Around = 3
-    Caption = 'Copyright © 2016, 2018 Alexander Kernozhitsky <sh200105@mail.ru>'#10#10'This program is free software: you can redistribute it and/or modify'#10'it under the terms of the GNU General Public License as published by'#10'the Free Software Foundation, either version 3 of the License, or'#10'(at your option) any later version.'#10#10'This program is distributed in the hope that it will be useful,'#10'but WITHOUT ANY WARRANTY; without even the implied warranty of'#10'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the'#10'GNU General Public License for more details.'#10#10'You should have received a copy of the GNU General Public License'#10'along with this program.  If not, see <https://www.gnu.org/licenses/>.'
+    BorderSpacing.Around = 4
+    Caption = 'Copyright © 2016, 2018, 2019 Alexander Kernozhitsky <sh200105@mail.ru>'#10#10'This program is free software: you can redistribute it and/or modify'#10'it under the terms of the GNU General Public License as published by'#10'the Free Software Foundation, either version 3 of the License, or'#10'(at your option) any later version.'#10#10'This program is distributed in the hope that it will be useful,'#10'but WITHOUT ANY WARRANTY; without even the implied warranty of'#10'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the'#10'GNU General Public License for more details.'#10#10'You should have received a copy of the GNU General Public License'#10'along with this program.  If not, see <https://www.gnu.org/licenses/>.'
     ParentColor = False
+    ParentFont = False
   end
   object ButtonPanel: TButtonPanel
-    Left = 6
-    Height = 42
-    Top = 302
-    Width = 409
+    Left = 8
+    Height = 37
+    Top = 337
+    Width = 563
+    BorderSpacing.Around = 8
     OKButton.Name = 'OKButton'
     OKButton.DefaultCaption = True
     HelpButton.Name = 'HelpButton'
@@ -42,14 +44,14 @@ object LicenseInfoFrom: TLicenseInfoFrom
   object HeaderLabel: TLabel
     Tag = 18
     Left = 0
-    Height = 33
+    Height = 35
     Top = 0
-    Width = 421
+    Width = 579
     Align = alTop
     Alignment = taCenter
     Caption = 'License info'
     Font.Color = clRed
-    Font.Height = -24
+    Font.Height = -30
     Font.Style = [fsBold, fsItalic]
     ParentColor = False
     ParentFont = False
@@ -57,11 +59,11 @@ object LicenseInfoFrom: TLicenseInfoFrom
   end
   object Bevel: TBevel
     Left = 0
-    Height = 5
-    Top = 36
-    Width = 421
+    Height = 6
+    Top = 39
+    Width = 579
     Align = alTop
-    BorderSpacing.Top = 3
+    BorderSpacing.Top = 4
     Shape = bsTopLine
   end
 end

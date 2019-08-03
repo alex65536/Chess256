@@ -1,3 +1,9 @@
+chess256 (0.13.3~alpha) unstable; urgency=medium
+
+  * Fix "Engine suddenly died" error when playing against engines.
+
+ -- Alexander Kernozhitsky <sh200105@mail.ru>  Sat, 03 Aug 2019 19:55:43 +0300
+
 chess256 (0.13.2~alpha) unstable; urgency=medium
 
   * Fix building with Lazarus 2.0.

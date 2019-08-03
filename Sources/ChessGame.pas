@@ -280,7 +280,7 @@ begin
   if not FActive then
     Exit;
   try
-    if TAbstractChessEngine(Sender).Terminated then
+    if (Sender as TChessPlayer).Engine.Terminated then
       RaiseEngineException(CurSide, SEngineDead);
     FEngineMoving := True;
     try
