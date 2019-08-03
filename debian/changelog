@@ -1,3 +1,9 @@
+chess256 (0.13.3~alpha+dbg) unstable; urgency=medium
+
+  * Write debug logs for engine communications.
+
+ -- Alexander Kernozhitsky <sh200105@mail.ru>  Sat, 03 Aug 2019 20:11:16 +0300
+
 chess256 (0.13.3~alpha) unstable; urgency=medium
 
   * Fix "Engine suddenly died" error when playing against engines.
