@@ -172,7 +172,8 @@ var
     else if (Str = '0-1') or (Str = 'O-1') or (Str = 'o-1') then
       PutGameResult(gwBlack)
     else if (Str = '1/2-1/2') or (Str = '1/2-1\2') or
-      (Str = '1\2-1/2') or (Str = '1\2-1\2') then
+      (Str = '1\2-1/2') or (Str = '1\2-1\2') or
+      (Str = '1/2') or (Str = '1\2') then
       PutGameResult(gwDraw)
     else if (Str = '*') then
       PutGameResult(gwNone)

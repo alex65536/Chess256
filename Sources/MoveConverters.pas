@@ -348,7 +348,7 @@ end;
 
 function TPGNMoveConverter.ParseMove(const MoveString: string): RChessMove;
 type
-  TMoveParseResult = (prOK, prNoSuchMove, prAmbigious);
+  TMoveParseResult = (prOK, prNoSuchMove, prAmbiguous);
 
 const
   NumCoords = ['1' .. '8'];
@@ -362,6 +362,7 @@ var
   PromoteTo: TPieceKind;
   IsCastling: boolean;
   CastlingSide: TCastlingSide;
+  IsShortPawnCapture: boolean;
   IsCorrect: boolean;
 
   procedure CleanVars;
@@ -374,6 +375,7 @@ var
     ActivePiece := pkNone;
     PromoteTo := pkNone;
     IsCastling := False;
+    IsShortPawnCapture := False;
     IsCorrect := False;
   end;
 
@@ -427,6 +429,16 @@ var
     // skip "=" that may come before promotion
     if (S <> '') and (S[Length(S)] = '=') then
       Delete(S, Length(S), 1);
+    // check for short pawn captures (like ed, ab, fg, ...)
+    if (Length(S) = 2) and (S[1] in LetCoords) and (S[2] in LetCoords) then
+    begin
+      IsShortPawnCapture := True;
+      SrcX := Ord(S[1]) - Ord('a');
+      DstX := Ord(S[2]) - Ord('a');
+      ActivePiece := pkPawn;
+      IsCorrect := True;
+      Exit;
+    end;
     // dst coodinates
     if Length(S) < 2 then
       Exit;
@@ -445,7 +457,7 @@ var
       'P', 'p': ActivePiece := pkPawn;
       'N', 'n': ActivePiece := pkKnight;
       'B': ActivePiece := pkBishop;
-      // small "B" is not allowed (or how to parse "bxa3"?)
+      // small "b" is not allowed (or how to parse "bxa3"?)
       'R', 'r': ActivePiece := pkRook;
       'Q', 'q': ActivePiece := pkQueen;
       'K', 'k': ActivePiece := pkKing
@@ -525,6 +537,15 @@ var
       end
       else if Move.Kind = mkPromote then
         Exit;
+      // checking short form of pawn capture
+      if IsShortPawnCapture then
+      begin
+        if (NActivePiece <> Move.PromoteTo) or (NSrcX <> Move.SrcX) or
+          (NDstX <> Move.DstX) then
+          Exit;
+        Result := True;
+        Exit;
+      end;
       // checking piece, src & dst.
       if NActivePiece = pkNone then
         NActivePiece := Move.PromoteTo;
@@ -554,7 +575,7 @@ var
     else if FitCount = 0 then
       Result := prNoSuchMove
     else
-      Result := prAmbigious;
+      Result := prAmbiguous;
   end;
 
 var
@@ -564,7 +585,7 @@ begin
   Res := ExtractChessMove(Result);
   if Res = prOK then
     Exit;
-  if Res = prAmbigious then
+  if Res = prAmbiguous then
     raise EMoveParser.Create(SParserAmbiguity)
   else
     raise EMoveParser.Create(SParserIllegalMove);
