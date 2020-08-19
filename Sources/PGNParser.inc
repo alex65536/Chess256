@@ -167,9 +167,11 @@ var
     Str := GetString(SeparatorSet);
     // game results (put them using PutGameResult)
     Processed := True;
-    if (Str = '1-0') or (Str = '1-O') or (Str = '1-o') then
+    if (Str = '1-0') or (Str = '1-O') or (Str = '1-o') or
+      (Str = '1:0') then
       PutGameResult(gwWhite)
-    else if (Str = '0-1') or (Str = 'O-1') or (Str = 'o-1') then
+    else if (Str = '0-1') or (Str = 'O-1') or (Str = 'o-1') or
+      (Str = '0:1') then
       PutGameResult(gwBlack)
     else if (Str = '1/2-1/2') or (Str = '1/2-1\2') or
       (Str = '1\2-1/2') or (Str = '1\2-1\2') or
