@@ -416,7 +416,8 @@ var
     case S[Length(S)] of
       'P', 'p': PromoteTo := pkPawn;
       'N', 'n': PromoteTo := pkKnight;
-      'B', 'b': PromoteTo := pkBishop;
+      'B': PromoteTo := pkBishop;
+      // small "b" is not allowed (or how to parse "cb"?)
       'R', 'r': PromoteTo := pkRook;
       'Q', 'q': PromoteTo := pkQueen;
       'K', 'k': PromoteTo := pkKing
