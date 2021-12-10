@@ -1,46 +1,44 @@
 object NAGSelect: TNAGSelect
   Left = 496
-  Height = 240
+  Height = 300
   Top = 210
-  Width = 320
+  Width = 400
   BorderStyle = bsDialog
   Caption = 'Select NAG...'
-  ClientHeight = 240
-  ClientWidth = 320
+  ClientHeight = 300
+  ClientWidth = 400
+  DesignTimePPI = 120
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.8.0.6'
-  Visible = False
   object ButtonPanel: TButtonPanel
-    Left = 3
+    Left = 4
     Height = 34
-    Top = 203
-    Width = 314
-    BorderSpacing.Around = 3
+    Top = 262
+    Width = 392
+    BorderSpacing.Around = 4
     OKButton.Name = 'OKButton'
     OKButton.Caption = 'OK'
-    OKButton.DefaultCaption = False
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
     CloseButton.Name = 'CloseButton'
     CloseButton.DefaultCaption = True
     CancelButton.Name = 'CancelButton'
     CancelButton.Caption = 'Cancel'
-    CancelButton.DefaultCaption = False
     TabOrder = 1
     ShowButtons = [pbOK, pbCancel]
     ShowBevel = False
   end
   object FlowPanel: TFlowPanel
     Left = 0
-    Height = 200
+    Height = 258
     Top = 0
-    Width = 320
+    Width = 400
     Align = alClient
     BevelOuter = bvNone
     ControlList = <>
     FlowLayout = tlTop
     FlowStyle = fsLeftRightTopBottom
+    ParentFont = False
     TabOrder = 0
   end
 end

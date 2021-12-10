@@ -1,15 +1,15 @@
 object GlyphKeeper: TGlyphKeeper
   OldCreateOrder = False
-  Height = 96
-  HorizontalOffset = 391
-  VerticalOffset = 180
-  Width = 124
-  PPI = 96
+  Height = 120
+  HorizontalOffset = 489
+  VerticalOffset = 225
+  Width = 155
+  PPI = 120
   object ImageList: TImageList
     Height = 24
     Width = 24
-    left = 48
-    top = 24
+    Left = 60
+    Top = 30
     Bitmap = {
       4C69270000001800000018000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

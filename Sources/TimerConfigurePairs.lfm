@@ -1,76 +1,118 @@
 object TimerConfigurePair: TTimerConfigurePair
   Left = 0
-  Height = 235
+  Height = 294
   Top = 0
-  Width = 327
+  Width = 409
   AutoSize = True
-  ClientHeight = 235
-  ClientWidth = 327
+  ClientHeight = 294
+  ClientWidth = 409
+  DesignTimePPI = 120
+  ParentFont = False
   TabOrder = 0
   object SameTimeCheck: TCheckBox
     Left = 0
-    Height = 19
+    Height = 22
     Top = 0
-    Width = 327
+    Width = 409
     Align = alTop
     Caption = 'Same time for both players'
     Checked = True
     OnChange = SameTimeCheckChange
+    ParentFont = False
     State = cbChecked
     TabOrder = 0
   end
   object WhiteGroup: TGroupBox
     Left = 0
-    Height = 216
-    Top = 19
-    Width = 162
+    Height = 272
+    Top = 22
+    Width = 152
     Align = alLeft
     AutoSize = True
     Caption = 'White and Black'
-    ClientHeight = 197
-    ClientWidth = 160
+    ClientHeight = 251
+    ClientWidth = 150
+    ParentFont = False
     TabOrder = 1
     inline WhiteConfigurer: TTimerConfigure
-      Height = 196
-      Width = 158
+      Height = 251
+      Width = 150
       Align = alClient
-      ClientHeight = 196
-      ClientWidth = 158
+      ClientHeight = 251
+      ClientWidth = 150
       inherited Panel: TPanel
-        Width = 158
-        ClientWidth = 158
+        Height = 36
+        Width = 150
+        ClientHeight = 34
+        ClientWidth = 148
+        inherited ClearButton: TBitBtn
+          Left = 96
+          Height = 34
+          Width = 52
+        end
+        inherited EraseButton: TBitBtn
+          Left = 41
+          Height = 34
+          Width = 55
+        end
+        inherited AddButton: TBitBtn
+          Height = 34
+          Width = 41
+        end
       end
       inherited ControlPanel: TPanel
-        Height = 167
-        Width = 158
+        Height = 215
+        Top = 36
+        Width = 150
       end
     end
   end
   object BlackGroup: TGroupBox
-    Left = 162
-    Height = 216
-    Top = 19
-    Width = 165
+    Left = 152
+    Height = 272
+    Top = 22
+    Width = 257
     Align = alClient
     AutoSize = True
     Caption = 'Black'
-    ClientHeight = 197
-    ClientWidth = 163
+    ClientHeight = 251
+    ClientWidth = 255
+    ParentFont = False
     TabOrder = 2
     Visible = False
     inline BlackConfigurer: TTimerConfigure
-      Height = 196
-      Width = 161
+      Height = 251
+      Width = 255
       Align = alClient
-      ClientHeight = 196
-      ClientWidth = 161
+      ClientHeight = 251
+      ClientWidth = 255
       inherited Panel: TPanel
-        Width = 161
-        ClientWidth = 161
+        Height = 36
+        Width = 255
+        ClientHeight = 34
+        ClientWidth = 253
+        inherited ClearButton: TBitBtn
+          Left = 96
+          Height = 34
+          Width = 52
+        end
+        inherited EraseButton: TBitBtn
+          Left = 41
+          Height = 34
+          Width = 55
+        end
+        inherited AddButton: TBitBtn
+          Height = 34
+          Width = 41
+        end
       end
       inherited ControlPanel: TPanel
-        Height = 167
-        Width = 161
+        Height = 215
+        Top = 36
+        Width = 255
+      end
+      inherited ActionList: TActionList
+        Top = 166
       end
     end
   end

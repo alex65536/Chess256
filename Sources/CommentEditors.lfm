@@ -1,67 +1,67 @@
 object CommentEditor: TCommentEditor
   Left = 486
-  Height = 240
+  Height = 300
   Top = 250
-  Width = 320
+  Width = 400
   BorderStyle = bsDialog
   Caption = 'Enter comment...'
-  ClientHeight = 240
-  ClientWidth = 320
+  ClientHeight = 300
+  ClientWidth = 400
+  DesignTimePPI = 120
   KeyPreview = True
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   Position = poScreenCenter
-  LCLVersion = '1.8.0.6'
-  Visible = False
   object Panel: TPanel
     Left = 0
-    Height = 200
+    Height = 258
     Top = 0
-    Width = 320
+    Width = 400
     Align = alClient
     BevelOuter = bvNone
     BorderStyle = bsSingle
-    ClientHeight = 198
-    ClientWidth = 318
+    ClientHeight = 256
+    ClientWidth = 398
+    ParentFont = False
     TabOrder = 0
     object Memo: TMemo
       Left = 0
-      Height = 174
-      Top = 24
-      Width = 318
+      Height = 230
+      Top = 26
+      Width = 398
       Align = alClient
+      ParentFont = False
       ScrollBars = ssAutoVertical
       TabOrder = 0
     end
     object CommentText: TLabel
-      Left = 3
+      Left = 4
       Height = 18
-      Top = 3
-      Width = 315
+      Top = 4
+      Width = 394
       Align = alTop
-      BorderSpacing.Left = 3
-      BorderSpacing.Top = 3
-      BorderSpacing.Bottom = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      BorderSpacing.Bottom = 4
       Caption = 'Enter your comment:'
       ParentColor = False
+      ParentFont = False
     end
   end
   object ButtonPanel: TButtonPanel
-    Left = 3
+    Left = 4
     Height = 34
-    Top = 203
-    Width = 314
-    BorderSpacing.Around = 3
+    Top = 262
+    Width = 392
+    BorderSpacing.Around = 4
     OKButton.Name = 'OKButton'
     OKButton.Caption = 'OK'
-    OKButton.DefaultCaption = False
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
     CloseButton.Name = 'CloseButton'
     CloseButton.DefaultCaption = True
     CancelButton.Name = 'CancelButton'
     CancelButton.Caption = 'Cancel'
-    CancelButton.DefaultCaption = False
     TabOrder = 1
     ShowButtons = [pbOK, pbCancel]
     ShowGlyphs = [pbOK, pbCancel]

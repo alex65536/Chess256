@@ -1,71 +1,78 @@
 object TimerConfigure: TTimerConfigure
   Left = 0
-  Height = 264
+  Height = 330
   Top = 0
-  Width = 324
+  Width = 405
   AutoSize = True
-  ClientHeight = 264
-  ClientWidth = 324
+  ClientHeight = 330
+  ClientWidth = 405
+  DesignTimePPI = 120
+  ParentFont = False
   TabOrder = 0
   object Panel: TPanel
     Left = 0
-    Height = 29
+    Height = 36
     Top = 0
-    Width = 324
+    Width = 405
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
     BorderStyle = bsSingle
-    ClientHeight = 29
-    ClientWidth = 324
+    ClientHeight = 34
+    ClientWidth = 403
+    ParentFont = False
     TabOrder = 0
     object ClearButton: TBitBtn
-      Left = 101
-      Height = 25
+      Left = 96
+      Height = 34
       Top = 0
-      Width = 53
+      Width = 52
       Action = ClearAction
       Align = alLeft
       AutoSize = True
+      ParentFont = False
       TabOrder = 2
     end
     object EraseButton: TBitBtn
-      Left = 48
-      Height = 25
+      Left = 41
+      Height = 34
       Top = 0
-      Width = 53
+      Width = 55
       Action = EraseAction
       Align = alLeft
       AutoSize = True
+      ParentFont = False
       TabOrder = 1
     end
     object AddButton: TBitBtn
       Left = 0
-      Height = 25
+      Height = 34
       Top = 0
-      Width = 48
+      Width = 41
       Action = AddAction
       Align = alLeft
       AutoSize = True
+      ParentFont = False
       TabOrder = 0
     end
   end
   object ControlPanel: TPanel
     Left = 0
-    Height = 235
-    Top = 29
-    Width = 324
+    Height = 294
+    Top = 36
+    Width = 405
     Align = alClient
     AutoSize = True
     BevelOuter = bvNone
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
+    ParentFont = False
     TabOrder = 1
   end
   object ActionList: TActionList
     Images = GlyphKeeper.ImageList
-    left = 67
-    top = 131
+    Left = 80
+    Top = 164
     object AddAction: TAction
       Caption = 'Add'
       ImageIndex = 6

@@ -1,45 +1,48 @@
 object BoardForm: TBoardForm
   Left = 427
-  Height = 543
+  Height = 679
   Top = 122
-  Width = 580
+  Width = 725
   Caption = 'Board'
-  ClientHeight = 543
-  ClientWidth = 580
+  ClientHeight = 679
+  ClientWidth = 725
   Color = 16769248
+  DesignTimePPI = 120
   OnCreate = FormCreate
   OnResize = FormResize
-  LCLVersion = '1.8.0.6'
-  Visible = False
   inline VisualBoard: TVisualChessBoard
-    Height = 488
-    Width = 580
+    Height = 610
+    Width = 725
     Align = alClient
-    ClientHeight = 488
-    ClientWidth = 580
+    ClientHeight = 610
+    ClientWidth = 725
     ParentColor = True
     inherited PaintBox: TPaintBox
-      Height = 472
-      Width = 564
+      Left = 12
+      Height = 590
+      Top = 12
+      Width = 705
     end
   end
   inline ImbalanceFrm: TImbalance
-    Height = 55
-    Top = 488
-    Width = 580
+    Height = 69
+    Top = 610
+    Width = 725
     Align = alBottom
-    ClientHeight = 55
-    ClientWidth = 580
+    ClientHeight = 69
+    ClientWidth = 725
     TabOrder = 1
     inherited PaintBox: TPaintBox
-      Height = 39
-      Width = 564
+      Left = 12
+      Height = 49
+      Top = 12
+      Width = 705
     end
   end
   object ActionList: TActionList
     Images = GlyphKeeper.ImageList
-    left = 140
-    top = 93
+    Left = 175
+    Top = 112
     object InvertBoardAction: TAction
       Caption = 'Invert board'
       ImageIndex = 36

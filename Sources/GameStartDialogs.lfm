@@ -1,322 +1,345 @@
 object NewGameDialog: TNewGameDialog
   Left = 459
-  Height = 257
+  Height = 306
   Top = 111
-  Width = 578
+  Width = 690
   ActiveControl = ButtonPanel.OKButton
   AutoSize = True
   BorderStyle = bsDialog
   Caption = 'New game...'
-  ClientHeight = 257
-  ClientWidth = 578
+  ClientHeight = 306
+  ClientWidth = 690
+  DesignTimePPI = 120
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.8.0.6'
-  Visible = False
   object ButtonPanel: TButtonPanel
-    Left = 6
+    Left = 8
     Height = 42
-    Top = 209
-    Width = 566
+    Top = 256
+    Width = 674
+    BorderSpacing.Around = 8
     OKButton.Name = 'OKButton'
     OKButton.Caption = 'OK'
-    OKButton.DefaultCaption = False
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
     CloseButton.Name = 'CloseButton'
     CloseButton.DefaultCaption = True
     CancelButton.Name = 'CancelButton'
     CancelButton.Caption = 'Cancel'
-    CancelButton.DefaultCaption = False
     TabOrder = 4
     ShowButtons = [pbOK, pbCancel]
   end
   object PositionTimePanel: TPanel
     Left = 0
-    Height = 150
-    Top = 53
-    Width = 123
+    Height = 193
+    Top = 55
+    Width = 146
     Align = alLeft
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 150
-    ClientWidth = 123
+    ClientHeight = 193
+    ClientWidth = 146
+    ParentFont = False
     TabOrder = 2
     object PositionGroup: TGroupBox
       Left = 0
-      Height = 99
+      Height = 138
       Top = 0
-      Width = 123
+      Width = 146
       Align = alClient
       AutoSize = True
       Caption = 'Position'
-      ClientHeight = 80
-      ClientWidth = 121
+      ClientHeight = 117
+      ClientWidth = 144
+      ParentFont = False
       TabOrder = 0
       object SpecifyBtn: TButton
         Left = 0
-        Height = 32
-        Top = 48
-        Width = 121
+        Height = 34
+        Top = 83
+        Width = 144
         Align = alBottom
         AutoSize = True
         Caption = 'Specify position...'
         Enabled = False
         OnClick = SpecifyBtnClick
+        ParentFont = False
         TabOrder = 1
       end
       object RadioPanel: TPanel
         Left = 0
-        Height = 48
+        Height = 83
         Top = 0
-        Width = 121
+        Width = 144
         Align = alClient
         BevelOuter = bvNone
         ChildSizing.EnlargeVertical = crsHomogenousSpaceResize
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 1
-        ClientHeight = 48
-        ClientWidth = 121
+        ClientHeight = 83
+        ClientWidth = 144
+        ParentFont = False
         TabOrder = 0
         object InitialRadio: TRadioButton
           Left = 0
-          Height = 21
-          Top = 2
-          Width = 121
+          Height = 22
+          Top = 13
+          Width = 144
           Caption = 'Initial position'
           Checked = True
           OnChange = SomethingChanged
+          ParentFont = False
           TabOrder = 0
           TabStop = True
         end
         object SpecificRadio: TRadioButton
           Left = 0
-          Height = 21
-          Top = 25
-          Width = 121
+          Height = 22
+          Top = 48
+          Width = 144
           Caption = 'Specific position'
           OnChange = SomethingChanged
+          ParentFont = False
           TabOrder = 1
         end
       end
     end
     object TimeControlGroup: TGroupBox
       Left = 0
-      Height = 51
-      Top = 99
-      Width = 123
+      Height = 55
+      Top = 138
+      Width = 146
       Align = alBottom
       AutoSize = True
       Caption = 'Time control'
-      ClientHeight = 32
-      ClientWidth = 121
+      ClientHeight = 34
+      ClientWidth = 144
+      ParentFont = False
       TabOrder = 1
       object TimeControlBtn: TButton
         Left = 0
-        Height = 32
+        Height = 34
         Top = 0
-        Width = 121
+        Width = 144
         Align = alBottom
         AutoSize = True
         Caption = 'Time control...'
         OnClick = TimeControlBtnClick
+        ParentFont = False
         TabOrder = 0
       end
     end
   end
   object PlayerPanel: TPanel
-    Left = 123
-    Height = 150
-    Top = 53
-    Width = 455
+    Left = 146
+    Height = 193
+    Top = 55
+    Width = 544
     Align = alClient
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 150
-    ClientWidth = 455
+    ClientHeight = 193
+    ClientWidth = 544
+    ParentFont = False
     TabOrder = 3
     object WhiteGroup: TGroupBox
       Left = 0
-      Height = 150
+      Height = 193
       Top = 0
-      Width = 213
+      Width = 272
       Align = alLeft
       AutoSize = True
       Caption = 'White'
-      ClientHeight = 131
-      ClientWidth = 211
+      ClientHeight = 172
+      ClientWidth = 270
+      ParentFont = False
       TabOrder = 0
       inline WhiteSelect: TPlayerSelector
-        Height = 131
-        Width = 211
+        Height = 172
+        Width = 270
         Align = alClient
-        ClientHeight = 131
-        ClientWidth = 211
+        ClientHeight = 172
+        ClientWidth = 270
         inherited PlayerSelect: TRadioGroup
-          Height = 31
-          Width = 211
-          ClientHeight = 12
-          ClientWidth = 209
+          Height = 65
+          Width = 270
+          ClientHeight = 44
+          ClientWidth = 268
         end
         inherited HumanGroup: TGroupBox
-          Height = 49
-          Top = 31
-          Width = 211
-          ClientHeight = 30
-          ClientWidth = 209
+          Height = 52
+          Top = 65
+          Width = 270
+          ClientHeight = 31
+          ClientWidth = 268
           inherited HumanLabel: TLabel
-            Height = 30
-            Width = 39
+            Height = 31
+            Width = 49
+            BorderSpacing.Right = 5
           end
           inherited HumanName: TEdit
-            Left = 42
-            Height = 30
-            Width = 167
+            Left = 54
+            Height = 31
+            Width = 214
           end
         end
         inherited EngineGroup: TGroupBox
-          Height = 51
-          Top = 80
-          Width = 211
-          ClientHeight = 32
-          ClientWidth = 209
+          Height = 55
+          Top = 117
+          Width = 270
+          ClientHeight = 34
+          ClientWidth = 268
           inherited EngineLabel: TLabel
-            Height = 32
-            Width = 31
+            Height = 34
+            Width = 39
+            BorderSpacing.Right = 5
           end
           inherited EngineOptions: TButton
-            Left = 140
-            Height = 32
-            Width = 69
+            Left = 184
+            Height = 34
+            Width = 84
           end
           inherited EnginePath: TEdit
-            Left = 34
-            Height = 30
-            Width = 80
+            Left = 44
+            Height = 31
+            Top = 2
+            Width = 100
           end
           inherited SelectBtn: TBitBtn
-            Left = 114
-            Height = 32
+            Left = 144
+            Height = 34
+            Width = 40
           end
         end
         inherited FileNameEdit: TFileNameEdit
-          Height = 30
+          Height = 31
+          ButtonWidth = 36
         end
       end
     end
     object BlackGroup: TGroupBox
-      Left = 213
-      Height = 150
+      Left = 272
+      Height = 193
       Top = 0
-      Width = 242
+      Width = 272
       Align = alClient
       AutoSize = True
       Caption = 'Black'
-      ClientHeight = 131
-      ClientWidth = 240
+      ClientHeight = 172
+      ClientWidth = 270
+      ParentFont = False
       TabOrder = 1
       inline BlackSelect: TPlayerSelector
-        Height = 131
-        Width = 240
+        Height = 172
+        Width = 270
         Align = alClient
-        ClientHeight = 131
-        ClientWidth = 240
+        ClientHeight = 172
+        ClientWidth = 270
         inherited PlayerSelect: TRadioGroup
-          Height = 31
-          Width = 240
-          ClientHeight = 12
-          ClientWidth = 238
+          Height = 65
+          Width = 270
+          ClientHeight = 44
+          ClientWidth = 268
         end
         inherited HumanGroup: TGroupBox
-          Height = 49
-          Top = 31
-          Width = 240
-          ClientHeight = 30
-          ClientWidth = 238
+          Height = 52
+          Top = 65
+          Width = 270
+          ClientHeight = 31
+          ClientWidth = 268
           inherited HumanLabel: TLabel
-            Height = 30
-            Width = 39
+            Height = 31
+            Width = 49
+            BorderSpacing.Right = 5
           end
           inherited HumanName: TEdit
-            Left = 42
-            Height = 30
-            Width = 196
+            Left = 54
+            Height = 31
+            Width = 214
           end
         end
         inherited EngineGroup: TGroupBox
-          Height = 51
-          Top = 80
-          Width = 240
-          ClientHeight = 32
-          ClientWidth = 238
+          Height = 55
+          Top = 117
+          Width = 270
+          ClientHeight = 34
+          ClientWidth = 268
           inherited EngineLabel: TLabel
-            Height = 32
-            Width = 31
+            Height = 34
+            Width = 39
+            BorderSpacing.Right = 5
           end
           inherited EngineOptions: TButton
-            Left = 169
-            Height = 32
-            Width = 69
+            Left = 184
+            Height = 34
+            Width = 84
           end
           inherited EnginePath: TEdit
-            Left = 34
-            Height = 30
-            Width = 109
+            Left = 44
+            Height = 31
+            Top = 2
+            Width = 100
           end
           inherited SelectBtn: TBitBtn
-            Left = 143
-            Height = 32
+            Left = 144
+            Height = 34
+            Width = 40
           end
         end
         inherited FileNameEdit: TFileNameEdit
-          Height = 30
+          Height = 31
+          ButtonWidth = 36
         end
       end
     end
   end
   object EventNamePanel: TPanel
     Left = 0
-    Height = 32
+    Height = 33
     Top = 0
-    Width = 578
+    Width = 690
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
     BorderStyle = bsSingle
-    ClientHeight = 30
-    ClientWidth = 576
+    ClientHeight = 31
+    ClientWidth = 688
+    ParentFont = False
     TabOrder = 0
     object LGameName: TLabel
-      Left = 3
-      Height = 30
+      Left = 4
+      Height = 31
       Top = 0
-      Width = 75
+      Width = 96
       Align = alLeft
-      BorderSpacing.Left = 3
-      BorderSpacing.Right = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Right = 4
       Caption = 'Game name:'
       Layout = tlCenter
       ParentColor = False
+      ParentFont = False
     end
     object GameName: TEdit
-      Left = 81
-      Height = 30
+      Left = 104
+      Height = 31
       Top = 0
-      Width = 495
+      Width = 584
       Align = alClient
+      ParentFont = False
       TabOrder = 0
       Text = 'Chess 256 Game'
     end
   end
   object AnalysisCheck: TCheckBox
     Left = 0
-    Height = 21
-    Top = 32
-    Width = 578
+    Height = 22
+    Top = 33
+    Width = 690
     Align = alTop
     Caption = 'Analysis mode'
     Checked = True
     OnChange = SomethingChanged
+    ParentFont = False
     State = cbChecked
     TabOrder = 1
   end

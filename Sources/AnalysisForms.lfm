@@ -1,52 +1,51 @@
 object AnalysisForm: TAnalysisForm
   Left = 450
-  Height = 93
+  Height = 116
   Top = 327
-  Width = 598
+  Width = 748
   Caption = 'Analysis'
-  ClientHeight = 93
-  ClientWidth = 598
+  ClientHeight = 116
+  ClientWidth = 748
+  DesignTimePPI = 120
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnHide = FormHide
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.8.0.6'
-  Visible = False
   object ListBox: TListBox
     Left = 0
-    Height = 67
-    Top = 26
-    Width = 598
+    Height = 84
+    Top = 32
+    Width = 748
     Align = alClient
-    Font.Height = -15
+    Font.Height = -18
     ItemHeight = 0
     OnDblClick = ListBoxDblClick
     ParentFont = False
-    ScrollWidth = 596
+    ScrollWidth = 746
     TabOrder = 1
     TopIndex = -1
   end
   object IndicatorPanel: TPanel
     Left = 0
-    Height = 26
+    Height = 32
     Top = 0
-    Width = 598
+    Width = 748
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
     BorderStyle = bsSingle
-    ClientHeight = 24
-    ClientWidth = 596
-    Font.Height = -15
+    ClientHeight = 30
+    ClientWidth = 746
+    Font.Height = -19
     ParentFont = False
     TabOrder = 0
     Visible = False
     object FlowPanel: TFlowPanel
       Left = 0
-      Height = 24
+      Height = 30
       Top = 0
-      Width = 596
+      Width = 746
       Align = alClient
       AutoSize = True
       BevelOuter = bvNone
@@ -83,143 +82,181 @@ object AnalysisForm: TAnalysisForm
         end>
       FlowLayout = tlTop
       FlowStyle = fsLeftRightTopBottom
+      Font.Height = -19
+      ParentFont = False
       TabOrder = 0
       object DepthPanel: TPanel
-        Left = 54
-        Height = 24
+        Left = 64
+        Height = 30
         Top = 0
-        Width = 41
+        Width = 51
         Align = alLeft
         AutoSize = True
-        ClientHeight = 24
-        ClientWidth = 41
+        ClientHeight = 30
+        ClientWidth = 51
+        Font.Height = -19
+        ParentFont = False
         TabOrder = 1
         object DepthLabel: TLabel
-          Left = 7
+          Left = 9
           Height = 22
-          Top = 1
-          Width = 27
+          Top = 4
+          Width = 33
           Align = alLeft
-          BorderSpacing.Left = 6
-          BorderSpacing.Right = 6
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 3
           Caption = 'd=4'
+          Font.Height = -19
           Layout = tlCenter
           ParentColor = False
+          ParentFont = False
         end
       end
       object TimePanel: TPanel
-        Left = 95
-        Height = 24
+        Left = 115
+        Height = 30
         Top = 0
-        Width = 76
+        Width = 88
         Align = alLeft
         AutoSize = True
-        ClientHeight = 24
-        ClientWidth = 76
+        ClientHeight = 30
+        ClientWidth = 88
+        Font.Height = -18
+        ParentFont = False
         TabOrder = 2
         object TimeLabel: TLabel
-          Left = 7
+          Left = 9
           Height = 22
-          Top = 1
-          Width = 62
+          Top = 4
+          Width = 70
           Align = alLeft
-          BorderSpacing.Left = 6
-          BorderSpacing.Right = 6
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 3
           Caption = '00:00:01'
+          Font.Height = -18
           Layout = tlCenter
           ParentColor = False
+          ParentFont = False
         end
       end
       object NodesPanel: TPanel
-        Left = 171
-        Height = 24
+        Left = 203
+        Height = 30
         Top = 0
-        Width = 64
+        Width = 80
         Align = alLeft
         AutoSize = True
-        ClientHeight = 24
-        ClientWidth = 64
+        ClientHeight = 30
+        ClientWidth = 80
+        Font.Height = -19
+        ParentFont = False
         TabOrder = 3
         object NodesLabel: TLabel
-          Left = 7
+          Left = 9
           Height = 22
-          Top = 1
-          Width = 50
+          Top = 4
+          Width = 62
           Align = alLeft
-          BorderSpacing.Left = 6
-          BorderSpacing.Right = 6
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 3
           Caption = '128 kN'
+          Font.Height = -19
           Layout = tlCenter
           ParentColor = False
+          ParentFont = False
         end
       end
       object SpeedPanel: TPanel
-        Left = 235
-        Height = 24
+        Left = 283
+        Height = 30
         Top = 0
-        Width = 77
+        Width = 89
         Align = alLeft
         AutoSize = True
-        ClientHeight = 24
-        ClientWidth = 77
+        ClientHeight = 30
+        ClientWidth = 89
+        Font.Height = -19
+        ParentFont = False
         TabOrder = 4
         object SpeedLabel: TLabel
-          Left = 7
+          Left = 9
           Height = 22
-          Top = 1
-          Width = 63
+          Top = 4
+          Width = 71
           Align = alLeft
-          BorderSpacing.Left = 6
-          BorderSpacing.Right = 6
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 3
           Caption = '128 kN/s'
+          Font.Height = -18
           Layout = tlCenter
           ParentColor = False
+          ParentFont = False
         end
       end
       object CurMovePanel: TPanel
-        Left = 312
-        Height = 24
+        Left = 372
+        Height = 30
         Top = 0
-        Width = 78
+        Width = 90
         Align = alLeft
         AutoSize = True
-        ClientHeight = 24
-        ClientWidth = 78
+        ClientHeight = 30
+        ClientWidth = 90
+        Font.Height = -19
+        ParentFont = False
         TabOrder = 5
         object CurMoveLabel: TLabel
-          Left = 7
+          Left = 9
           Height = 22
-          Top = 1
-          Width = 64
+          Top = 4
+          Width = 72
           Align = alLeft
-          BorderSpacing.Left = 6
-          BorderSpacing.Right = 6
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 3
           Caption = 'e4 (1/20)'
+          Font.Height = -18
           Layout = tlCenter
           ParentColor = False
+          ParentFont = False
         end
       end
       object ScorePanel: TPanel
         Left = 0
-        Height = 24
+        Height = 30
         Top = 0
-        Width = 54
+        Width = 64
         Align = alLeft
         AutoSize = True
-        ClientHeight = 24
-        ClientWidth = 54
+        ClientHeight = 30
+        ClientWidth = 64
+        Font.Height = -19
+        ParentFont = False
         TabOrder = 0
         object ScoreLabel: TLabel
-          Left = 7
+          Left = 9
           Height = 22
-          Top = 1
-          Width = 40
+          Top = 4
+          Width = 46
           Align = alLeft
-          BorderSpacing.Left = 6
-          BorderSpacing.Right = 6
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 8
+          BorderSpacing.Bottom = 3
           Caption = '+0.00'
+          Font.Height = -18
           Layout = tlCenter
           ParentColor = False
+          ParentFont = False
         end
       end
     end
@@ -227,19 +264,19 @@ object AnalysisForm: TAnalysisForm
   object EngineHandle: TTimer
     Interval = 200
     OnTimer = EngineHandleTimer
-    left = 184
-    top = 40
+    Left = 230
+    Top = 50
   end
   object OpenDialog: TOpenDialog
     Title = 'Select engine'
     Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
-    left = 240
-    top = 40
+    Left = 300
+    Top = 50
   end
   object ActionList: TActionList
     Images = GlyphKeeper.ImageList
-    left = 112
-    top = 40
+    Left = 140
+    Top = 50
     object AnalysisAction: TAction
       Caption = 'Start analysis'
       ImageIndex = 15

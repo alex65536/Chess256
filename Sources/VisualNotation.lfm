@@ -1,7 +1,11 @@
 object VisualChessNotation: TVisualChessNotation
   Left = 0
-  Height = 201
+  Height = 255
   Top = 0
-  Width = 270
+  Width = 338
+  DesignTimePPI = 120
+  ParentFont = False
   TabOrder = 0
+  DesignLeft = -1
+  DesignTop = -1
 end

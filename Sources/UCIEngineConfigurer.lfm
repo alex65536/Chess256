@@ -1,44 +1,43 @@
 object UCIConfigurerForm: TUCIConfigurerForm
   Left = 431
-  Height = 514
+  Height = 63
   Top = 147
-  Width = 262
+  Width = 210
   AutoSize = True
   BorderStyle = bsDialog
   Caption = 'UCIConfigurerForm'
-  ClientHeight = 514
-  ClientWidth = 262
+  ClientHeight = 63
+  ClientWidth = 210
+  DesignTimePPI = 120
   Position = poScreenCenter
-  LCLVersion = '1.8.0.6'
-  Visible = False
   object ButtonPanel: TButtonPanel
-    Left = 6
+    Left = 8
     Height = 42
-    Top = 466
-    Width = 250
+    Top = 13
+    Width = 194
+    BorderSpacing.Around = 8
     OKButton.Name = 'OKButton'
     OKButton.Caption = 'OK'
-    OKButton.DefaultCaption = False
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
     CloseButton.Name = 'CloseButton'
     CloseButton.DefaultCaption = True
     CancelButton.Name = 'CancelButton'
     CancelButton.Caption = 'Cancel'
-    CancelButton.DefaultCaption = False
     TabOrder = 0
     ShowButtons = [pbOK, pbCancel]
     ShowGlyphs = [pbOK, pbCancel]
   end
   object Panel: TPanel
-    Left = 3
-    Height = 457
-    Top = 3
-    Width = 256
+    Left = 4
+    Height = 1
+    Top = 4
+    Width = 202
     Align = alClient
     AutoSize = True
-    BorderSpacing.Around = 3
+    BorderSpacing.Around = 4
     BevelOuter = bvNone
+    ParentFont = False
     TabOrder = 1
   end
 end

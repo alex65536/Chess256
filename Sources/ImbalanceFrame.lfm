@@ -1,17 +1,20 @@
 object Imbalance: TImbalance
   Left = 0
-  Height = 188
+  Height = 234
   Top = 0
-  Width = 330
-  ClientHeight = 188
-  ClientWidth = 330
+  Width = 412
+  ClientHeight = 234
+  ClientWidth = 412
+  DesignTimePPI = 120
+  ParentFont = False
   TabOrder = 0
   object PaintBox: TPaintBox
-    Left = 8
-    Height = 172
-    Top = 8
-    Width = 314
+    Left = 10
+    Height = 214
+    Top = 10
+    Width = 392
     Anchors = [akTop, akLeft, akRight, akBottom]
+    ParentFont = False
     OnPaint = PaintBoxPaint
   end
 end

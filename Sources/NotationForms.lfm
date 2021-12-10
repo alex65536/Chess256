@@ -1,26 +1,25 @@
 object NotationForm: TNotationForm
-  Left = 389
-  Height = 647
-  Top = 60
-  Width = 326
+  Left = 0
+  Height = 869
+  Top = 0
+  Width = 797
   Align = alClient
   Caption = 'Notation'
-  ClientHeight = 647
-  ClientWidth = 326
+  ClientHeight = 869
+  ClientWidth = 797
+  DesignTimePPI = 120
   KeyPreview = True
   Position = poScreenCenter
   ShowHint = True
-  LCLVersion = '1.8.0.6'
-  Visible = False
   inline Notation: TVisualChessNotation
-    Height = 647
-    Width = 326
+    Height = 869
+    Width = 797
     Align = alClient
   end
   object ActionList: TActionList
     Images = GlyphKeeper.ImageList
-    left = 109
-    top = 89
+    Left = 120
+    Top = 112
     object DelNodeAction: TAction
       Caption = 'Delete current node'
       ImageIndex = 22

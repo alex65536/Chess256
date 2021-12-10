@@ -254,6 +254,10 @@ begin
   MainMenu.Images := GlyphKeeper.ImageList;
   {$ENDIF}
 
+  // TODO : remove this once the main menu icons are scalable
+  ToolBar.ButtonHeight := 32;
+  ToolBar.ButtonWidth := 32;
+
   FGame := nil;
 
   Texture := TResourceTextureContainer.Create;

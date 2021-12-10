@@ -1,11 +1,12 @@
 object PositionEditor: TPositionEditor
   Left = 416
-  Height = 397
+  Height = 496
   Top = 93
-  Width = 765
+  Width = 956
   Caption = 'Position Editor'
-  ClientHeight = 397
-  ClientWidth = 765
+  ClientHeight = 496
+  ClientWidth = 956
+  DesignTimePPI = 120
   KeyPreview = True
   Menu = MainMenu
   OnChangeBounds = FormChangeBounds
@@ -15,26 +16,25 @@ object PositionEditor: TPositionEditor
   OnShow = FormShow
   Position = poScreenCenter
   ShowHint = True
-  LCLVersion = '1.8.0.6'
-  Visible = False
   object Panel: TPanel
-    Left = 419
-    Height = 369
+    Left = 524
+    Height = 496
     Top = 0
-    Width = 346
+    Width = 432
     Align = alRight
     BorderStyle = bsSingle
-    ClientHeight = 367
-    ClientWidth = 344
+    ClientHeight = 494
+    ClientWidth = 430
+    ParentFont = False
     TabOrder = 0
     object ButtonPanel: TButtonPanel
-      Left = 7
+      Left = 9
       Height = 42
-      Top = 319
-      Width = 330
+      Top = 443
+      Width = 412
+      BorderSpacing.Around = 8
       OKButton.Name = 'OKButton'
       OKButton.Caption = 'OK'
-      OKButton.DefaultCaption = False
       OKButton.OnClick = OKButtonClick
       HelpButton.Name = 'HelpButton'
       HelpButton.DefaultCaption = True
@@ -42,27 +42,27 @@ object PositionEditor: TPositionEditor
       CloseButton.DefaultCaption = True
       CancelButton.Name = 'CancelButton'
       CancelButton.Caption = 'Cancel'
-      CancelButton.DefaultCaption = False
       TabOrder = 1
       ShowButtons = [pbOK, pbCancel]
       ShowGlyphs = [pbOK, pbCancel]
     end
     object EditorToolPanel: TPanel
       Left = 1
-      Height = 356
+      Height = 419
       Top = 1
-      Width = 342
+      Width = 428
       Align = alTop
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 356
-      ClientWidth = 342
+      ClientHeight = 419
+      ClientWidth = 428
+      ParentFont = False
       TabOrder = 0
       object PiecePanel: TPanel
         Left = 0
-        Height = 100
+        Height = 125
         Top = 0
-        Width = 342
+        Width = 428
         Align = alTop
         BevelOuter = bvNone
         BorderStyle = bsSingle
@@ -70,200 +70,218 @@ object PositionEditor: TPositionEditor
         ChildSizing.EnlargeVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 7
-        ClientHeight = 98
-        ClientWidth = 340
+        ClientHeight = 123
+        ClientWidth = 426
+        ParentFont = False
         TabOrder = 0
         object WhitePawnBtn: TSpeedButton
           Left = 0
-          Height = 49
+          Height = 62
           Hint = 'White pawn (P)'
           Top = 0
-          Width = 49
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = WhitePawnBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object WhiteKnightBtn: TSpeedButton
-          Left = 49
-          Height = 49
+          Left = 61
+          Height = 62
           Hint = 'White knight (N)'
           Top = 0
-          Width = 49
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = WhiteKnightBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object WhiteBishopBtn: TSpeedButton
-          Left = 98
-          Height = 49
+          Left = 122
+          Height = 62
           Hint = 'White bishop (B)'
           Top = 0
-          Width = 49
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = WhiteBishopBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object WhiteRookBtn: TSpeedButton
-          Left = 147
-          Height = 49
+          Left = 183
+          Height = 62
           Hint = 'White rook (R)'
           Top = 0
-          Width = 49
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = WhiteRookBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object WhiteQueenBtn: TSpeedButton
-          Left = 196
-          Height = 49
+          Left = 244
+          Height = 62
           Hint = 'White queen (Q)'
           Top = 0
-          Width = 49
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = WhiteQueenBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object WhiteKingBtn: TSpeedButton
-          Left = 245
-          Height = 49
+          Left = 305
+          Height = 62
           Hint = 'White king (K)'
           Top = 0
-          Width = 49
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = WhiteKingBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object EraserBtn: TSpeedButton
-          Left = 294
-          Height = 49
+          Left = 366
+          Height = 62
           Hint = 'Erase pieces (E)'
           Top = 0
-          Width = 46
+          Width = 60
           Flat = True
           GroupIndex = 1
           OnClick = EraserBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object BlackPawnBtn: TSpeedButton
           Left = 0
-          Height = 49
+          Height = 61
           Hint = 'Black pawn (Shift+P)'
-          Top = 49
-          Width = 49
+          Top = 62
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = BlackPawnBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object BlackKnightBtn: TSpeedButton
-          Left = 49
-          Height = 49
+          Left = 61
+          Height = 61
           Hint = 'Black knight (Shift+N)'
-          Top = 49
-          Width = 49
+          Top = 62
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = BlackKnightBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object BlackBishopBtn: TSpeedButton
-          Left = 98
-          Height = 49
+          Left = 122
+          Height = 61
           Hint = 'Black bishop (Shift+B)'
-          Top = 49
-          Width = 49
+          Top = 62
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = BlackBishopBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object BlackRookBtn: TSpeedButton
-          Left = 147
-          Height = 49
+          Left = 183
+          Height = 61
           Hint = 'Black rook (Shift+R)'
-          Top = 49
-          Width = 49
+          Top = 62
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = BlackRookBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object BlackQueenBtn: TSpeedButton
-          Left = 196
-          Height = 49
+          Left = 244
+          Height = 61
           Hint = 'Black queen (Shift+Q)'
-          Top = 49
-          Width = 49
+          Top = 62
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = BlackQueenBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object BlackKingBtn: TSpeedButton
-          Left = 245
-          Height = 49
+          Left = 305
+          Height = 61
           Hint = 'Black king (Shift+K)'
-          Top = 49
-          Width = 49
+          Top = 62
+          Width = 61
           Flat = True
           GroupIndex = 1
           OnClick = BlackKingBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
         object CursorBtn: TSpeedButton
-          Left = 294
-          Height = 49
+          Left = 366
+          Height = 61
           Hint = 'Move pieces (M)'
-          Top = 49
-          Width = 46
+          Top = 62
+          Width = 60
           Down = True
           Flat = True
           GroupIndex = 1
           OnClick = CursorBtnClick
           OnPaint = SpeedButtonsPaint
+          ParentFont = False
         end
       end
       object CastlingPanel: TGroupBox
         AnchorSideLeft.Control = EditorToolPanel
         AnchorSideTop.Control = PiecePanel
         AnchorSideTop.Side = asrBottom
-        Left = 3
-        Height = 89
-        Top = 103
-        Width = 194
+        Left = 4
+        Height = 98
+        Top = 129
+        Width = 228
         AutoSize = True
-        BorderSpacing.Around = 3
+        BorderSpacing.Around = 4
         Caption = 'Castling'
-        ClientHeight = 70
-        ClientWidth = 192
+        ClientHeight = 77
+        ClientWidth = 226
+        ParentFont = False
         TabOrder = 1
         object WhiteCastlingGroup: TGroupBox
           Left = 0
-          Height = 70
+          Height = 77
           Top = 0
-          Width = 96
+          Width = 113
           Align = alLeft
           AutoSize = True
           Caption = 'White'
-          ClientHeight = 51
-          ClientWidth = 94
+          ClientHeight = 56
+          ClientWidth = 111
+          ParentFont = False
           TabOrder = 0
           object WhiteKingside: TCheckBox
             AnchorSideLeft.Control = WhiteCastlingGroup
             AnchorSideTop.Control = WhiteCastlingGroup
-            Left = 3
-            Height = 21
-            Top = 3
-            Width = 75
-            BorderSpacing.Around = 3
+            Left = 4
+            Height = 22
+            Top = 4
+            Width = 87
+            BorderSpacing.Around = 4
             Caption = 'Kingside'
             Checked = True
+            ParentFont = False
             State = cbChecked
             TabOrder = 0
           end
@@ -271,37 +289,40 @@ object PositionEditor: TPositionEditor
             AnchorSideLeft.Control = WhiteCastlingGroup
             AnchorSideTop.Control = WhiteKingside
             AnchorSideTop.Side = asrBottom
-            Left = 3
-            Height = 21
-            Top = 27
-            Width = 88
-            BorderSpacing.Around = 3
+            Left = 4
+            Height = 22
+            Top = 30
+            Width = 103
+            BorderSpacing.Around = 4
             Caption = 'Queenside'
             Checked = True
+            ParentFont = False
             State = cbChecked
             TabOrder = 1
           end
         end
         object BlackCastlingGroup: TGroupBox
-          Left = 96
-          Height = 70
+          Left = 113
+          Height = 77
           Top = 0
-          Width = 96
+          Width = 113
           Align = alClient
           Caption = 'Black'
-          ClientHeight = 51
-          ClientWidth = 94
+          ClientHeight = 56
+          ClientWidth = 111
+          ParentFont = False
           TabOrder = 1
           object BlackKingside: TCheckBox
             AnchorSideLeft.Control = BlackCastlingGroup
             AnchorSideTop.Control = BlackCastlingGroup
-            Left = 3
-            Height = 21
-            Top = 3
-            Width = 75
-            BorderSpacing.Around = 3
+            Left = 4
+            Height = 22
+            Top = 4
+            Width = 87
+            BorderSpacing.Around = 4
             Caption = 'Kingside'
             Checked = True
+            ParentFont = False
             State = cbChecked
             TabOrder = 0
           end
@@ -309,13 +330,14 @@ object PositionEditor: TPositionEditor
             AnchorSideLeft.Control = BlackCastlingGroup
             AnchorSideTop.Control = BlackKingside
             AnchorSideTop.Side = asrBottom
-            Left = 3
-            Height = 21
-            Top = 27
-            Width = 88
-            BorderSpacing.Around = 3
+            Left = 4
+            Height = 22
+            Top = 30
+            Width = 103
+            BorderSpacing.Around = 4
             Caption = 'Queenside'
             Checked = True
+            ParentFont = False
             State = cbChecked
             TabOrder = 1
           end
@@ -327,15 +349,15 @@ object PositionEditor: TPositionEditor
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = EditorToolPanel
         AnchorSideRight.Side = asrBottom
-        Left = 290
-        Height = 30
-        Top = 195
-        Width = 49
+        Left = 363
+        Height = 32
+        Top = 231
+        Width = 61
         Anchors = [akTop, akRight]
         AutoComplete = True
         AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
-        BorderSpacing.Top = 3
-        BorderSpacing.Right = 3
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
         ItemHeight = 0
         ItemIndex = 0
         Items.Strings = (
@@ -349,6 +371,7 @@ object PositionEditor: TPositionEditor
           'g'
           'h'
         )
+        ParentFont = False
         Style = csDropDownList
         TabOrder = 4
         Text = '-'
@@ -357,30 +380,32 @@ object PositionEditor: TPositionEditor
         AnchorSideTop.Control = EnPassantLineCombo
         AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = EnPassantLineCombo
-        Left = -8
+        Left = -10
         Height = 18
         Hint = 'If last move was double pawn move, put the line where it happened. Otherwise, put -.'
-        Top = 201
-        Width = 293
+        Top = 238
+        Width = 367
         Alignment = taRightJustify
         Anchors = [akTop, akLeft, akRight]
-        BorderSpacing.Right = 5
+        BorderSpacing.Right = 6
         Caption = 'En passant line'
         ParentColor = False
+        ParentFont = False
       end
       object MoveNumber: TSpinEdit
         AnchorSideLeft.Control = MoveNumberLabel
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = CastlingPanel
         AnchorSideTop.Side = asrBottom
-        Left = 93
-        Height = 28
-        Top = 195
-        Width = 72
-        BorderSpacing.Left = 5
-        BorderSpacing.Top = 3
+        Left = 111
+        Height = 29
+        Top = 231
+        Width = 90
+        BorderSpacing.Left = 6
+        BorderSpacing.Top = 4
         MaxValue = 99999
         MinValue = 1
+        ParentFont = False
         TabOrder = 3
         Value = 1
       end
@@ -388,26 +413,28 @@ object PositionEditor: TPositionEditor
         AnchorSideLeft.Control = EditorToolPanel
         AnchorSideTop.Control = MoveNumber
         AnchorSideTop.Side = asrCenter
-        Left = 3
+        Left = 4
         Height = 18
-        Top = 200
-        Width = 85
-        BorderSpacing.Left = 3
+        Top = 236
+        Width = 101
+        BorderSpacing.Left = 4
         Caption = 'Move number'
         ParentColor = False
+        ParentFont = False
       end
       object MoveCounterLabel: TLabel
         AnchorSideLeft.Control = EditorToolPanel
         AnchorSideTop.Control = MoveCounter
         AnchorSideTop.Side = asrCenter
-        Left = 3
+        Left = 4
         Height = 18
         Hint = 'Count of half-moves without captures and moves made by pawns (required for draw by 50 moves rule).'
-        Top = 228
-        Width = 84
-        BorderSpacing.Left = 3
+        Top = 265
+        Width = 100
+        BorderSpacing.Left = 4
         Caption = 'Move counter'
         ParentColor = False
+        ParentFont = False
         ParentShowHint = False
         ShowHint = True
       end
@@ -415,23 +442,25 @@ object PositionEditor: TPositionEditor
         AnchorSideLeft.Control = MoveNumber
         AnchorSideTop.Control = MoveNumber
         AnchorSideTop.Side = asrBottom
-        Left = 93
-        Height = 28
-        Top = 223
-        Width = 72
+        Left = 111
+        Height = 29
+        Top = 260
+        Width = 90
+        ParentFont = False
         TabOrder = 5
       end
       object ClrBoardBtn: TBitBtn
         AnchorSideLeft.Control = EditorToolPanel
         AnchorSideTop.Control = MoveCounter
         AnchorSideTop.Side = asrBottom
-        Left = 3
-        Height = 34
-        Top = 254
-        Width = 168
+        Left = 4
+        Height = 42
+        Top = 293
+        Width = 210
         Action = ClearBoardAction
-        BorderSpacing.Left = 3
-        BorderSpacing.Top = 3
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        ParentFont = False
         TabOrder = 6
       end
       object InitialPosBtn: TBitBtn
@@ -440,13 +469,14 @@ object PositionEditor: TPositionEditor
         AnchorSideTop.Control = ClrBoardBtn
         AnchorSideRight.Control = EditorToolPanel
         AnchorSideRight.Side = asrBottom
-        Left = 171
-        Height = 34
-        Top = 254
-        Width = 168
+        Left = 214
+        Height = 42
+        Top = 293
+        Width = 210
         Action = InitialPositionAction
         Anchors = [akTop, akLeft, akRight]
-        BorderSpacing.Right = 3
+        BorderSpacing.Right = 4
+        ParentFont = False
         TabOrder = 7
       end
       object CopyFENBtn: TBitBtn
@@ -455,12 +485,13 @@ object PositionEditor: TPositionEditor
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = ClrBoardBtn
         AnchorSideRight.Side = asrBottom
-        Left = 3
-        Height = 34
-        Top = 288
-        Width = 168
+        Left = 4
+        Height = 42
+        Top = 335
+        Width = 210
         Action = CopyFENAction
         Anchors = [akTop, akLeft, akRight]
+        ParentFont = False
         TabOrder = 8
       end
       object PasteFENBtn: TBitBtn
@@ -469,12 +500,13 @@ object PositionEditor: TPositionEditor
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = InitialPosBtn
         AnchorSideRight.Side = asrBottom
-        Left = 171
-        Height = 34
-        Top = 288
-        Width = 168
+        Left = 214
+        Height = 42
+        Top = 335
+        Width = 210
         Action = PasteFENAction
         Anchors = [akTop, akLeft, akRight]
+        ParentFont = False
         TabOrder = 9
       end
       object FlipHorzBtn: TBitBtn
@@ -483,12 +515,13 @@ object PositionEditor: TPositionEditor
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = InitialPosBtn
         AnchorSideRight.Side = asrBottom
-        Left = 171
-        Height = 34
-        Top = 322
-        Width = 168
+        Left = 214
+        Height = 42
+        Top = 377
+        Width = 210
         Action = FlipHorizontallyAction
         Anchors = [akTop, akLeft, akRight]
+        ParentFont = False
         TabOrder = 11
       end
       object FlipVertBtn: TBitBtn
@@ -497,12 +530,13 @@ object PositionEditor: TPositionEditor
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = ClrBoardBtn
         AnchorSideRight.Side = asrBottom
-        Left = 3
-        Height = 34
-        Top = 322
-        Width = 168
+        Left = 4
+        Height = 42
+        Top = 377
+        Width = 210
         Action = FlipVerticallyAction
         Anchors = [akTop, akLeft, akRight]
+        ParentFont = False
         TabOrder = 10
       end
       object WhoMovesPanel: TPanel
@@ -513,64 +547,69 @@ object PositionEditor: TPositionEditor
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = CastlingPanel
         AnchorSideBottom.Side = asrBottom
-        Left = 200
-        Height = 89
-        Top = 103
-        Width = 139
+        Left = 236
+        Height = 98
+        Top = 129
+        Width = 188
         Anchors = [akTop, akLeft, akRight, akBottom]
         AutoSize = True
-        BorderSpacing.Right = 3
+        BorderSpacing.Right = 4
         BevelOuter = bvNone
-        ClientHeight = 89
-        ClientWidth = 139
+        ClientHeight = 98
+        ClientWidth = 188
         ParentColor = False
+        ParentFont = False
         TabOrder = 2
         object WhiteMoves: TToggleBox
           Left = 0
-          Height = 48
+          Height = 60
           Top = 0
-          Width = 139
+          Width = 188
           Align = alTop
           Caption = 'White moves'
           Checked = True
           OnChange = WhiteMovesChange
+          ParentFont = False
           State = cbChecked
           TabOrder = 0
         end
         object BlackMoves: TToggleBox
           Left = 0
-          Height = 41
-          Top = 48
-          Width = 139
+          Height = 38
+          Top = 60
+          Width = 188
           Align = alClient
           AutoSize = True
           Caption = 'Black moves'
           OnChange = BlackMovesChange
+          ParentFont = False
           TabOrder = 1
         end
       end
     end
   end
   inline Field: TVisualChessBoard
-    Height = 369
-    Width = 419
+    Height = 496
+    Width = 524
     Align = alClient
-    ClientHeight = 369
-    ClientWidth = 419
+    ClientHeight = 496
+    ClientWidth = 524
     Color = 16769248
     OnMouseLeave = nil
     TabOrder = 1
-    DesignLeft = 519
-    DesignTop = 228
+    DesignLeft = 649
+    DesignTop = 285
     inherited PaintBox: TPaintBox
-      Height = 353
-      Width = 403
+      Left = 12
+      Height = 476
+      Top = 12
+      Width = 504
     end
   end
   object ActionList: TActionList
     Images = GlyphKeeper.ImageList
-    left = 225
-    top = 133
+    Left = 281
+    Top = 166
     object ClearBoardAction: TAction
       Caption = 'Clear board'
       Hint = 'Clears the board.'
@@ -615,8 +654,8 @@ object PositionEditor: TPositionEditor
     end
   end
   object MainMenu: TMainMenu
-    left = 184
-    top = 133
+    Left = 230
+    Top = 166
     object MenuItem1: TMenuItem
       Caption = 'Position'
       object MenuItem2: TMenuItem
@@ -650,7 +689,7 @@ object PositionEditor: TPositionEditor
     Enabled = False
     Interval = 25
     OnTimer = CursorBugFixTimerTimer
-    left = 272
-    top = 133
+    Left = 336
+    Top = 166
   end
 end

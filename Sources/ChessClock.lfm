@@ -1,23 +1,26 @@
 object VisualChessClock: TVisualChessClock
   Left = 0
-  Height = 98
+  Height = 122
   Top = 0
-  Width = 320
-  ClientHeight = 98
-  ClientWidth = 320
+  Width = 400
+  ClientHeight = 122
+  ClientWidth = 400
   Color = clSilver
+  DesignTimePPI = 120
   OnResize = FrameResize
   ParentColor = False
+  ParentFont = False
   TabOrder = 0
   object WhitePanel: TPanel
     Left = 0
-    Height = 50
+    Height = 62
     Top = 0
-    Width = 320
+    Width = 400
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 50
-    ClientWidth = 320
+    ClientHeight = 62
+    ClientWidth = 400
+    ParentFont = False
     TabOrder = 0
     object WhiteShape: TShape
       AnchorSideLeft.Control = WhitePanel
@@ -27,45 +30,45 @@ object VisualChessClock: TVisualChessClock
       AnchorSideBottom.Control = WhitePanel
       AnchorSideBottom.Side = asrBottom
       Left = 0
-      Height = 50
+      Height = 62
       Top = 0
-      Width = 320
+      Width = 400
       Anchors = [akTop, akLeft, akRight, akBottom]
       Brush.Color = 16773360
       Pen.Color = 16769248
       Shape = stRoundRect
     end
     object LWhite: TLabel
-      Left = 3
-      Height = 44
-      Top = 3
-      Width = 70
+      Left = 4
+      Height = 54
+      Top = 4
+      Width = 87
       Align = alLeft
       Alignment = taCenter
-      BorderSpacing.Left = 3
-      BorderSpacing.Top = 3
-      BorderSpacing.Right = 3
-      BorderSpacing.Bottom = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 4
+      BorderSpacing.Bottom = 4
       Caption = 'White'
-      Font.Height = -27
+      Font.Height = -34
       Layout = tlCenter
       ParentColor = False
       ParentFont = False
     end
     object WhiteTime: TLabel
-      Left = 207
-      Height = 44
-      Top = 3
-      Width = 110
+      Left = 260
+      Height = 54
+      Top = 4
+      Width = 136
       Align = alRight
       Alignment = taCenter
-      BorderSpacing.Left = 3
-      BorderSpacing.Top = 3
-      BorderSpacing.Right = 3
-      BorderSpacing.Bottom = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 4
+      BorderSpacing.Bottom = 4
       Caption = '00:00:00'
       Font.Color = clRed
-      Font.Height = -27
+      Font.Height = -34
       Font.Style = [fsBold]
       Layout = tlCenter
       ParentColor = False
@@ -74,13 +77,14 @@ object VisualChessClock: TVisualChessClock
   end
   object BlackPanel: TPanel
     Left = 0
-    Height = 48
-    Top = 50
-    Width = 320
+    Height = 60
+    Top = 62
+    Width = 400
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 48
-    ClientWidth = 320
+    ClientHeight = 60
+    ClientWidth = 400
+    ParentFont = False
     TabOrder = 1
     object BlackShape: TShape
       AnchorSideLeft.Control = BlackPanel
@@ -90,46 +94,46 @@ object VisualChessClock: TVisualChessClock
       AnchorSideBottom.Control = BlackPanel
       AnchorSideBottom.Side = asrBottom
       Left = 0
-      Height = 48
+      Height = 60
       Top = 0
-      Width = 320
+      Width = 400
       Anchors = [akTop, akLeft, akRight, akBottom]
       Brush.Color = 2097152
       Pen.Color = 6299680
       Shape = stRoundRect
     end
     object LBlack: TLabel
-      Left = 3
-      Height = 42
-      Top = 3
-      Width = 61
+      Left = 4
+      Height = 52
+      Top = 4
+      Width = 84
       Align = alLeft
       Alignment = taCenter
-      BorderSpacing.Left = 3
-      BorderSpacing.Top = 3
-      BorderSpacing.Right = 3
-      BorderSpacing.Bottom = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 4
+      BorderSpacing.Bottom = 4
       Caption = 'Black'
       Font.Color = clWhite
-      Font.Height = -27
+      Font.Height = -34
       Layout = tlCenter
       ParentColor = False
       ParentFont = False
     end
     object BlackTime: TLabel
-      Left = 215
-      Height = 42
-      Top = 3
-      Width = 102
+      Left = 264
+      Height = 52
+      Top = 4
+      Width = 132
       Align = alRight
       Alignment = taCenter
-      BorderSpacing.Left = 3
-      BorderSpacing.Top = 3
-      BorderSpacing.Right = 3
-      BorderSpacing.Bottom = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 4
+      BorderSpacing.Bottom = 4
       Caption = '00:00:00'
       Font.Color = clRed
-      Font.Height = -27
+      Font.Height = -34
       Layout = tlCenter
       ParentColor = False
       ParentFont = False

@@ -1,133 +1,133 @@
 object TimerConfigureForm: TTimerConfigureForm
   Left = 488
-  Height = 170
+  Height = 138
   Top = 207
-  Width = 325
+  Width = 304
   AutoSize = True
   BorderStyle = bsDialog
   Caption = 'Set time control...'
-  ClientHeight = 170
-  ClientWidth = 325
+  ClientHeight = 138
+  ClientWidth = 304
+  DesignTimePPI = 120
   OnCreate = FormCreate
   OnResize = FormResize
   Position = poScreenCenter
-  Visible = False
   object Panel: TPanel
     Left = 0
-    Height = 129
+    Height = 138
     Top = 0
-    Width = 252
+    Width = 304
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 129
-    ClientWidth = 252
+    ClientHeight = 138
+    ClientWidth = 304
+    ParentFont = False
     TabOrder = 0
     object ButtonPanel: TButtonPanel
-      Left = 6
+      Left = 8
       Height = 42
-      Top = 81
-      Width = 240
+      Top = 88
+      Width = 288
+      BorderSpacing.Around = 8
       OKButton.Name = 'OKButton'
       OKButton.Caption = 'OK'
-      OKButton.DefaultCaption = False
       HelpButton.Name = 'HelpButton'
       HelpButton.DefaultCaption = True
       CloseButton.Name = 'CloseButton'
       CloseButton.DefaultCaption = True
       CancelButton.Name = 'CancelButton'
       CancelButton.Caption = 'Cancel'
-      CancelButton.DefaultCaption = False
       TabOrder = 0
       ShowButtons = [pbOK, pbCancel]
     end
     inline Configurer: TTimerConfigurePair
-      Height = 75
-      Width = 252
+      Height = 80
+      Width = 304
       Align = alClient
-      ClientHeight = 75
-      ClientWidth = 252
+      ClientHeight = 80
+      ClientWidth = 304
       OnResize = ConfigurerResize
       TabOrder = 1
       inherited SameTimeCheck: TCheckBox
-        Height = 21
-        Width = 252
+        Height = 22
+        Width = 304
       end
       inherited WhiteGroup: TGroupBox
-        Height = 54
-        Top = 21
-        Width = 126
-        ClientHeight = 35
-        ClientWidth = 124
+        Height = 58
+        Top = 22
+        Width = 152
+        ClientHeight = 37
+        ClientWidth = 150
         inherited WhiteConfigurer: TTimerConfigure
-          Height = 35
-          Width = 124
+          Height = 37
+          Width = 150
           Align = alClient
-          ClientHeight = 35
-          ClientWidth = 124
+          ClientHeight = 37
+          ClientWidth = 150
           inherited Panel: TPanel
-            Height = 34
-            Width = 124
-            ClientHeight = 32
-            ClientWidth = 122
+            Height = 36
+            Width = 150
+            ClientHeight = 34
+            ClientWidth = 148
             inherited ClearButton: TBitBtn
-              Left = 80
-              Height = 32
-              Width = 42
+              Left = 96
+              Height = 34
+              Width = 52
             end
             inherited EraseButton: TBitBtn
-              Left = 36
-              Height = 32
-              Width = 44
+              Left = 41
+              Height = 34
+              Width = 55
             end
             inherited AddButton: TBitBtn
-              Height = 32
-              Width = 36
+              Height = 34
+              Width = 41
             end
           end
           inherited ControlPanel: TPanel
             Height = 1
-            Top = 34
-            Width = 124
+            Top = 36
+            Width = 150
           end
         end
       end
       inherited BlackGroup: TGroupBox
-        Left = 126
-        Height = 54
-        Top = 21
-        Width = 126
-        ClientHeight = 35
-        ClientWidth = 124
+        Left = 152
+        Height = 58
+        Top = 22
+        Width = 152
+        ClientHeight = 37
+        ClientWidth = 150
         inherited BlackConfigurer: TTimerConfigure
-          Height = 35
-          Width = 124
+          Height = 37
+          Width = 150
           Align = alClient
-          ClientHeight = 35
-          ClientWidth = 124
+          ClientHeight = 37
+          ClientWidth = 150
           inherited Panel: TPanel
-            Height = 34
-            Width = 124
-            ClientHeight = 32
-            ClientWidth = 122
+            Height = 36
+            Width = 150
+            ClientHeight = 34
+            ClientWidth = 148
             inherited ClearButton: TBitBtn
-              Left = 80
-              Height = 32
-              Width = 42
+              Left = 96
+              Height = 34
+              Width = 52
             end
             inherited EraseButton: TBitBtn
-              Left = 36
-              Height = 32
-              Width = 44
+              Left = 41
+              Height = 34
+              Width = 55
             end
             inherited AddButton: TBitBtn
-              Height = 32
-              Width = 36
+              Height = 34
+              Width = 41
             end
           end
           inherited ControlPanel: TPanel
             Height = 1
-            Top = 34
-            Width = 124
+            Top = 36
+            Width = 150
           end
         end
       end

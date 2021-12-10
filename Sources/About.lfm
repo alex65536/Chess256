@@ -1,71 +1,72 @@
 object AboutBox: TAboutBox
   Left = 449
-  Height = 366
+  Height = 236
   Top = 215
-  Width = 431
+  Width = 427
   AutoSize = True
   BorderStyle = bsDialog
   Caption = 'About Chess 256'
-  ClientHeight = 366
-  ClientWidth = 431
+  ClientHeight = 236
+  ClientWidth = 427
   Color = 16759230
+  DesignTimePPI = 120
   Font.Color = clBlack
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.8.0.6'
-  Visible = False
   object Panel1: TPanel
     Left = 0
-    Height = 70
-    Top = 296
-    Width = 431
+    Height = 76
+    Top = 160
+    Width = 427
     Align = alBottom
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 70
-    ClientWidth = 431
+    ClientHeight = 76
+    ClientWidth = 427
+    Font.Color = clBlack
+    ParentFont = False
     TabOrder = 0
     object BottomBevel: TBevel
-      Left = 3
+      Left = 4
       Height = 2
-      Top = 30
-      Width = 425
+      Top = 32
+      Width = 419
       Align = alBottom
-      BorderSpacing.Left = 3
-      BorderSpacing.Right = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Right = 4
       Shape = bsTopLine
     end
     object HaveNiceGame: TLabel
-      Left = 3
+      Left = 4
       Height = 22
-      Top = 5
-      Width = 425
+      Top = 6
+      Width = 419
       Align = alClient
       Alignment = taCenter
-      BorderSpacing.Around = 3
+      BorderSpacing.Around = 4
       Caption = 'Have a nice game!'
       Font.Color = clGreen
-      Font.Height = -16
+      Font.Height = -20
       Font.Style = [fsItalic]
       ParentColor = False
       ParentFont = False
     end
     object CenterBevel: TBevel
-      Left = 3
+      Left = 4
       Height = 2
       Top = 0
-      Width = 425
+      Width = 419
       Align = alTop
-      BorderSpacing.Left = 3
-      BorderSpacing.Right = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Right = 4
       Shape = bsTopLine
     end
     object ButtonPanel: TPanel
       Left = 0
-      Height = 38
-      Top = 32
-      Width = 431
+      Height = 42
+      Top = 34
+      Width = 427
       Align = alBottom
       AutoSize = True
       BevelOuter = bvNone
@@ -75,52 +76,62 @@ object AboutBox: TAboutBox
       ChildSizing.ShrinkVertical = crsHomogenousChildResize
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 2
-      ClientHeight = 38
-      ClientWidth = 431
+      ClientHeight = 42
+      ClientWidth = 427
+      Font.Color = clBlack
+      ParentFont = False
       TabOrder = 0
       object LicenseInfoBtn: TButton
-        Left = 3
-        Height = 32
-        Top = 3
-        Width = 230
-        BorderSpacing.Around = 3
+        Left = 4
+        Height = 34
+        Top = 4
+        Width = 231
+        BorderSpacing.Around = 4
         Caption = 'License info'
+        Font.Color = clBlack
         OnClick = LicenseInfoBtnClick
+        ParentFont = False
         TabOrder = 1
       end
       object CloseBtn: TButton
-        Left = 236
-        Height = 32
-        Top = 3
-        Width = 192
-        BorderSpacing.Around = 3
+        Left = 239
+        Height = 34
+        Top = 4
+        Width = 184
+        BorderSpacing.Around = 4
         Caption = 'Close'
+        Font.Color = clBlack
         OnClick = CloseBtnClick
+        ParentFont = False
         TabOrder = 0
       end
     end
   end
   object Panel2: TPanel
     Left = 0
-    Height = 296
+    Height = 160
     Top = 0
-    Width = 431
+    Width = 427
     Align = alClient
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 296
-    ClientWidth = 431
+    ClientHeight = 160
+    ClientWidth = 427
+    Font.Color = clBlack
+    ParentFont = False
     TabOrder = 1
     object DeveloperEMail: TLabel
       AnchorSideLeft.Control = AppBuildDate
       AnchorSideTop.Control = AppDeveloper
       AnchorSideTop.Side = asrBottom
-      Left = 202
+      Left = 254
       Height = 18
-      Top = 94
-      Width = 109
+      Top = 106
+      Width = 139
       Caption = 'sh200105@mail.ru'
+      Font.Color = clBlack
       ParentColor = False
+      ParentFont = False
     end
     object AppVersion: TLabel
       AnchorSideLeft.Control = TopBevel
@@ -128,15 +139,15 @@ object AboutBox: TAboutBox
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = TopBevel
       AnchorSideRight.Side = asrBottom
-      Left = 131
+      Left = 164
       Height = 23
-      Top = 49
-      Width = 297
+      Top = 60
+      Width = 259
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
       Caption = 'AppVersion'
       Font.Color = clBlack
-      Font.Height = -17
+      Font.Height = -21
       Font.Style = [fsItalic]
       ParentColor = False
       ParentFont = False
@@ -144,9 +155,9 @@ object AboutBox: TAboutBox
     object Image1: TImage
       AnchorSideTop.Control = NamePanel
       Left = 0
-      Height = 128
+      Height = 160
       Top = 0
-      Width = 128
+      Width = 160
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869631F8D000089504E47
         0D0A1A0A0000000D49484452000001000000010008060000005C72A866000000
@@ -1286,29 +1297,29 @@ object AboutBox: TAboutBox
     object NamePanel: TPanel
       AnchorSideLeft.Control = TopBevel
       AnchorSideLeft.Side = asrCenter
-      Left = 172
-      Height = 49
+      Left = 156
+      Height = 60
       Top = 0
-      Width = 215
+      Width = 275
       Alignment = taLeftJustify
       AutoSize = True
-      BorderSpacing.Right = 3
+      BorderSpacing.Right = 4
       BevelOuter = bvNone
-      ClientHeight = 49
-      ClientWidth = 215
-      Font.Height = -44
+      ClientHeight = 60
+      ClientWidth = 275
+      Font.Height = -55
       ParentFont = False
       TabOrder = 0
       object Label1: TLabel
         Left = 0
-        Height = 49
+        Height = 60
         Top = 0
-        Width = 32
+        Width = 40
         Align = alLeft
         Caption = 'C'
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clBlue
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1318,15 +1329,15 @@ object AboutBox: TAboutBox
         ParentFont = False
       end
       object Label2: TLabel
-        Left = 32
-        Height = 49
+        Left = 40
+        Height = 60
         Top = 0
-        Width = 27
+        Width = 34
         Align = alLeft
         Caption = 'h'
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clRed
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1336,15 +1347,15 @@ object AboutBox: TAboutBox
         ParentFont = False
       end
       object Label3: TLabel
-        Left = 59
-        Height = 49
+        Left = 74
+        Height = 60
         Top = 0
-        Width = 24
+        Width = 31
         Align = alLeft
         Caption = 'e'
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clBlue
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1354,15 +1365,15 @@ object AboutBox: TAboutBox
         ParentFont = False
       end
       object Label4: TLabel
-        Left = 83
-        Height = 49
+        Left = 105
+        Height = 60
         Top = 0
-        Width = 24
+        Width = 31
         Align = alLeft
         Caption = 's'
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clRed
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1372,15 +1383,15 @@ object AboutBox: TAboutBox
         ParentFont = False
       end
       object Label5: TLabel
-        Left = 131
-        Height = 49
+        Left = 167
+        Height = 60
         Top = 0
-        Width = 12
+        Width = 15
         Align = alLeft
         Caption = ' '
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clBlue
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1390,15 +1401,15 @@ object AboutBox: TAboutBox
         ParentFont = False
       end
       object Label6: TLabel
-        Left = 107
-        Height = 49
+        Left = 136
+        Height = 60
         Top = 0
-        Width = 24
+        Width = 31
         Align = alLeft
         Caption = 's'
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clBlue
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1408,15 +1419,15 @@ object AboutBox: TAboutBox
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 143
-        Height = 49
+        Left = 182
+        Height = 60
         Top = 0
-        Width = 24
+        Width = 31
         Align = alLeft
         Caption = '2'
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clRed
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1426,15 +1437,15 @@ object AboutBox: TAboutBox
         ParentFont = False
       end
       object Label8: TLabel
-        Left = 167
-        Height = 49
+        Left = 213
+        Height = 60
         Top = 0
-        Width = 24
+        Width = 31
         Align = alLeft
         Caption = '5'
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clBlue
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1444,15 +1455,15 @@ object AboutBox: TAboutBox
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 191
-        Height = 49
+        Left = 244
+        Height = 60
         Top = 0
-        Width = 24
+        Width = 31
         Align = alLeft
         Caption = '6'
         Font.CharSet = RUSSIAN_CHARSET
         Font.Color = clRed
-        Font.Height = -44
+        Font.Height = -55
         Font.Name = 'Arial'
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -1469,60 +1480,68 @@ object AboutBox: TAboutBox
       AnchorSideTop.Side = asrBottom
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
-      Left = 131
-      Height = 10
-      Top = 72
-      Width = 297
+      Left = 164
+      Height = 12
+      Top = 83
+      Width = 259
       Anchors = [akTop, akLeft, akRight]
-      BorderSpacing.Left = 3
-      BorderSpacing.Right = 3
+      BorderSpacing.Left = 4
+      BorderSpacing.Right = 4
       Shape = bsTopLine
     end
     object LAppDeveloper: TLabel
       AnchorSideLeft.Control = Image1
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = TopBevel
-      Left = 136
+      Left = 170
       Height = 18
-      Top = 76
-      Width = 67
-      BorderSpacing.Left = 8
-      BorderSpacing.Top = 4
+      Top = 88
+      Width = 85
+      BorderSpacing.Left = 10
+      BorderSpacing.Top = 5
       Caption = 'Developer: '
+      Font.Color = clBlack
       ParentColor = False
+      ParentFont = False
     end
     object AppDeveloper: TLabel
       AnchorSideLeft.Control = AppBuildDate
       AnchorSideTop.Control = LAppDeveloper
-      Left = 202
+      Left = 254
       Height = 18
-      Top = 76
-      Width = 141
+      Top = 88
+      Width = 173
       Caption = 'Alexander Kernozhitsky'
+      Font.Color = clBlack
       ParentColor = False
+      ParentFont = False
     end
     object LDeveloperEMail: TLabel
       AnchorSideLeft.Control = LAppDeveloper
       AnchorSideTop.Control = LAppDeveloper
       AnchorSideTop.Side = asrBottom
-      Left = 136
+      Left = 170
       Height = 18
-      Top = 94
-      Width = 42
+      Top = 106
+      Width = 56
       Caption = 'e-mail: '
+      Font.Color = clBlack
       ParentColor = False
+      ParentFont = False
     end
     object LAppBuildDate: TLabel
       AnchorSideLeft.Control = LAppDeveloper
       AnchorSideTop.Control = LDeveloperEMail
       AnchorSideTop.Side = asrBottom
-      Left = 136
+      Left = 170
       Height = 18
-      Top = 112
-      Width = 66
+      Top = 124
+      Width = 84
       Caption = 'Build date: '
       Color = 16759230
+      Font.Color = clBlack
       ParentColor = False
+      ParentFont = False
       Transparent = False
     end
     object AppBuildDate: TLabel
@@ -1530,12 +1549,14 @@ object AboutBox: TAboutBox
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = DeveloperEMail
       AnchorSideTop.Side = asrBottom
-      Left = 202
+      Left = 254
       Height = 18
-      Top = 112
-      Width = 82
+      Top = 124
+      Width = 101
       Caption = 'AppBuildDate'
+      Font.Color = clBlack
       ParentColor = False
+      ParentFont = False
     end
   end
 end

@@ -1,20 +1,20 @@
 object LicenseInfoFrom: TLicenseInfoFrom
   Left = 0
-  Height = 382
+  Height = 357
   Top = 0
   Width = 579
   AutoSize = True
   BorderStyle = bsDialog
   Caption = 'License info'
-  ClientHeight = 382
+  ClientHeight = 357
   ClientWidth = 579
   Color = 16773360
   DesignTimePPI = 120
   Position = poScreenCenter
   object LicenseLabel: TLabel
     Left = 4
-    Height = 280
-    Top = 49
+    Height = 252
+    Top = 47
     Width = 571
     Align = alClient
     BorderSpacing.Around = 4
@@ -24,8 +24,8 @@ object LicenseInfoFrom: TLicenseInfoFrom
   end
   object ButtonPanel: TButtonPanel
     Left = 8
-    Height = 37
-    Top = 337
+    Height = 42
+    Top = 307
     Width = 563
     BorderSpacing.Around = 8
     OKButton.Name = 'OKButton'
@@ -34,7 +34,6 @@ object LicenseInfoFrom: TLicenseInfoFrom
     HelpButton.DefaultCaption = True
     CloseButton.Name = 'CloseButton'
     CloseButton.Caption = '&Close'
-    CloseButton.DefaultCaption = False
     CancelButton.Name = 'CancelButton'
     CancelButton.DefaultCaption = True
     TabOrder = 0
@@ -42,7 +41,7 @@ object LicenseInfoFrom: TLicenseInfoFrom
   end
   object HeaderLabel: TLabel
     Left = 0
-    Height = 35
+    Height = 33
     Top = 0
     Width = 579
     Align = alTop
@@ -58,7 +57,7 @@ object LicenseInfoFrom: TLicenseInfoFrom
   object Bevel: TBevel
     Left = 0
     Height = 6
-    Top = 39
+    Top = 37
     Width = 579
     Align = alTop
     BorderSpacing.Top = 4

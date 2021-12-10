@@ -1,27 +1,30 @@
 object TextViewImplFrame: TTextViewImplFrame
   Left = 0
-  Height = 231
+  Height = 289
   Top = 0
-  Width = 317
-  ClientHeight = 231
-  ClientWidth = 317
+  Width = 396
+  ClientHeight = 289
+  ClientWidth = 396
+  DesignTimePPI = 120
+  ParentFont = False
   TabOrder = 0
   object Panel: TPanel
     Left = 0
-    Height = 231
+    Height = 289
     Top = 0
-    Width = 317
+    Width = 396
     Align = alClient
     BevelInner = bvLowered
-    ClientHeight = 231
-    ClientWidth = 317
+    ClientHeight = 289
+    ClientWidth = 396
     Color = clWindow
     ParentColor = False
+    ParentFont = False
     TabOrder = 0
     OnMouseWheel = PanelMouseWheel
     object ScrollBar: TScrollBar
-      Left = 295
-      Height = 227
+      Left = 374
+      Height = 285
       Top = 2
       Width = 20
       Align = alRight
@@ -31,12 +34,13 @@ object TextViewImplFrame: TTextViewImplFrame
       OnChange = ScrollBarChange
     end
     object PaintBox: TPaintBox
-      Left = 5
-      Height = 221
-      Top = 5
-      Width = 287
+      Left = 6
+      Height = 277
+      Top = 6
+      Width = 364
       Align = alClient
-      BorderSpacing.Around = 3
+      BorderSpacing.Around = 4
+      ParentFont = False
       OnMouseDown = PaintBoxMouseDown
       OnPaint = PaintBoxPaint
       OnResize = PaintBoxResize
@@ -45,7 +49,7 @@ object TextViewImplFrame: TTextViewImplFrame
   object Timer: TTimer
     Interval = 500
     OnTimer = TimerTimer
-    left = 62
-    top = 34
+    Left = 78
+    Top = 43
   end
 end

@@ -1,21 +1,24 @@
 object VisualChessBoard: TVisualChessBoard
   Left = 0
-  Height = 271
+  Height = 339
   Top = 0
-  Width = 320
-  ClientHeight = 271
-  ClientWidth = 320
+  Width = 401
+  ClientHeight = 339
+  ClientWidth = 401
   Color = clDefault
+  DesignTimePPI = 120
   OnMouseLeave = PaintBoxMouseLeave
   OnResize = FrameResize
   ParentColor = False
+  ParentFont = False
   TabOrder = 0
   object PaintBox: TPaintBox
     Left = 8
-    Height = 255
+    Height = 319
     Top = 8
-    Width = 304
+    Width = 381
     Anchors = [akTop, akLeft, akRight, akBottom]
+    ParentFont = False
     OnMouseDown = PaintBoxMouseDown
     OnMouseLeave = PaintBoxMouseLeave
     OnMouseMove = PaintBoxMouseMove

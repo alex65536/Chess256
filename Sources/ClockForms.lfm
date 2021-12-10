@@ -1,59 +1,82 @@
 object ClockForm: TClockForm
   Left = 478
-  Height = 107
+  Height = 134
   Top = 238
-  Width = 310
+  Width = 388
   Caption = 'Clock'
-  ClientHeight = 107
-  ClientWidth = 310
+  ClientHeight = 134
+  ClientWidth = 388
+  DesignTimePPI = 120
   OnCreate = FormCreate
-  LCLVersion = '1.8.0.6'
-  Visible = False
   inline VisualClock: TVisualChessClock
-    Height = 107
-    Width = 310
+    Height = 134
+    Width = 388
     Align = alClient
-    ClientHeight = 107
-    ClientWidth = 310
+    ClientHeight = 134
+    ClientWidth = 388
     inherited WhitePanel: TPanel
-      Width = 310
-      ClientWidth = 310
+      Height = 78
+      Width = 388
+      ClientHeight = 78
+      ClientWidth = 388
       inherited WhiteShape: TShape
-        Width = 310
+        Height = 78
+        Width = 388
       end
       inherited LWhite: TLabel
-        Width = 74
+        Left = 5
+        Height = 68
+        Top = 5
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        BorderSpacing.Bottom = 5
         Font.Color = clBlack
       end
       inherited WhiteTime: TLabel
-        Left = 201
-        Width = 106
+        Left = 247
+        Height = 68
+        Top = 5
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        BorderSpacing.Bottom = 5
       end
     end
     inherited BlackPanel: TPanel
-      Height = 57
-      Width = 310
-      ClientHeight = 57
-      ClientWidth = 310
+      Height = 56
+      Top = 78
+      Width = 388
+      ClientHeight = 56
+      ClientWidth = 388
       inherited BlackShape: TShape
-        Height = 57
-        Width = 310
+        Height = 56
+        Width = 388
       end
       inherited LBlack: TLabel
-        Height = 51
-        Width = 67
+        Left = 5
+        Height = 46
+        Top = 5
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        BorderSpacing.Bottom = 5
       end
       inherited BlackTime: TLabel
-        Left = 203
-        Height = 51
-        Width = 104
+        Left = 251
+        Height = 46
+        Top = 5
+        BorderSpacing.Left = 5
+        BorderSpacing.Top = 5
+        BorderSpacing.Right = 5
+        BorderSpacing.Bottom = 5
       end
     end
   end
   object ActionList: TActionList
     Images = GlyphKeeper.ImageList
-    left = 136
-    top = 40
+    Left = 168
+    Top = 40
     object ClockOrientationAction: TAction
       Caption = 'Change clock orientation'
       OnExecute = ClockOrientationActionExecute
