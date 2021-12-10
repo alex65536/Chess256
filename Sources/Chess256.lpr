@@ -28,8 +28,6 @@ uses
   Interfaces, // this includes the LCL widgetset
   ChessGUIUtils,
   Forms,
-  CmdBox,
-  DebugConsole,
   MainUnit,
   ChessRules,
   PromoteDialog,
@@ -98,7 +96,6 @@ begin
   Application.CreateForm(TClockForm, ClockForm);
   Application.CreateForm(TMoveVariantForm, MoveVariantForm);
   Application.CreateForm(TAboutBox, AboutBox);
-  Application.CreateForm(TConsole, Console);
   Application.CreateForm(TPromoteDlg, PromoteDlg);
   Application.CreateForm(TPositionEditor, PositionEditor);
   Application.CreateForm(TNAGSelect, NAGSelect);

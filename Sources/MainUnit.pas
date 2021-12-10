@@ -28,7 +28,7 @@ interface
 
 uses
   Forms, Controls, ExtCtrls, ChessBoards, PromoteDialog, PositionEditors, About,
-  ApplicationForms, Dialogs, SysUtils, NotationForms, DebugConsole, ClockForms,
+  ApplicationForms, Dialogs, SysUtils, NotationForms, ClockForms,
   ChessRules, AnalysisForms, TextureContainers, ChessGame, GameStartDialogs,
   ChessStrings, ActnList, Menus, ComCtrls, BoardForms, MoveVariantForms,
   PseudoDockedForms, Classes;
@@ -274,8 +274,6 @@ begin
   AddWindow(AnalysisForm, Panel4, Splitter3, True);
   MoveVariantForm.Container.Shown := False;
   ClockForm.Container.Shown := False;
-
-  ShowDebugConsole;
 
   CreateNewGame;
 end;
