@@ -10,7 +10,6 @@ object LicenseInfoFrom: TLicenseInfoFrom
   ClientWidth = 579
   Color = 16773360
   DesignTimePPI = 120
-  OnCreate = FormCreate
   Position = poScreenCenter
   object LicenseLabel: TLabel
     Left = 4
@@ -42,7 +41,6 @@ object LicenseInfoFrom: TLicenseInfoFrom
     ShowButtons = [pbClose]
   end
   object HeaderLabel: TLabel
-    Tag = 18
     Left = 0
     Height = 35
     Top = 0

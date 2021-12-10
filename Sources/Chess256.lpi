@@ -6,6 +6,7 @@
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
       <Title Value="Chess 256"/>
+      <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <XPManifest>
@@ -53,7 +54,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="63">
+    <Units Count="62">
       <Unit0>
         <Filename Value="Chess256.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -373,20 +374,16 @@
         <ResourceBaseClass Value="Frame"/>
       </Unit59>
       <Unit60>
-        <Filename Value="ScaleDPI.pas"/>
+        <Filename Value="PersistentNotation.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit60>
       <Unit61>
-        <Filename Value="PersistentNotation.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit61>
-      <Unit62>
         <Filename Value="LicenseInfo.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="LicenseInfoFrom"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit62>
+      </Unit61>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

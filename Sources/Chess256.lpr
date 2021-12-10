@@ -78,13 +78,13 @@ uses
   AnalysisForms,
   PseudoDockedForms,
   ImbalanceFrame,
-  ScaleDPI,
   PersistentNotation,
   LicenseInfo;
 
 {$R *.res}
 
 begin
+  Application.Scaled := True;
   Application.Title := 'Chess 256';
   RequireDerivedFormResource := True;
   Application.Initialize;

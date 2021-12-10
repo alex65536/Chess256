@@ -102,7 +102,6 @@ begin
   AppBuildDate.Caption :=
     Format(BuildDateFmt, [FormatDateTime(ViewFmt, StrToDateTime(
       {$INCLUDE %DATE%}, DateFmt)), {$INCLUDE %TIME%}]);
-  ScaleLabelsFromTags;
 end;
 
 procedure TAboutBox.CloseBtnClick(Sender: TObject);

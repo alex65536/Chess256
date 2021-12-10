@@ -27,7 +27,7 @@ unit ApplicationForms;
 interface
 
 uses
-  Forms, StdCtrls, Classes, ScaleDPI;
+  Forms, StdCtrls, Classes;
 
 type
   TApplicationForm = class;
@@ -64,8 +64,6 @@ type
   public
     property Container: TFormContainer read FContainer;
     property OnCaptionChange: TNotifyEvent read FOnCaptionChange write FOnCaptionChange;
-    procedure AfterConstruction; override;
-    procedure ScaleLabelsFromTags;
     procedure ShowWithContainer;
     constructor Create(TheOwner: TComponent); override;
   end;
@@ -117,26 +115,6 @@ begin
   inherited TextChanged;
   if Assigned(FOnCaptionChange) then
     FOnCaptionChange(Self);
-end;
-
-procedure TApplicationForm.AfterConstruction;
-begin
-  // TApplicationForm automatically scales DPI after creation.
-  DoScaleDPI(Self);
-  inherited AfterConstruction;
-end;
-
-procedure TApplicationForm.ScaleLabelsFromTags;
-// Suppose we have an actual Font.Size in a tag of the label. Then, it
-// just restores Font.Size from the tag. This is nessesary, because Font.Size
-// is not stored.
-var
-  I: integer;
-begin
-  for I := 0 to ComponentCount - 1 do
-    if (Components[I] is TLabel) and (Components[I].Tag <> 0) then
-      with TLabel(Components[I]) do
-        Font.Size := Tag;
 end;
 
 procedure TApplicationForm.ShowWithContainer;

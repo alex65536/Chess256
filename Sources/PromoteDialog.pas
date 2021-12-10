@@ -28,10 +28,11 @@ interface
 
 uses
   Classes, Graphics, Buttons, ChessBoards, ChessRules, ApplicationForms,
-  LCLType, ScaleDPI;
+  LCLType;
 
 const
   StdGlyphSize = 64;
+  StdGlyphDPI = 96;
 
 type
 
@@ -123,7 +124,7 @@ procedure TPromoteDlg.AddGlyphs(AColor: TPieceColor);
 var
   GlyphSize: integer;
 begin
-  GlyphSize := ScaleX(StdGlyphSize, WasDPI);
+  GlyphSize := ScaleX(StdGlyphSize, StdGlyphDPI);
   if Assigned(FTextureContainer) then
     with FTextureContainer do
     begin

@@ -74,7 +74,6 @@ end;
 
 procedure TAboutEngine.FormShow(Sender: TObject);
 begin
-  ScaleLabelsFromTags;
   if Assigned(FEngine) then
   begin
     DisableAutoSizing;

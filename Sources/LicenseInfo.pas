@@ -37,7 +37,6 @@ type
     ButtonPanel: TButtonPanel;
     HeaderLabel: TLabel;
     LicenseLabel: TLabel;
-    procedure FormCreate(Sender: TObject);
   end;
 
 var
@@ -46,13 +45,6 @@ var
 implementation
 
 {$R *.lfm}
-
-{ TLicenseInfoFrom }
-
-procedure TLicenseInfoFrom.FormCreate(Sender: TObject);
-begin
-  ScaleLabelsFromTags;
-end;
 
 end.
 
