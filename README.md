@@ -20,7 +20,7 @@ Welcome to the _Chess 256_ reposiory! :)
 
 _Chess 256_ is a chess program for playing, editing and analysing chess games. This project was supposed to be a very powerful chess application, but many features are missing by now. Though, many basic things have been already implemented.
 
-The project is in **ALPHA** state.
+The project is still considered in alpha state for some reason. Still, it's quite stable to use, as no critical bugs were found for a large amount of time.
 
 # Screenshots
 
