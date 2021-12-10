@@ -162,6 +162,7 @@ begin
   Cnt := FProcess.NumBytesAvailable;
   if Cnt = 0 then
     Exit;
+  S := '';
   SetLength(S, Cnt);
   FProcess.Output.Read(S[1], Cnt);
   PushStr(S);

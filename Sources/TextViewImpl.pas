@@ -965,7 +965,7 @@ procedure TFormatText.CalcWidths(Beg, Len: integer);
   begin
     while Len <> 0 do
     begin
-      TempLen := UTF8CharacterLength(Text);
+      TempLen := UTF8CodepointSize(Text);
       ASize.cx := 0;
       ASize.cy := 0;
       GetTextExtentPoint(FCanvas.Handle, Text, TempLen, ASize);
