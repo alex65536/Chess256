@@ -1,7 +1,7 @@
 {
   This file is part of Chess 256.
 
-  Copyright © 2016, 2018 Alexander Kernozhitsky <sh200105@mail.ru>
+  Copyright © 2016, 2018, 2021 Alexander Kernozhitsky <sh200105@mail.ru>
 
   Chess 256 is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -84,6 +84,7 @@ type
     procedure DoBeginAction(AAction: TNotationAction); override;
     procedure DoEndAction(AAction: TNotationAction); override;
     procedure DoChangeTail; override;
+    procedure DoChangeTailRaw;
     procedure DoSaveState; virtual;
   public
     // Actions
@@ -259,8 +260,14 @@ procedure TPersistentChessNotation.DoChangeTail;
 begin
   if IsChanging then
     Exit;
-  if FStateSaveLock = 0 then
-    FTailChanged := True;
+  FTailChanged := True;
+  inherited DoChangeTail;
+end;
+
+procedure TPersistentChessNotation.DoChangeTailRaw;
+// Just like DoChangeTail, but does not set FTailChanged. Useful in Undo and
+// Redo, where we don't want to reset this flag after we restored the state.
+begin
   inherited DoChangeTail;
 end;
 
@@ -303,7 +310,7 @@ begin
   Changed;
   DoChange;
   if TailChanged then
-    DoChangeTail;
+    DoChangeTailRaw;
   DoEndAction(naUndo);
   Dec(FStateSaveLock);
 end;
@@ -334,7 +341,7 @@ begin
   Changed;
   DoChange;
   if TailChanged then
-    DoChangeTail;
+    DoChangeTailRaw;
   DoEndAction(naRedo);
   Dec(FStateSaveLock);
 end;
