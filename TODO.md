@@ -25,6 +25,10 @@
   - Rewrite calculation of on-screen character length
   - Maybe do not use just one char to determine it, but use two or more char
   - Another option is to switch to a native richtext view and forget about these issues
+- Remove deprecated parts
+  - Remove ScaleDPI
+  - Remove PseudoDocking and replace with AnchorDocking
+- Port the changes made in BattleField back to Chess256
 
 ## Potentally obsolete or unclear issues
 
