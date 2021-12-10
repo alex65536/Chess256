@@ -1,7 +1,7 @@
 {
   This file is part of Chess 256.
 
-  Copyright © 2016, 2018 Alexander Kernozhitsky <sh200105@mail.ru>
+  Copyright © 2016, 2018, 2021 Alexander Kernozhitsky <sh200105@mail.ru>
 
   Chess 256 is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -771,6 +771,8 @@ end;
 
 procedure TNotationIterator.AssignTo(Target: TNotationIterator);
 begin
+  if (FList = Target.FList) and (FNode = Target.FNode) then
+    Exit;
   Target.FList := FList;
   Target.FNode := FNode;
   Target.DoChange;

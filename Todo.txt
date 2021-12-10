@@ -17,7 +17,6 @@
 !!! Too many board refreshes in the beginning.
 !!! Optimize VisualChessNotation when undo/redo.
 !!! When the key is up, the actions still execute.
-!!! When just clicking onto the notation, the analysis restarts.
 !!! Remove the Debug Console
 !!! Add command-line support for engines.
 !!! Add Winboard/XBoard engines support
