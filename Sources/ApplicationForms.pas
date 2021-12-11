@@ -27,109 +27,15 @@ unit ApplicationForms;
 interface
 
 uses
-  Forms, StdCtrls, Classes;
+  Forms;
 
 type
-  TApplicationForm = class;
-
-  { TFormContainer }
-
-  TFormContainer = class(TFrame)
-  private
-    FForm: TApplicationForm;
-    // Getters / Setters
-    procedure SetForm(AValue: TApplicationForm);
-    procedure SetShown(AValue: boolean);
-  protected
-    // Virtual methods
-    procedure BindForm(AForm: TApplicationForm); virtual;
-    procedure UnbindForm; virtual;
-    function GetShown: boolean; virtual; abstract;
-    procedure ShowForm; virtual; abstract;
-    procedure HideForm; virtual; abstract;
-  public
-    // Properties
-    property Shown: boolean read GetShown write SetShown;
-    property Form: TApplicationForm read FForm write SetForm;
-  end;
 
   { TApplicationForm }
 
   TApplicationForm = class(TForm)
-  private
-    FContainer: TFormContainer;
-    FOnCaptionChange: TNotifyEvent;
-  protected
-    procedure TextChanged; override;
-  public
-    property Container: TFormContainer read FContainer;
-    property OnCaptionChange: TNotifyEvent read FOnCaptionChange write FOnCaptionChange;
-    procedure ShowWithContainer;
-    constructor Create(TheOwner: TComponent); override;
   end;
 
 implementation
-
-{ TFormContainer }
-
-procedure TFormContainer.SetForm(AValue: TApplicationForm);
-begin
-  if FForm = AValue then
-    Exit;
-  UnbindForm;
-  BindForm(AValue);
-end;
-
-procedure TFormContainer.SetShown(AValue: boolean);
-begin
-  if AValue = GetShown then
-    Exit;
-  if AValue then
-    ShowForm
-  else
-    HideForm;
-end;
-
-procedure TFormContainer.BindForm(AForm: TApplicationForm);
-// Binds the forms to the container.
-begin
-  if AForm = nil then
-    Exit;
-  FForm := AForm;
-  FForm.FContainer := Self;
-end;
-
-procedure TFormContainer.UnbindForm;
-// Unbinds the forms to the container.
-begin
-  if FForm = nil then
-    Exit;
-  FForm.FContainer := nil;
-  FForm := nil;
-end;
-
-{ TApplicationForm }
-
-procedure TApplicationForm.TextChanged;
-begin
-  inherited TextChanged;
-  if Assigned(FOnCaptionChange) then
-    FOnCaptionChange(Self);
-end;
-
-procedure TApplicationForm.ShowWithContainer;
-// Shows the form with the container.
-begin
-  if Assigned(FContainer) then
-    FContainer.Shown := True
-  else
-    Visible := True;
-end;
-
-constructor TApplicationForm.Create(TheOwner: TComponent);
-begin
-  FContainer := nil;
-  inherited Create(TheOwner);
-end;
 
 end.

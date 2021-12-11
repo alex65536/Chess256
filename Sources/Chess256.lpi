@@ -46,15 +46,19 @@
         <Mode0 Name="default"/>
       </Modes>
     </RunParams>
-    <RequiredPackages Count="2">
+    <RequiredPackages Count="3">
       <Item1>
-        <PackageName Value="FCL"/>
+        <PackageName Value="AnchorDocking"/>
+        <MinVersion Major="1" Valid="True"/>
       </Item1>
       <Item2>
-        <PackageName Value="LCL"/>
+        <PackageName Value="FCL"/>
       </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
     </RequiredPackages>
-    <Units Count="62">
+    <Units Count="61">
       <Unit0>
         <Filename Value="Chess256.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -360,30 +364,23 @@
         <IsPartOfProject Value="True"/>
       </Unit57>
       <Unit58>
-        <Filename Value="PseudoDockedForms.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="PseudoDockContainer"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit58>
-      <Unit59>
         <Filename Value="ImbalanceFrame.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Imbalance"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Frame"/>
-      </Unit59>
-      <Unit60>
+      </Unit58>
+      <Unit59>
         <Filename Value="PersistentNotation.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit60>
-      <Unit61>
+      </Unit59>
+      <Unit60>
         <Filename Value="LicenseInfo.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="LicenseInfoFrom"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit61>
+      </Unit60>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -402,13 +399,9 @@
         <OverflowChecks Value="True"/>
         <StackChecks Value="True"/>
       </Checks>
-      <Optimizations>
-        <OptimizationLevel Value="2"/>
-      </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
-        <GenerateDebugInfo Value="False"/>
         <DebugInfoType Value="dsDwarf2"/>
         <UseLineInfoUnit Value="False"/>
         <UseHeaptrc Value="True"/>

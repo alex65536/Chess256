@@ -1,19 +1,18 @@
 object NotationForm: TNotationForm
   Left = 0
-  Height = 869
+  Height = 707
   Top = 0
-  Width = 797
-  Align = alClient
+  Width = 421
   Caption = 'Notation'
-  ClientHeight = 869
-  ClientWidth = 797
+  ClientHeight = 707
+  ClientWidth = 421
   DesignTimePPI = 120
   KeyPreview = True
   Position = poScreenCenter
   ShowHint = True
   inline Notation: TVisualChessNotation
-    Height = 869
-    Width = 797
+    Height = 707
+    Width = 421
     Align = alClient
   end
   object ActionList: TActionList

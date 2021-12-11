@@ -27,7 +27,7 @@ uses
   SysUtils,
   Interfaces, // this includes the LCL widgetset
   ChessGUIUtils,
-  Forms,
+  Forms, anchordockpkg,
   MainUnit,
   ChessRules,
   PromoteDialog,
@@ -76,7 +76,6 @@ uses
   MoveVariantForms,
   EngineStrings,
   AnalysisForms,
-  PseudoDockedForms,
   ImbalanceFrame,
   PersistentNotation,
   LicenseInfo;

@@ -31,7 +31,7 @@ uses
   ApplicationForms, Dialogs, SysUtils, NotationForms, ClockForms,
   ChessRules, AnalysisForms, TextureContainers, ChessGame, GameStartDialogs,
   ChessStrings, ActnList, Menus, ComCtrls, BoardForms, MoveVariantForms,
-  PseudoDockedForms, Classes;
+  Classes, AnchorDocking;
 
 resourcestring
   SResignConfirmation = 'Do you really want to resign?';
@@ -87,8 +87,6 @@ type
     MenuItem46: TMenuItem;
     MenuItem47: TMenuItem;
     MenuItem48: TMenuItem;
-    Panel4: TPanel;
-    Splitter3: TSplitter;
     ToolButton28: TToolButton;
     ToolButton29: TToolButton;
     ToolButton30: TToolButton;
@@ -101,19 +99,11 @@ type
     ChangeLookAction: TAction;
     FontSelectAction: TAction;
     NewGameAction: TAction;
-    Panel1: TPanel;
-    Panel2: TPanel;
-    Panel3: TPanel;
-    Panel5: TPanel;
-    GlobalPanel: TPanel;
     ResignAction: TAction;
     OfferDrawAction: TAction;
     ActionList: TActionList;
     FontDialog: TFontDialog;
     EngineHandleTimer: TTimer;
-    Splitter1: TSplitter;
-    Splitter2: TSplitter;
-    Splitter4: TSplitter;
     ToolBar: TToolBar;
     ToolButton1: TToolButton;
     ToolButton10: TToolButton;
@@ -158,15 +148,15 @@ type
     procedure GameFinished(Sender: TObject);
     procedure GameChanger(Sender: TObject);
     procedure WindowShowHideMenuItemClick(Sender: TObject);
-    procedure ChildFormCaptionChanged(Sender: TObject);
     procedure ChildFormShow(Sender: TObject);
     procedure ChildFormHide(Sender: TObject);
+    procedure DockMasterCreateControl(Sender: TObject; AName: string;
+      var AControl: TControl; DoDisableAutoSizing: boolean);
   private
     Texture: TTextureContainer;
     FGame: TChessGame;
   protected
-    procedure AddWindow(AForm: TApplicationForm; APanel: TCustomPanel;
-      ASplitter: TSplitter; CanHide: boolean);
+    procedure AddWindow(AForm: TApplicationForm; ShowForm: boolean);
   public
     procedure CreateNewGame;
   end;
@@ -266,18 +256,28 @@ begin
   BoardForm.TextureContainer := Texture;
   PromoteDlg.TextureContainer := Texture;
 
-  GlobalPanel.DoubleBuffered := True;
-
   MoveVariantForm.VisualBoard := BoardForm.VisualBoard;
   NotationForm.ChessBoard := BoardForm.Board;
 
-  AddWindow(BoardForm, Panel3, nil, False);
-  AddWindow(NotationForm, Panel1, Splitter1, False);
-  AddWindow(ClockForm, Panel5, Splitter4, False);
-  AddWindow(MoveVariantForm, Panel2, Splitter2, True);
-  AddWindow(AnalysisForm, Panel4, Splitter3, True);
-  MoveVariantForm.Container.Shown := False;
-  ClockForm.Container.Shown := False;
+  DockMaster.HeaderStyle := adhsLine;
+  DockMaster.MakeDockSite(Self, [akBottom], admrpChild);
+  DockMaster.OnCreateControl := @DockMasterCreateControl;
+
+  AddWindow(BoardForm, True);
+  AddWindow(NotationForm, True);
+  AddWindow(ClockForm, False);
+  AddWindow(MoveVariantForm, False);
+  AddWindow(AnalysisForm, True);
+
+  // TODO : show caption at the top of Analysis
+
+  // MoveVariantForm.Container.Shown := False;
+  // ClockForm.Container.Shown := False;
+
+  DockMaster.ManualDock(DockMaster.GetAnchorSite(BoardForm), Self, alClient);
+  DockMaster.ManualDock(DockMaster.GetAnchorSite(AnalysisForm),
+    DockMaster.GetAnchorSite(BoardForm), alBottom);
+  DockMaster.ManualDock(DockMaster.GetAnchorSite(NotationForm), Self, alRight);
 
   CreateNewGame;
 end;
@@ -361,47 +361,54 @@ end;
 procedure TMainForm.WindowShowHideMenuItemClick(Sender: TObject);
 begin
   with Sender as TMenuItem do
-    TPseudoDockContainer(Tag).Shown := Checked;
-end;
-
-procedure TMainForm.ChildFormCaptionChanged(Sender: TObject);
-begin
-  with Sender as TPseudoDockContainer do
-    TMenuItem(Tag).Caption := Form.Caption;
+  begin
+    // TODO : dock controls on show, do not leave them just floating
+    if Checked then
+      DockMaster.ShowControl(TForm(Tag).Name, True)
+    else
+      DockMaster.GetAnchorSite(TForm(Tag)).CloseSite;
+  end;
 end;
 
 procedure TMainForm.ChildFormShow(Sender: TObject);
 begin
-  with Sender as TPseudoDockContainer do
-    TMenuItem(Tag).Checked := Shown;
+  // TODO
 end;
 
 procedure TMainForm.ChildFormHide(Sender: TObject);
 begin
-  with Sender as TPseudoDockContainer do
-    TMenuItem(Tag).Checked := Shown;
+  // TODO
 end;
 
-procedure TMainForm.AddWindow(AForm: TApplicationForm; APanel: TCustomPanel;
-  ASplitter: TSplitter; CanHide: boolean);
+procedure TMainForm.DockMasterCreateControl(Sender: TObject; AName: string;
+  var AControl: TControl; DoDisableAutoSizing: boolean);
+begin
+  AControl := Screen.FindForm(AName);
+  if AControl <> nil then
+  begin
+    if DoDisableAutoSizing then
+      AControl.DisableAutoSizing;
+  end
+  else
+    raise Exception.Create('Component ' + AName + ' doesn''t exist!');
+end;
+
+procedure TMainForm.AddWindow(AForm: TApplicationForm; ShowForm: boolean);
 var
   AItem: TMenuItem;
-  AContainer: TPseudoDockContainer;
 begin
-  APanel.ParentColor := True;
-  AContainer := DockFormToPanel(AForm, GlobalPanel, APanel, ASplitter, CanHide);
   AItem := TMenuItem.Create(Self);
-  AContainer.Tag := PtrInt(AItem);
-  AContainer.OnCaptionChange := @ChildFormCaptionChanged;
-  AContainer.OnShowForm := @ChildFormShow;
-  AContainer.OnHideForm := @ChildFormHide;
-  AItem.Tag := PtrInt(AContainer);
+  AItem.Tag := PtrInt(AForm);
   AItem.OnClick := @WindowShowHideMenuItemClick;
   AItem.Caption := AForm.Caption;
-  AItem.Checked := AContainer.Shown;
-  AItem.Enabled := CanHide;
+  AItem.Checked := ShowForm;
   AItem.AutoCheck := True;
   WindowMenu.Add(AItem);
+
+  AForm.Tag := PtrInt(AItem);
+
+  AForm.AutoSize := False;
+  DockMaster.MakeDockable(AForm, ShowForm, False, True);
 end;
 
 procedure TMainForm.CreateNewGame;
@@ -414,7 +421,8 @@ begin
   FGame.OnFinishGame := @GameFinished;
   NewGameDialog.ApplyToGame(FGame);
   MoveVariantForm.ShowMoves;
-  ClockForm.Container.Shown := FGame.Active;
+  // ClockForm.Container.Shown := FGame.Active;
+  // TODO show clock here
   NotationForm.ChessNotation.ClearStates;
 end;
 

@@ -1,11 +1,11 @@
 object MainForm: TMainForm
   Left = 402
-  Height = 786
+  Height = 644
   Top = 419
-  Width = 1205
+  Width = 760
   Caption = 'Chess 256'
-  ClientHeight = 786
-  ClientWidth = 1205
+  ClientHeight = 644
+  ClientWidth = 760
   DesignTimePPI = 120
   KeyPreview = True
   Menu = MainMenu
@@ -15,9 +15,9 @@ object MainForm: TMainForm
   Position = poScreenCenter
   object ToolBar: TToolBar
     Left = 0
-    Height = 42
+    Height = 82
     Top = 0
-    Width = 1205
+    Width = 760
     AutoSize = True
     ButtonHeight = 40
     ButtonWidth = 40
@@ -29,8 +29,8 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 0
     object ToolButton25: TToolButton
-      Left = 891
-      Top = 2
+      Left = 129
+      Top = 42
       Action = AboutAction
     end
     object ToolButton1: TToolButton
@@ -46,294 +46,175 @@ object MainForm: TMainForm
       Style = tbsSeparator
     end
     object ToolButton3: TToolButton
-      Left = 51
+      Left = 49
       Top = 2
       Action = ResignAction
     end
     object ToolButton4: TToolButton
-      Left = 91
+      Left = 89
       Top = 2
       Action = OfferDrawAction
     end
     object ToolButton5: TToolButton
-      Left = 131
+      Left = 129
       Height = 40
       Top = 2
       Caption = 'ToolButton5'
       Style = tbsSeparator
     end
     object ToolButton6: TToolButton
-      Left = 231
+      Left = 225
       Top = 2
       Action = NotationForm.InsertCommentAction
     end
     object ToolButton7: TToolButton
-      Left = 271
+      Left = 265
       Top = 2
       Action = NotationForm.InsertNAGAction
     end
     object ToolButton8: TToolButton
-      Left = 311
+      Left = 305
       Height = 40
       Top = 2
       Caption = 'ToolButton8'
       Style = tbsSeparator
     end
     object ToolButton9: TToolButton
-      Left = 321
+      Left = 313
       Top = 2
       Action = NotationForm.CopyFENAction
     end
     object ToolButton10: TToolButton
-      Left = 361
+      Left = 353
       Top = 2
       Action = NotationForm.CopyPGNAction
     end
     object ToolButton11: TToolButton
-      Left = 401
+      Left = 393
       Top = 2
       Action = NotationForm.PasteFENAction
     end
     object ToolButton12: TToolButton
-      Left = 441
+      Left = 433
       Top = 2
       Action = NotationForm.PastePGNAction
     end
     object ToolButton13: TToolButton
-      Left = 481
+      Left = 473
       Height = 40
       Top = 2
       Caption = 'ToolButton13'
       Style = tbsSeparator
     end
     object ToolButton14: TToolButton
-      Left = 491
+      Left = 481
       Top = 2
       Action = NotationForm.EditNodeAction
     end
     object ToolButton15: TToolButton
-      Left = 531
+      Left = 521
       Top = 2
       Action = NotationForm.DelNodeAction
     end
     object ToolButton16: TToolButton
-      Left = 571
+      Left = 561
       Height = 40
       Top = 2
       Caption = 'ToolButton16'
       Style = tbsSeparator
     end
     object ToolButton17: TToolButton
-      Left = 581
+      Left = 569
       Top = 2
       Action = NotationForm.TruncateNotationAction
     end
     object ToolButton18: TToolButton
-      Left = 621
+      Left = 609
       Top = 2
       Action = NotationForm.ClearNotationAction
     end
     object ToolButton19: TToolButton
-      Left = 661
+      Left = 649
       Height = 40
       Top = 2
       Caption = 'ToolButton19'
       Style = tbsSeparator
     end
     object ToolButton20: TToolButton
-      Left = 721
+      Left = 705
       Top = 2
       Action = AnalysisForm.AnalysisAction
     end
     object ToolButton21: TToolButton
-      Left = 761
-      Top = 2
+      Left = 1
+      Top = 42
       Action = AnalysisForm.AnalysisStopAction
     end
     object ToolButton22: TToolButton
-      Left = 801
-      Top = 2
+      Left = 41
+      Top = 42
       Action = AnalysisForm.EngineSettingsAction
     end
     object ToolButton23: TToolButton
-      Left = 841
-      Top = 2
+      Left = 81
+      Top = 42
       Action = AnalysisForm.EngineSelectAction
     end
     object ToolButton24: TToolButton
-      Left = 881
+      Left = 121
       Height = 40
-      Top = 2
+      Top = 42
       Caption = 'ToolButton24'
       Style = tbsSeparator
     end
     object ToolButton26: TToolButton
-      Left = 671
+      Left = 657
       Top = 2
       Action = BoardForm.InvertBoardAction
     end
     object ToolButton27: TToolButton
-      Left = 711
+      Left = 697
       Height = 40
       Top = 2
       Caption = 'ToolButton27'
       Style = tbsSeparator
     end
     object ToolButton28: TToolButton
-      Left = 141
+      Left = 137
       Top = 2
       Action = NotationForm.UndoAction
     end
     object ToolButton29: TToolButton
-      Left = 181
+      Left = 177
       Top = 2
       Action = NotationForm.RedoAction
     end
     object ToolButton30: TToolButton
-      Left = 221
+      Left = 217
       Height = 40
       Top = 2
       Caption = 'ToolButton30'
       Style = tbsSeparator
     end
   end
-  object GlobalPanel: TPanel
-    Left = 0
-    Height = 744
-    Top = 42
-    Width = 1205
-    Align = alClient
-    BevelOuter = bvNone
-    ClientHeight = 744
-    ClientWidth = 1205
-    Color = clWindow
-    ParentColor = False
-    ParentFont = False
-    TabOrder = 1
-    object Panel1: TPanel
-      Left = 706
-      Height = 744
-      Top = 0
-      Width = 499
-      Align = alRight
-      BevelOuter = bvNone
-      ClientHeight = 744
-      ClientWidth = 499
-      Color = clRed
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 0
-      object Panel5: TPanel
-        Left = 0
-        Height = 166
-        Top = 0
-        Width = 499
-        Align = alTop
-        BevelOuter = bvNone
-        Color = clFuchsia
-        ParentColor = False
-        ParentFont = False
-        TabOrder = 0
-      end
-      object Splitter4: TSplitter
-        Cursor = crVSplit
-        Left = 0
-        Height = 6
-        Top = 166
-        Width = 499
-        Align = alTop
-        MinSize = 1
-        ResizeAnchor = akTop
-        ResizeStyle = rsPattern
-      end
-    end
-    object Panel2: TPanel
-      Left = 0
-      Height = 744
-      Top = 0
-      Width = 190
-      Align = alLeft
-      BevelOuter = bvNone
-      Color = clLime
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 1
-    end
-    object Panel3: TPanel
-      Left = 196
-      Height = 744
-      Top = 0
-      Width = 504
-      Align = alClient
-      BevelOuter = bvNone
-      ClientHeight = 744
-      ClientWidth = 504
-      Color = clBlue
-      ParentColor = False
-      ParentFont = False
-      TabOrder = 2
-      object Splitter3: TSplitter
-        Cursor = crVSplit
-        Left = 0
-        Height = 6
-        Top = 610
-        Width = 504
-        Align = alBottom
-        MinSize = 1
-        ResizeAnchor = akBottom
-        ResizeStyle = rsPattern
-      end
-      object Panel4: TPanel
-        Left = 0
-        Height = 128
-        Top = 616
-        Width = 504
-        Align = alBottom
-        BevelOuter = bvNone
-        Color = clYellow
-        ParentColor = False
-        ParentFont = False
-        TabOrder = 1
-      end
-    end
-    object Splitter2: TSplitter
-      Left = 190
-      Height = 744
-      Top = 0
-      Width = 6
-      MinSize = 1
-      ResizeStyle = rsPattern
-    end
-    object Splitter1: TSplitter
-      Left = 700
-      Height = 744
-      Top = 0
-      Width = 6
-      Align = alRight
-      Anchors = [akRight]
-      MinSize = 1
-      ResizeAnchor = akRight
-      ResizeStyle = rsPattern
-    end
-  end
   object EngineHandleTimer: TTimer
     Interval = 25
     OnTimer = EngineHandleTimerTimer
-    Left = 160
-    Top = 80
+    Left = 264
+    Top = 184
   end
   object FontDialog: TFontDialog
     Title = 'Select font...'
     MinFontSize = 0
     MaxFontSize = 0
     PreviewText = '♙♘♗♖♕♔♟♞♝♜♛♚ABCDEFGH12345678'
-    Left = 40
-    Top = 80
+    Left = 136
+    Top = 184
   end
   object ActionList: TActionList
     Images = GlyphKeeper.ImageList
-    Left = 270
-    Top = 80
+    Left = 392
+    Top = 184
     object AboutAction: TAction
       Caption = 'About'
       ImageIndex = 20
@@ -380,8 +261,8 @@ object MainForm: TMainForm
     end
   end
   object MainMenu: TMainMenu
-    Left = 360
-    Top = 80
+    Left = 480
+    Top = 184
     object MenuItem1: TMenuItem
       Caption = 'Game'
       object MenuItem6: TMenuItem

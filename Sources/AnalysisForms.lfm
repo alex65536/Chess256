@@ -12,6 +12,7 @@ object AnalysisForm: TAnalysisForm
   OnHide = FormHide
   OnShow = FormShow
   Position = poScreenCenter
+  LCLVersion = '2.0.12.0'
   object ListBox: TListBox
     Left = 0
     Height = 84
@@ -35,8 +36,8 @@ object AnalysisForm: TAnalysisForm
     AutoSize = True
     BevelOuter = bvNone
     BorderStyle = bsSingle
-    ClientHeight = 30
-    ClientWidth = 746
+    ClientHeight = 32
+    ClientWidth = 748
     Font.Height = -19
     ParentFont = False
     TabOrder = 0

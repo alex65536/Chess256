@@ -131,7 +131,7 @@ implementation
 
 procedure TAnalysisForm.AnalysisActionExecute(Sender: TObject);
 begin
-  ShowWithContainer;
+  // ShowWithContainer; TODO
   StartEngine;
 end;
 
@@ -231,7 +231,7 @@ end;
 
 procedure TAnalysisForm.FormHide(Sender: TObject);
 begin
-  StopEngine;
+  StopEngine;  // TODO : remove this, as the form is never hidden
 end;
 
 procedure TAnalysisForm.FormShow(Sender: TObject);
@@ -498,13 +498,12 @@ begin
   if FUpdating <> 0 then
     Exit;
   MaxWidth := 0;
-  with ListBox.Items do
-  begin
-    ListBox.Canvas.Font.Assign(ListBox.Font);
-    for I := 0 to Count - 1 do
-      MaxWidth := Max(MaxWidth, ListBox.Canvas.TextWidth(Strings[I]));
-    ListBox.ScrollWidth := MaxWidth + 2;
-  end;
+  // Do not use "with ListBox.Items" here, as TextWidth() may invalidate them.
+  // See https://gitlab.com/freepascal.org/lazarus/lazarus/-/issues/39509.
+  ListBox.Canvas.Font.Assign(ListBox.Font);
+  for I := 0 to ListBox.Items.Count - 1 do
+    MaxWidth := Max(MaxWidth, ListBox.Canvas.TextWidth(ListBox.Items[I]));
+  ListBox.ScrollWidth := MaxWidth + 2;
 end;
 
 procedure TAnalysisForm.CreateEngine(const FileName: string);
