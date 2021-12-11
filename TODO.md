@@ -28,6 +28,7 @@
 - Remove deprecated parts
   - Remove PseudoDocking and replace with AnchorDocking
 - Port the changes made in BattleField back to Chess256
+- Fix a bug that GameStartDialog becomes resizeable after choosing Analysis mode = false, then Computer
 
 ## Potentally obsolete or unclear issues
 
