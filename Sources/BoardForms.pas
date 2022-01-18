@@ -73,7 +73,11 @@ begin
   if Move.Kind = mkImpossible then
     Exit;
   if Move.Kind = mkPromote then
+  begin
     Move.PromoteTo := PromoteDlg.Execute(Board.MoveSide);
+    if Move.PromoteTo = pkNone then
+      Exit;
+  end;
   NotationForm.ChessNotation.AddMove(Move);
 end;
 

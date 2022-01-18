@@ -148,6 +148,7 @@ end;
 function TPromoteDlg.Execute(AColor: TPieceColor): TPieceKind;
   // Executes the dialog for piece color AColor. Returns the selected piece kind.
 begin
+  FActivePiece := pkNone;
   AddGlyphs(AColor);
   ShowModal;
   Result := FActivePiece;
