@@ -495,6 +495,8 @@ begin
   Panel.DoubleBuffered := True;
   with FTempBuffer.Canvas do
   begin
+    if GetBuildLCLWidgetType = lpCocoa then
+      AntialiasingMode := amOff;
     Brush.Style := bsSolid;
     Brush.Color := PaintBox.Color;
     Pen.Width := CursorWidth;
@@ -943,10 +945,7 @@ begin
   // now, draw the cursor!
   WasPenMode := FCanvas.Pen.Mode;
   try
-    if GetBuildLCLWidgetType = lpCocoa then
-      FCanvas.Pen.Mode := pmNot
-    else
-      FCanvas.Pen.Mode := pmNotXor;
+    FCanvas.Pen.Mode := pmNotXor;
     for I := Beg to Beg + Len - 1 do
     begin
       if CurPos + 1 = I then
