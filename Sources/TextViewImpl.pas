@@ -40,7 +40,7 @@ interface
 
 uses
   Forms, ExtCtrls, StdCtrls, TextViewBase, Graphics, FGL, LCLIntf, Types, Math,
-  SysUtils, LazUTF8, Classes, Controls, Utilities;
+  SysUtils, LazUTF8, Classes, Controls, Utilities, LCLPlatformDef;
 
 const
   CursorWidth = 2;
@@ -943,7 +943,10 @@ begin
   // now, draw the cursor!
   WasPenMode := FCanvas.Pen.Mode;
   try
-    FCanvas.Pen.Mode := pmNotXor;
+    if GetBuildLCLWidgetType = lpCocoa then
+      FCanvas.Pen.Mode := pmNot
+    else
+      FCanvas.Pen.Mode := pmNotXor;
     for I := Beg to Beg + Len - 1 do
     begin
       if CurPos + 1 = I then
