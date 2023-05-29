@@ -1,7 +1,7 @@
 {
   This file is part of Chess 256.
 
-  Copyright © 2016, 2018 Alexander Kernozhitsky <sh200105@mail.ru>
+  Copyright © 2016, 2018, 2023 Alexander Kernozhitsky <sh200105@mail.ru>
 
   Chess 256 is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -53,6 +53,13 @@ const
       EngineName1 = 'stockfish-x86_64';
     {$ENDIF}
     EngineName2 = '/usr/games/stockfish';
+    EngineFilter = '*';
+    EngineDefExt = '';
+    {$DEFINE HAS_ENGINE_NAME}
+  {$ENDIF}
+  {$IFDEF DARWIN}
+    EngineName1 = 'stockfish';
+    EngineName2 = '/opt/homebrew/bin/stockfish';
     EngineFilter = '*';
     EngineDefExt = '';
     {$DEFINE HAS_ENGINE_NAME}

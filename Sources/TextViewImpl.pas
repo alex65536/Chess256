@@ -1,7 +1,7 @@
 {
   This file is part of Chess 256.
 
-  Copyright © 2016, 2018 Alexander Kernozhitsky <sh200105@mail.ru>
+  Copyright © 2016, 2018, 2023 Alexander Kernozhitsky <sh200105@mail.ru>
 
   Chess 256 is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -305,6 +305,10 @@ begin
   with FTempBuffer do
   begin
     Canvas.Brush.Style := bsSolid;
+    // Workaround for Qt and (hopefully) Cocoa widgetsets. Without this line,
+    // the area will be filled with pmNot (or pmNotXor) mode used by the cursor
+    // for some strange reason.
+    Canvas.Line(0, 0, 0, 0);
     Canvas.FillRect(Rect(0, 0, Width, Height));
   end;
   Y := 0;
@@ -494,7 +498,6 @@ begin
     Brush.Style := bsSolid;
     Brush.Color := PaintBox.Color;
     Pen.Width := CursorWidth;
-    Pen.Mode := pmNot;
   end;
 end;
 
@@ -925,6 +928,7 @@ procedure TFormatText.DrawCursor(Beg, Len: integer; AX, AY: integer);
 // Draws the cursor onto the canvas.
 var
   I, H, CurPos: integer;
+  WasPenMode: TPenMode;
 begin
   if not CanDrawCursor(Beg, Len) then
     Exit;
@@ -937,11 +941,17 @@ begin
   H := GetSize(Beg, Len, True).cy;
   AY += H;
   // now, draw the cursor!
-  for I := Beg to Beg + Len - 1 do
-  begin
-    if CurPos + 1 = I then
-      FCanvas.Line(AX + 1, AY - H, AX + 1, AY);
-    AX += CharSize[I].cx;
+  WasPenMode := FCanvas.Pen.Mode;
+  try
+    FCanvas.Pen.Mode := pmNotXor;
+    for I := Beg to Beg + Len - 1 do
+    begin
+      if CurPos + 1 = I then
+        FCanvas.Line(AX + 1, AY - H, AX + 1, AY);
+      AX += CharSize[I].cx;
+    end;
+  finally
+    FCanvas.Pen.Mode := WasPenMode;
   end;
 end;
 
