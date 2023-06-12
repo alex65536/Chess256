@@ -1,12 +1,11 @@
 object PseudoDockContainer: TPseudoDockContainer
-  Left = 284
+  Left = 0
   Height = 200
-  Top = 84
+  Top = 0
   Width = 218
   ClientHeight = 200
   ClientWidth = 218
-  LCLVersion = '1.8.0.6'
-  Visible = True
+  TabOrder = 0
   object CaptionPanel: TPanel
     Left = 0
     Height = 14

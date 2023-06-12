@@ -80,7 +80,7 @@ uses
   ImbalanceFrame,
   ScaleDPI,
   PersistentNotation,
-  LicenseInfo;
+  LicenseInfo, unitFrmPgnDatabase;
 
 {$R *.res}
 
@@ -103,5 +103,6 @@ begin
   Application.CreateForm(TNewGameDialog, NewGameDialog);
   Application.CreateForm(TTimerConfigureForm, TimerConfigureForm);
   Application.CreateForm(TLicenseInfoFrom, LicenseInfoFrom);
+  Application.CreateForm(TfrmPGNDatabase, frmPGNDatabase);
   Application.Run;
 end.

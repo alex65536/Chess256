@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 402
+  Left = 3910
   Height = 629
-  Top = 419
+  Top = -219
   Width = 964
   Caption = 'Chess 256'
   ClientHeight = 629
@@ -12,8 +12,6 @@ object MainForm: TMainForm
   OnResize = FormResize
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.8.0.6'
-  Visible = False
   object ToolBar: TToolBar
     Left = 0
     Height = 34
@@ -199,24 +197,24 @@ object MainForm: TMainForm
   end
   object GlobalPanel: TPanel
     Left = 0
-    Height = 567
+    Height = 595
     Top = 34
     Width = 964
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 567
+    ClientHeight = 595
     ClientWidth = 964
     Color = clWindow
     ParentColor = False
     TabOrder = 1
     object Panel1: TPanel
       Left = 565
-      Height = 567
+      Height = 595
       Top = 0
       Width = 399
       Align = alRight
       BevelOuter = bvNone
-      ClientHeight = 567
+      ClientHeight = 595
       ClientWidth = 399
       Color = clRed
       ParentColor = False
@@ -246,7 +244,7 @@ object MainForm: TMainForm
     end
     object Panel2: TPanel
       Left = 0
-      Height = 567
+      Height = 595
       Top = 0
       Width = 152
       Align = alLeft
@@ -257,12 +255,12 @@ object MainForm: TMainForm
     end
     object Panel3: TPanel
       Left = 157
-      Height = 567
+      Height = 595
       Top = 0
       Width = 403
       Align = alClient
       BevelOuter = bvNone
-      ClientHeight = 567
+      ClientHeight = 595
       ClientWidth = 403
       Color = clBlue
       ParentColor = False
@@ -271,7 +269,7 @@ object MainForm: TMainForm
         Cursor = crVSplit
         Left = 0
         Height = 5
-        Top = 460
+        Top = 488
         Width = 403
         Align = alBottom
         MinSize = 1
@@ -281,7 +279,7 @@ object MainForm: TMainForm
       object Panel4: TPanel
         Left = 0
         Height = 102
-        Top = 465
+        Top = 493
         Width = 403
         Align = alBottom
         BevelOuter = bvNone
@@ -292,7 +290,7 @@ object MainForm: TMainForm
     end
     object Splitter2: TSplitter
       Left = 152
-      Height = 567
+      Height = 595
       Top = 0
       Width = 5
       MinSize = 1
@@ -300,7 +298,7 @@ object MainForm: TMainForm
     end
     object Splitter1: TSplitter
       Left = 560
-      Height = 567
+      Height = 595
       Top = 0
       Width = 5
       Align = alRight
@@ -313,21 +311,21 @@ object MainForm: TMainForm
   object EngineHandleTimer: TTimer
     Interval = 25
     OnTimer = EngineHandleTimerTimer
-    left = 128
-    top = 64
+    Left = 128
+    Top = 64
   end
   object FontDialog: TFontDialog
     Title = 'Select font...'
     MinFontSize = 0
     MaxFontSize = 0
     PreviewText = '♙♘♗♖♕♔♟♞♝♜♛♚ABCDEFGH12345678'
-    left = 32
-    top = 64
+    Left = 32
+    Top = 64
   end
   object ActionList: TActionList
     Images = GlyphKeeper.ImageList
-    left = 216
-    top = 64
+    Left = 216
+    Top = 64
     object AboutAction: TAction
       Caption = 'About'
       ImageIndex = 20
@@ -372,10 +370,14 @@ object MainForm: TMainForm
       OnExecute = ExitActionExecute
       ShortCut = 32883
     end
+    object actLoadPGNFile: TAction
+      Caption = 'Open PGN...'
+      OnExecute = actLoadPGNFileExecute
+    end
   end
   object MainMenu: TMainMenu
-    left = 288
-    top = 64
+    Left = 288
+    Top = 64
     object MenuItem1: TMenuItem
       Caption = 'Game'
       object MenuItem6: TMenuItem
@@ -395,6 +397,12 @@ object MainForm: TMainForm
       end
       object MenuItem11: TMenuItem
         Action = ExitAction
+      end
+    end
+    object mniFile: TMenuItem
+      Caption = 'File'
+      object mniLoadPGN: TMenuItem
+        Action = actLoadPGNFile
       end
     end
     object MenuItem3: TMenuItem
@@ -523,5 +531,12 @@ object MainForm: TMainForm
         Action = AboutAction
       end
     end
+  end
+  object dlgOpenPGN: TOpenDialog
+    Title = 'Open existing PGN file'
+    Filter = 'PGN (Portable Game Notation)|*.pgn'
+    Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 206
+    Top = 150
   end
 end
