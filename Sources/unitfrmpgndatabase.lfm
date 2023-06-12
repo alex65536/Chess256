@@ -1,0 +1,76 @@
+object frmPGNDatabase: TfrmPGNDatabase
+  Left = 4740
+  Height = 484
+  Top = -191
+  Width = 617
+  Caption = 'PGN Database'
+  ClientHeight = 484
+  ClientWidth = 617
+  object pnlDatabase: TPanel
+    Left = 0
+    Height = 484
+    Top = 0
+    Width = 617
+    Align = alClient
+    ClientHeight = 484
+    ClientWidth = 617
+    TabOrder = 0
+    object gridPGNDatabase: TStringGrid
+      Left = 1
+      Height = 482
+      Top = 1
+      Width = 615
+      Align = alClient
+      AutoEdit = False
+      AutoFillColumns = True
+      CellHintPriority = chpAll
+      ColCount = 4
+      ColumnClickSorts = True
+      Columns = <      
+        item
+          MinSize = 100
+          MaxSize = 300
+          Title.Caption = 'Game Info'
+          Width = 153
+        end      
+        item
+          Title.Caption = 'White'
+          Width = 153
+        end      
+        item
+          Title.Caption = 'Black'
+          Width = 153
+        end      
+        item
+          Title.Caption = 'Moves'
+          Width = 154
+        end>
+      FixedCols = 0
+      HeaderHotZones = [gzFixedRows]
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goDrawFocusSelected, goRowSelect, goRelaxedRowSelect, goSmoothScroll, goFixedRowNumbering, goHeaderPushedLook, goSelectionActive, goRowHighlight]
+      Options2 = [goScrollToLastRow]
+      PopupMenu = pmnPGNDatabase
+      RowCount = 1
+      ScrollBars = ssBoth
+      TabOrder = 0
+      OnDblClick = gridPGNDatabaseDblClick
+      OnDrawCell = gridPGNDatabaseDrawCell
+      OnMouseMove = gridPGNDatabaseMouseMove
+      OnPrepareCanvas = gridPGNDatabasePrepareCanvas
+      ColWidths = (
+        153
+        153
+        153
+        154
+      )
+    end
+  end
+  object pmnPGNDatabase: TPopupMenu
+    Left = 128
+    Top = 40
+    object mniLoadGame: TMenuItem
+      Caption = 'Load Game'
+      OnClick = mniLoadGameClick
+    end
+  end
+end

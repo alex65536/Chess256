@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <MainUnit Value="0"/>
       <Title Value="Chess 256"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
@@ -53,7 +55,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="63">
+    <Units Count="64">
       <Unit0>
         <Filename Value="Chess256.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -363,7 +365,7 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="PseudoDockContainer"/>
         <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
+        <ResourceBaseClass Value="Frame"/>
       </Unit58>
       <Unit59>
         <Filename Value="ImbalanceFrame.pas"/>
@@ -387,6 +389,14 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit62>
+      <Unit63>
+        <Filename Value="unitfrmpgndatabase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPGNDatabase"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitFrmPgnDatabase"/>
+      </Unit63>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

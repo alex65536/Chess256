@@ -31,7 +31,7 @@ uses
   ApplicationForms, Dialogs, SysUtils, NotationForms, ClockForms,
   ChessRules, AnalysisForms, TextureContainers, ChessGame, GameStartDialogs,
   ChessStrings, ActnList, Menus, ComCtrls, BoardForms, MoveVariantForms,
-  PseudoDockedForms, Classes;
+  PseudoDockedForms, Classes, RegExpr, unitFrmPgnDatabase;
 
 resourcestring
   SResignConfirmation = 'Do you really want to resign?';
@@ -42,6 +42,7 @@ type
 
   TMainForm = class(TApplicationForm)
     AboutAction: TAction;
+    actLoadPGNFile: TAction;
     ExitAction: TAction;
     MainMenu: TMainMenu;
     MenuItem1: TMenuItem;
@@ -87,6 +88,9 @@ type
     MenuItem46: TMenuItem;
     MenuItem47: TMenuItem;
     MenuItem48: TMenuItem;
+    mniLoadPGN: TMenuItem;
+    mniFile: TMenuItem;
+    dlgOpenPGN: TOpenDialog;
     Panel4: TPanel;
     Splitter3: TSplitter;
     ToolButton28: TToolButton;
@@ -143,6 +147,7 @@ type
     ToolButton8: TToolButton;
     ToolButton9: TToolButton;
     procedure AboutActionExecute(Sender: TObject);
+    procedure actLoadPGNFileExecute(Sender: TObject);
     procedure ChangeLookActionExecute(Sender: TObject);
     procedure ExitActionExecute(Sender: TObject);
     procedure FontSelectActionExecute(Sender: TObject);
@@ -163,11 +168,11 @@ type
     procedure ChildFormHide(Sender: TObject);
   private
     Texture: TTextureContainer;
-    FGame: TChessGame;
   protected
     procedure AddWindow(AForm: TApplicationForm; APanel: TCustomPanel;
       ASplitter: TSplitter; CanHide: boolean);
   public
+    FGame: TChessGame;
     procedure CreateNewGame;
   end;
 
@@ -201,6 +206,77 @@ end;
 procedure TMainForm.AboutActionExecute(Sender: TObject);
 begin
   AboutBox.ShowModal;
+end;
+
+procedure TMainForm.actLoadPGNFileExecute(Sender: TObject);
+var
+  SList : TStringList;
+  i, R, j, row : Integer;
+  s, s2, pgntags, white, black : AnsiString;
+  RegexObj: TRegExpr;
+begin
+  //load pgn file
+  RegexObj := TRegExpr.Create();
+  RegexObj.Expression := '((((\[.*?\])\s*)+)(1\..+?(0-1|1-0|1/2-1/2)))';
+  if dlgOpenPGN.Execute() then
+  begin
+    frmPGNDatabase.Show();
+    frmPGNDatabase.gridPGNDatabase.Clear();
+    frmPGNDatabase.gridPGNDatabase.RowCount := 1 + frmPGNDatabase.gridPGNDatabase.FixedRows;
+    s := '';
+    s2 := '';
+    R := 1;
+    row := frmPGNDatabase.gridPGNDatabase.FixedRows;
+    SList := TStringList.Create();
+    SList.LoadFromFile(dlgOpenPGN.FileName);
+    for i := 0 to SList.Count-1 do
+    begin
+      s2 := SList[i];
+      s += s2 + #13#10;
+       if (s2.Contains(' 1-0') or s2.Contains(' 1/2-1/2') or s2.Contains(' 0-1')) and RegexObj.Exec(s) then
+       begin
+         pgntags := RegexObj.Match[2];
+         j := pgntags.IndexOf('[White "');
+         white := '';
+         if (j > 0) then
+         begin
+           white := pgntags.Substring(j+8, pgntags.Substring(j+8).IndexOf('"]'));
+         end;
+         j := pgntags.IndexOf('[Black "');
+         black := '';
+         if (j > 0) then
+         begin
+           black := pgntags.Substring(j+8, pgntags.Substring(j+8).IndexOf('"]'));
+         end;
+
+         frmPGNDatabase.gridPGNDatabase.RowCount := frmPGNDatabase.gridPGNDatabase.RowCount + 1;
+
+         frmPGNDatabase.gridPGNDatabase.Cells[0, row] := RegexObj.Match[2];
+         frmPGNDatabase.gridPGNDatabase.Cells[1, row] := white;
+         frmPGNDatabase.gridPGNDatabase.Cells[2, row] := black;
+         frmPGNDatabase.gridPGNDatabase.Cells[3, row] := RegexObj.Match[5];
+         Inc(row);
+         s := '';
+         R := R + 1;
+       end
+    end;
+    if (R-1 = 1) then
+    begin
+       frmPGNDatabase.Caption := FormatFloat('#,',R-1) + ' PGN Game';
+    end else
+    begin
+       frmPGNDatabase.Caption := FormatFloat('#,',R-1) + ' PGN Games';
+    end;
+
+    try
+       CreateNewGame();
+    except
+      on E: Exception do
+        MessageDlg(E.Message, mtError, [mbOK], 0);
+    end;
+    SList.Free();
+  end;
+  RegexObj.Free();
 end;
 
 procedure TMainForm.ChangeLookActionExecute(Sender: TObject);
